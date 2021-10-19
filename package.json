@@ -5,11 +5,12 @@
     "main": "build/vds.css",
     "scripts": {
         "sass": "\"node-sass\" --include-path node_modules src/styles/vds.sass src/styles/vds-temporary.css",
-        "postcss": "postcss src/styles/vds.css --config src/styles/postcss.config.js -o build/vds.css",
+        "postcss": "postcss src/styles/vds.css --config src/postcss.config.js -o build/vds.css",
         "copytodoc": "cp build/vds.css docs/vds.css",
         "icons": "grunt",
+        "fonts": "cp -r src/fonts build/fonts",
         "styles": "npm run sass && npm run postcss && npm run copytodoc && npm run cleanup",
-        "build": "npm run styles && npm run icons",
+        "build": "npm run styles && npm run fonts && npm run icons",
         "dev": "docsify serve docs --port 3001",
         "cleanup": "rm -f src/styles/vds-temporary.css",
         "ghlogin": "npm login --registry=https://npm.pkg.github.com/ && npm publish"
