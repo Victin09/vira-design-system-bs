@@ -1,0 +1,265 @@
+.button
+    height: 2.5em
+    letter-spacing: 0
+    font-weight: 500
+    transition: background-color .15s linear, box-shadow .2s linear
+
+.button:not(.is-text,.is-borderless,.is-ghost,.is-light,.is-outlined,.is-static,.is-primary, .is-info, .is-warning, .is-danger, .is-success, .is-dark)
+    box-shadow: 0 1px 3px -2px rgba($black, .3)
+.button:active:not(.is-text,.is-borderless,.is-ghost,.is-light,.is-outlined, .is-info, .is-warning, .is-danger, .is-success, .is-dark)
+    background-color: $code-background
+
+.button.is-small
+    height: 2.1875em
+
+.button:not(.is-rounded).is-small
+    border-radius: $radius
+
+.button.is-primary:not(.is-inverted):not(.is-light):not(.is-outlined),
+.button.is-dark:not(.is-inverted):not(.is-light):not(.is-outlined),
+.button.is-success:not(.is-inverted):not(.is-light):not(.is-outlined),
+.button.is-danger:not(.is-inverted):not(.is-light):not(.is-outlined),
+.button.is-warning:not(.is-inverted):not(.is-light):not(.is-outlined),
+.button.is-info:not(.is-inverted):not(.is-light):not(.is-outlined)
+    box-shadow: 0 3px 3px -2px rgba($black, .3)
+
+.button.is-text.has-text-grey:hover:not(:active)
+    color: $grey-dark !important
+
+.button > .icon
+    width: 1.125em
+    height: 1.125em
+    fill: $text
+    transition: fill .1s linear
+
+.button > .icon.is-medium
+    width: 1.375rem
+    height: 1.375rem
+
+.button > .icon:first-child:not(:last-child)
+    margin-right: .375em
+    margin-left: -.125em
+.button > .icon:last-child:not(:first-child)
+    margin-right: -.125em
+    margin-left: .375em
+
+.button.is-primary > .icon,
+.button.is-danger > .icon,
+.button.is-info > .icon,
+.button.is-warning > .icon,
+.button.is-success > .icon,
+.button.is-dark > .icon
+    fill: white
+
+.button:not(:hover) > .icon.is-light
+    fill: $grey-dark
+.button:hover > .icon.is-primary
+    fill: $primary
+.button:hover > .icon.is-danger
+    fill: $danger
+.button:hover > .icon.is-warning
+    fill: $warning
+.button:hover > .icon.is-info
+    fill: $info
+.button:hover > .icon.is-success
+    fill: $success
+.button:hover > .icon.is-dark
+    fill: $dark
+
+// Outlined
+.button.is-primary.is-outlined
+    box-shadow: inset 0 0 0 1px $primary
+.button.is-primary.is-outlined:focus,
+.button.is-primary.is-outlined:hover,
+.button.is-primary.is-outlined.is-focused,
+.button.is-primary.is-outlined.is-hovered
+    background-color: rgba($primary,.07)
+    color: $primary
+    transition: none
+
+.button.is-success.is-outlined
+    box-shadow: inset 0 0 0 1px $success
+.button.is-success.is-outlined:focus,
+.button.is-success.is-outlined:hover,
+.button.is-success.is-outlined.is-focused,
+.button.is-success.is-outlined.is-hovered
+    background-color: rgba($success,.07)
+    color: $success
+    transition: none
+
+.button.is-info.is-outlined
+    box-shadow: inset 0 0 0 1px $info
+.button.is-info.is-outlined:focus,
+.button.is-info.is-outlined:hover,
+.button.is-info.is-outlined.is-focused,
+.button.is-info.is-outlined.is-hovered
+    background-color: rgba($info,.07)
+    color: $info
+    transition: none
+
+.button.is-warning.is-outlined
+    box-shadow: inset 0 0 0 1px $warning
+.button.is-warning.is-outlined:focus,
+.button.is-warning.is-outlined:hover,
+.button.is-warning.is-outlined.is-focused,
+.button.is-warning.is-outlined.is-hovered
+    background-color: rgba($warning,.07)
+    color: $warning
+    transition: none
+
+.button.is-danger.is-outlined
+    box-shadow: inset 0 0 0 1px $danger
+.button.is-danger.is-outlined:focus,
+.button.is-danger.is-outlined:hover,
+.button.is-danger.is-outlined.is-focused,
+.button.is-danger.is-outlined.is-hovered
+    background-color: rgba($danger,.07)
+    color: $danger
+    transition: none
+
+.button.is-dark.is-outlined
+    box-shadow: inset 0 0 0 1px $dark
+.button.is-dark.is-outlined:focus,
+.button.is-dark.is-outlined:hover,
+.button.is-dark.is-outlined.is-focused,
+.button.is-dark.is-outlined.is-hovered
+    background-color: rgba($dark,.07)
+    color: $dark
+    transition: none
+
+.button.is-inverted.is-outlined
+    box-shadow: inset 0 0 0 1px white
+.button.is-inverted.is-outlined:focus,
+.button.is-inverted.is-outlined:hover,
+.button.is-inverted.is-outlined.is-focused,
+.button.is-inverted.is-outlined.is-hovered
+    background-color: rgba(white,.07) !important
+    color: white !important
+    transition: none
+
+.button.is-outlined:active
+    background-color: transparent !important;
+
+// Rounded background transition effect
+.button.is-borderless.is-rounded.is-square
+    position: relative
+    background-color: transparent
+.button.is-borderless.is-rounded.is-square:before
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-top: -1.125em
+    margin-left: -1.125em
+    width: 2.25em
+    height: 2.25em
+    border-radius: $radius-rounded
+    background-color: transparent
+    content: ''
+    transition: transform .2s ease-in, background-color .2s ease-in
+    transform: scale(0)
+.button.is-borderless.is-rounded.is-square:hover:before,
+.button.is-borderless.is-rounded.is-square.is-hovered:before
+    background-color: $menu-item-hover-background-color
+    transition: transform .2s ease-out, background-color .2s ease-out
+    transform: scale(1)
+.button.is-borderless.is-rounded.is-square:active:before,
+.button.is-borderless.is-rounded.is-square.is-active:before
+    background-color: rgba($black,.125)
+    transform: scale(1)
+
+.button.is-beefy
+    padding: calc(1.375em - #{$button-border-width}) 1.75em
+
+.button.is-square
+    padding: 0
+    width: 2.5em
+.button.is-small.is-square
+    width: 2.1875em
+
+// Button loading state
+// See loader.saas
+
+
+// Button chaining
+.button + .button.is-static
+    padding-right: .5em
+    padding-left: .625em
+
+.button.is-static + .button.is-text,
+.button.is-static + .button.is-ghost
+    padding-left: 0
+
+.button.is-text + .button.is-text
+    margin-left: -.5em
+
+.button.is-primary.is-light
+    background-color: $primary-lighter
+    color: $primary !important
+
+.button.is-primary.is-light:hover
+    background-color: mix($purple-light,$primary-lighter,6)
+
+
+// New Type
+.button.is-glowing
+    position: relative
+
+.button.is-glowing:before
+    position: absolute
+    top: 20%
+    right: 8%
+    bottom: 0
+    left: 8%
+    content: ''
+
+.button.is-glowing.is-primary:before
+    box-shadow: 0 .1875em 1.125em rgba($primary,.7)
+
+.button.is-glowing.is-success:before
+    box-shadow: 0 .1875em 1.125em rgba($success,.7)
+
+.button.is-glowing.is-info:before
+    box-shadow: 0 .1875em 1.125em rgba($info,.7)
+
+.button.is-glowing.is-danger:before
+    box-shadow: 0 .1875em 1.125em rgba($danger,.7)
+
+.button.is-glowing.is-dark:before
+    box-shadow: 0 .1875em 1.125em rgba($dark,.6)
+
+
+/* Links */
+a,
+.is-link
+    vertical-align: baseline
+    transition: all .2s ease !important
+
+a.is-underlined:not(.is-regular),
+.is-link.is-underlined:not(.is-regular),
+a.is-ghost,
+.is-link.is-ghost
+    color: inherit
+
+a.is-ghost:hover:not(.is-underlined),
+a:hover > .is-link.is-ghost:not(.is-underlined)
+    color: $link
+
+a.is-underlined,
+.is-link.is-underlined
+    text-decoration: underline
+    text-decoration-thickness: .1em
+    text-decoration-width: .1em
+    transition-property: text-decoration-color, text-decoration-thickness, text-decoration-width
+
+a.is-underlined.is-ghost,
+.is-link.is-underlined.is-ghost
+    text-decoration-color: transparent
+
+a.is-underlined:hover,
+a.is-underlined.is-ghost:hover,
+a:hover > .is-link.is-underlined,
+a:hover > .is-link.is-underlined.is-ghost
+    text-decoration: underline
+    text-decoration-thickness: .2em
+    text-decoration-width: .2em
+    text-decoration-color: $link

@@ -1,0 +1,64 @@
+{
+    "name": "vira-design-system",
+    "version": "1.51.1",
+    "description": "Vira Design System",
+    "main": "build/vds.css",
+    "scripts": {
+        "sass": "\"node-sass\" --include-path node_modules src/styles/vds.sass src/styles/vds-temporary.css",
+        "postcss": "postcss src/styles/vds.css --config src/styles/postcss.config.js -o build/vds.css",
+        "copytodoc": "cp build/vds.css docs/vds.css",
+        "icons": "grunt",
+        "styles": "npm run sass && npm run postcss && npm run copytodoc && npm run cleanup",
+        "build": "npm run styles && npm run icons",
+        "dev": "docsify serve docs --port 3001",
+        "cleanup": "rm -f src/styles/vds-temporary.css",
+        "ghlogin": "npm login --registry=https://npm.pkg.github.com/ && npm publish"
+    },
+    "files": [
+        "build/*"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Victin09/vira-design-system.git"
+    },
+    "keywords": [
+        "design system",
+        "icons"
+    ],
+    "author": {
+        "name": "Victor Gomez",
+        "email": "victorgomez1209@outlook.es",
+        "url": "https://github.com/Victin09"
+    },
+    "license": "CC-BY-SA-4.0",
+    "bugs": {
+        "url": "https://github.com/Victin09/vira-design-system/issues"
+    },
+    "homepage": "https://github.com/Victin09/vira-design-system",
+    "browserslist": [
+        "defaults",
+        "not ie <= 8"
+    ],
+    "devDependencies": {
+        "bulma": "^0.9.2",
+        "cssnano": "^4.1.10",
+        "grunt": "^1.0.4",
+        "grunt-cli": "^1.2.0",
+        "grunt-contrib-clean": "~0.5.0",
+        "grunt-contrib-copy": "~0.5.0",
+        "grunt-contrib-background-color: rgba($info,.07)less": "^2.0.0",
+        "grunt-contrib-requirejs": "~0.4.4",
+        "grunt-svgmin": "^6.0.0",
+        "grunt-svgstore": "^2.0.0",
+        "node-sass": "^6.0.1",
+        "postcss": "^6.0.22",
+        "postcss-cli": "^7.1.1",
+        "postcss-import": "^11.1.0",
+        "postcss-preset-env": "^5.1.0"
+    },
+    "dependencies": {
+        "@creativebulma/bulma-tooltip": "^1.2.0",
+        "browserslist": "^4.14.0",
+        "caniuse-lite": "^1.0.30001115"
+    }
+}
