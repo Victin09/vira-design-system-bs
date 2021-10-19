@@ -1,3 +1,7 @@
+- <a href="/" class="docsify-logo">
+VDS
+</a>
+
 - 
 <div class="menu is-small"><ul class="menu-list">
 - <p class="menu-label is-size-7 has-text-weight-semibold mb-2 pl-2">Foundation</p>
