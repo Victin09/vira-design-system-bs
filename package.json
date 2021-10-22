@@ -1,19 +1,16 @@
 {
-    "name": "vira-design-system",
+    "name": "@vira/vds",
     "version": "1.51.1",
     "description": "Vira Design System",
-    "main": "build/vds.css",
+    "main": "scss/vds.scss",
     "scripts": {
-        "sass": "\"node-sass\" --include-path node_modules src/styles/vds.sass src/styles/vds-temporary.css",
-        "postcss": "postcss src/styles/vds.css --config src/postcss.config.js -o build/vds.css",
-        "copytodoc": "cp build/vds.css docs/vds.css",
+        "sass": "node-sass src/scss/vds.scss -o src/scss/vds.css",
+        "postcss": "postcss src/scss/vds.css --config postcss.config.js -o dist/vds.css",
+        "js": "webpack",
         "icons": "grunt",
-        "fonts": "cp -r src/fonts build/fonts",
-        "styles": "npm run sass && npm run postcss && npm run copytodoc && npm run cleanup",
-        "build": "npm run styles && npm run fonts && npm run icons",
-        "dev": "docsify serve docs --port 3001",
-        "cleanup": "rm -f src/styles/vds-temporary.css",
-        "ghlogin": "npm login --registry=https://npm.pkg.github.com/ && npm publish"
+        "fonts": "cp -r src/fonts dist/fonts",
+        "styles": "npm run sass && npm run postcss",
+        "build": "npm run js && npm run styles && npm run fonts && npm run icons"
     },
     "files": [
         "build/*"
@@ -41,13 +38,11 @@
         "not ie <= 8"
     ],
     "devDependencies": {
-        "bulma": "^0.9.2",
         "cssnano": "^4.1.10",
         "grunt": "^1.0.4",
         "grunt-cli": "^1.2.0",
         "grunt-contrib-clean": "~0.5.0",
         "grunt-contrib-copy": "~0.5.0",
-        "grunt-contrib-background-color: rgba($info,.07)less": "^2.0.0",
         "grunt-contrib-requirejs": "~0.4.4",
         "grunt-svgmin": "^6.0.0",
         "grunt-svgstore": "^2.0.0",
@@ -55,11 +50,8 @@
         "postcss": "^6.0.22",
         "postcss-cli": "^7.1.1",
         "postcss-import": "^11.1.0",
-        "postcss-preset-env": "^5.1.0"
-    },
-    "dependencies": {
-        "@creativebulma/bulma-tooltip": "^1.2.0",
-        "browserslist": "^4.14.0",
-        "caniuse-lite": "^1.0.30001115"
+        "postcss-preset-env": "^5.1.0",
+        "webpack": "^5.59.0",
+        "webpack-cli": "^4.9.1"
     }
 }

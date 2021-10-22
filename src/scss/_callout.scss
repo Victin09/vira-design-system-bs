@@ -1,0 +1,27 @@
+.callout {
+    padding: 2rem;
+    margin: 0;
+    background-color: $code-bg;
+    border-radius: .5rem;
+    
+    &-border {
+        border-left-style: solid;
+        border-left-width: 4px;
+    }
+
+    &-success {
+        border-left-color: $success;
+    }
+
+    &-info {
+        border-left-color: $info;
+    }
+
+    &-warning {
+        border-left-color: $warning;
+    }
+
+    &-danger {
+        border-left-color: $danger;
+    }
+}

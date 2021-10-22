@@ -30,7 +30,7 @@ module.exports = function(grunt) {
             },
             default : {
                 files: {
-                    'build/vds-icons.svg': [
+                    'dist/vds-icons.svg': [
                         'src/icons/*.svg'
                     ]
                 },
@@ -56,8 +56,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'build/vds-icons.min.svg': 'build/vds-icons.svg',
-                    'docs/media/vds-icons.min.svg': 'build/vds-icons.svg',
+                    'dist/vds-icons.min.svg': 'dist/vds-icons.svg',
                 }
             }
         }
