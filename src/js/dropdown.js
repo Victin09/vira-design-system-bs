@@ -1,6 +1,6 @@
 /**
 * --------------------------------------------------------------------------
-* Grayshift (v1.0.2): dropdown.js
+* Vira Design System (v1.0.0): collapse.js
 * Licensed under MIT (https://opensource.org/licenses/mit-license.php)
 * --------------------------------------------------------------------------
 */
@@ -11,8 +11,13 @@ import {
 } from './dom/selectors';
 
 // Dropdown
-const Dropdown = (() => {
-  document.addEventListener("DOMContentLoaded", () => {
+class Dropdown {
+  constructor() {
+    this.init();
+  }
+
+  // Init method
+  init() {
     // Selectors
     const dropdownToggleSelector = `[${dataToggleString}="dropdown"]`;
 
@@ -87,7 +92,7 @@ const Dropdown = (() => {
         }
       });
     }
-  })
-})();
+  }
+};
 
-export default Dropdown;
+export const dropdown = new Dropdown();

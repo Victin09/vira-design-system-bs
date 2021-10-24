@@ -6,7 +6,7 @@
     "scripts": {
         "sass": "node-sass src/scss/vds.scss -o src/scss/vds.css",
         "postcss": "postcss src/scss/vds.css --config postcss.config.js -o dist/vds.css",
-        "js": "webpack",
+        "js": "rollup src/js/index.js --format umd --name 'vds' --file dist/vds.js",
         "icons": "grunt",
         "fonts": "cp -r src/fonts dist/fonts",
         "styles": "npm run sass && npm run postcss",
@@ -53,5 +53,8 @@
         "postcss-preset-env": "^5.1.0",
         "webpack": "^5.59.0",
         "webpack-cli": "^4.9.1"
+    },
+    "dependencies": {
+        "rollup": "^2.58.0"
     }
 }

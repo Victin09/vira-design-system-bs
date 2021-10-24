@@ -1,3 +1,10 @@
+/**
+* --------------------------------------------------------------------------
+* Vira Design System (v1.0.0): index.js
+* Licensed under MIT (https://opensource.org/licenses/mit-license.php)
+* --------------------------------------------------------------------------
+*/
+
 import { dataTargetString } from '../dom/selectors';
 
 // Get the target of the controller element

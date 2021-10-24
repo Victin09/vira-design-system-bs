@@ -34,7 +34,7 @@
 
 // Framework grid generation
 //
-// Used only by Grayshift to generate the correct number of grid classes given
+// Used only by Vira Design System to generate the correct number of grid classes given
 // any value of `$grid-columns`.
 
 @mixin make-grid-columns($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
