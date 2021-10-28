@@ -81,7 +81,7 @@
 
 body {
   margin: 0;
-  font: 500 1rem/1.5 "Inter", sans-serif;
+  font: 500 1rem/1.5 "Hack", monospace;
   color: var(--body-color);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -3632,14 +3632,19 @@ iframe {
   margin: 0;
   background-color: var(--fill-bg);
   border-radius: .5rem; }
-  .callout-border {
+  .callout.callout-success {
     border-left-style: solid;
-    border-left-width: 4px; }
-  .callout-success {
+    border-left-width: 4px;
     border-left-color: var(--green); }
-  .callout-info {
+  .callout.callout-info {
+    border-left-style: solid;
+    border-left-width: 4px;
     border-left-color: var(--cyan); }
-  .callout-warning {
+  .callout.callout-warning {
+    border-left-style: solid;
+    border-left-width: 4px;
     border-left-color: var(--yellow); }
-  .callout-danger {
+  .callout.callout-danger {
+    border-left-style: solid;
+    border-left-width: 4px;
     border-left-color: var(--red); }

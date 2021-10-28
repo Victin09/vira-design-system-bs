@@ -1,19 +1,21 @@
 {
-    "name": "@vira/vds",
+    "name": "@vira/vira-design-system",
     "version": "1.51.1",
     "description": "Vira Design System",
-    "main": "scss/vds.scss",
+    "main": "dist/vira-design-system.js",
+    "module": "dist/vira-design-system.js",
     "scripts": {
         "sass": "node-sass src/scss/vds.scss -o src/scss/vds.css",
         "postcss": "postcss src/scss/vds.css --config postcss.config.js -o dist/vds.css",
         "js": "rollup src/js/index.js --format umd --name 'vds' --file dist/vds.js",
+        "js-webpack": "webpack",
         "icons": "grunt",
         "fonts": "cp -r src/fonts dist/fonts",
         "styles": "npm run sass && npm run postcss",
-        "build": "npm run js && npm run styles && npm run fonts && npm run icons"
+        "build": "npm run js && npm run js-webpack && npm run styles && npm run fonts && npm run icons"
     },
     "files": [
-        "build/*"
+        "dist/*"
     ],
     "repository": {
         "type": "git",
@@ -51,10 +53,8 @@
         "postcss-cli": "^7.1.1",
         "postcss-import": "^11.1.0",
         "postcss-preset-env": "^5.1.0",
+        "rollup": "^2.58.0",
         "webpack": "^5.59.0",
         "webpack-cli": "^4.9.1"
-    },
-    "dependencies": {
-        "rollup": "^2.58.0"
     }
 }

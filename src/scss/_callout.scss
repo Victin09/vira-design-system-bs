@@ -3,25 +3,28 @@
     margin: 0;
     background-color: $code-bg;
     border-radius: .5rem;
-    
-    &-border {
+
+    &.callout-success {
         border-left-style: solid;
         border-left-width: 4px;
-    }
-
-    &-success {
         border-left-color: $success;
     }
 
-    &-info {
+    &.callout-info {
+        border-left-style: solid;
+        border-left-width: 4px;
         border-left-color: $info;
     }
 
-    &-warning {
+    &.callout-warning {
+        border-left-style: solid;
+        border-left-width: 4px;
         border-left-color: $warning;
     }
 
-    &-danger {
+    &.callout-danger {
+        border-left-style: solid;
+        border-left-width: 4px;
         border-left-color: $danger;
     }
 }

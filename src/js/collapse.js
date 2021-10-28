@@ -5,157 +5,125 @@
 * --------------------------------------------------------------------------
 */
 
-import {
-  dataToggleString,
-  dataParentString,
-  showString
-} from './dom/selectors';
-import getTarget from './util/index';
+import { showString, getSelector } from './dom/selectors';
+import { executeAfterTransition } from './util/index';
+import EventHandler from './util/event-handler';
+
+// Selectors
+const COLLAPSE_CLASS = 'collapse',
+      COLLAPSING_CLASS = 'collapsing',
+      CLASS_NAME_HORIZONTAL = 'collapse-horizontal',
+      WIDTH = 'width',
+      HEIGHT = 'height',
+      DATA_KEY = 'vds.collapse',
+      EVENT_KEY = `.${DATA_KEY}`,
+      DATA_API_KEY = '.data-api',
+      EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`,
+      SELECTOR_DATA_TOGGLE = '[data-vds-toggle="collapse"]';
+      
 
 // Collapse
-export class Collapse {
-    constructor() {
-      this.init();
+class Collapse {
+  constructor(parent, element) {
+    this.parent = parent;
+    this.element = element;
+  }
+  
+  toggle() {
+    if (this.isShown()) {
+      this.hide()
+    } else {
+      this.show()
     }
+  }
+  
+  isShown(element = this.element) {
+    return element.classList.contains("show")
+  }
 
-    // Init method
-    init() {
-      // Selectors
-      const collapseString = 'collapse',
-            collapsingString = 'collapsing',
-            collapseClass = `.${collapseString}`,
-            collapseToggleSelector = `[${dataToggleString}="${collapseString}"]`;
-    
-      // Variables
-      const collapseTriggers = document.querySelectorAll(collapseToggleSelector);
-      // Check if there are any triggers
-      if(collapseTriggers.length > 0) {
-        // Add a click event on each of them
-        collapseTriggers.forEach(el => {
-          el.addEventListener('click', e => {
-            // Get the targeted content
-            const content = document.querySelector(getTarget(el));
-    
-            // Check if there is content to collapse
-            if(content) {
-              // Get the content parent
-              const contentParent = content.getAttribute(dataParentString),
-                    // Get the parent of the collapse
-                    collapseParent = content.closest(contentParent),
-                    // Check for the "show" class on the content
-                    collapsed = content.classList.contains(showString);
-    
-              const clearOpen = () => {
-                // Get the collapse parent
-                const collapseParent = document.querySelector(contentParent);
-    
-                // Loop through all collapsed and clear them
-                collapseParent.querySelectorAll(collapseClass).forEach(el => {
-                  // Check if there are any triggers
-                  if(el.previousElementSibling) {
-                    // Get the collapse trigger
-                    const collapseTrigger = el.previousElementSibling.closest(collapseToggleSelector) || el.previousElementSibling.querySelector(collapseToggleSelector),
-                    // Get the content parent
-                    contentParent = el.getAttribute(dataParentString);
-    
-                    // Check if the content should be hidden
-                    if(el !== content && contentParent === `#${collapseParent.id}`) {
-                      // Hide content
-                      hide(el, collapseTrigger);
-                    }
-                  }
-                });
-              };
-    
-              const show = content => {
-                // Get the natural height of the content
-                const getHeight = () => {
-                  // Make it visible
-                  content.style.display = 'block';
-                  // Get it's height
-                  const height = content.scrollHeight + 'px';
-                  // Hide it again
-                  content.style.display = '';
-    
-                  return height;
-                };
-    
-                // Remove the "collapse" class
-                content.classList.remove(collapseString);
-                // Add the "collapsing" class
-                content.classList.add(collapsingString);
-                // Update the inline height
-                content.style.height = getHeight();
-    
-                // Set the "aria-expanded" attribute to "true"
-                el.setAttribute('aria-expanded', true);
-    
-                // When the transition is complete, show it
-                const complete = () => {
-                  // Remove the "collapsing" class
-                  content.classList.remove(collapsingString);
-                  // Add both the "collapse" and the "show" class
-                  content.classList.add(collapseString, showString);
-                  // Remove the inline height
-                  content.style.height = '';
-                  // Remove event listener after it runs
-                  content.removeEventListener('transitionend', complete);
-                };
-    
-                content.addEventListener('transitionend', complete);
-              };
-    
-              const hide = (content, trigger = el) => {
-                // Give the element a height to change from
-                content.style.height = content.scrollHeight + 'px';
-    
-                // Add the "collapsing" class
-                content.classList.add(collapsingString);
-                // Remove both the "collapse" and the "show" class
-                content.classList.remove(collapseString, showString);
-                // Force reflow to enable transition
-                content.offsetHeight;
-                // Remove the inline height
-                content.style.height = '';
-    
-                // Set the "aria-expanded" attribute to false
-                trigger.setAttribute('aria-expanded', false);
-    
-                // When the transition is complete, hide it
-                const complete = () => {
-                  // Remove the "collapsing" class
-                  content.classList.remove(collapsingString);
-                  // Add the "collapse" class
-                  content.classList.add(collapseString);
-                  // Remove event listener after it runs
-                  content.removeEventListener('transitionend', complete);
-                };
-    
-                content.addEventListener('transitionend', complete);
-              };
-    
-              // Check if there are any parents
-              if(collapseParent) {
-                // Clear all collapsed
-                clearOpen();
-              }
-    
-              // Check if the content should collapse
-              if(!collapsed) {
-                // If the content is hidden, show it
-                show(content);
-              } else {
-                // Otherwise, hide it
-                hide(content);
-              }
-            }
-    
-            // Stop the default behaviour
-            e.preventDefault();
-          });
-        });
-      }
-    }
+  getDimension() {
+    return this.element.classList.contains(CLASS_NAME_HORIZONTAL) ? WIDTH : HEIGHT
+  }
+
+  show() {
+    // Get the natural height of the content
+    const getHeight = () => {
+      // Make it visible
+      this.element.style.display = 'block';
+      // Get it's height
+      const height = content.scrollHeight + 'px';
+      // Hide it again
+      this.element.style.display = '';
+
+      return height;
+    };
+
+    // Remove the "collapse" class
+    this.element.classList.remove(COLLAPSE_CLASS);
+    // Add the "collapsing" class
+    this.element.classList.add(COLLAPSING_CLASS);
+    // Get element dimension
+    const dimension = this.getDimension();
+    // Set element dimentsion to 0
+    this.element.style[dimension] = 0
+
+    // Set the "aria-expanded" attribute to "true"
+    this.parent.setAttribute('aria-expanded', true);
+
+    // When the transition is complete, show it
+    const complete = () => {
+      // Remove the "collapsing" class
+      this.element.classList.remove(COLLAPSING_CLASS);
+      // Add both the "collapse" and the "show" class
+      this.element.classList.add(COLLAPSE_CLASS, showString);
+      // Remove the inline height
+      this.element.style.height = '';
+    };
+
+    executeAfterTransition(complete, this.element, true)
+    const capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1)
+    const scrollSize = `scroll${capitalizedDimension}`
+
+    // Set element dimension
+    this.element.style[dimension] = `${this.element[scrollSize]}px`
+  };
+
+  hide() {
+    // Get element dimension
+    const dimension = this.getDimension()
+    // Set element dimension
+    this.element.style[dimension] = `${this.element.getBoundingClientRect()[dimension]}px`
+    // Force reflow to enable transition
+    this.element.offsetHeight;
+    // Add the "collapsing" class
+    this.element.classList.add(COLLAPSING_CLASS);
+    // Remove both the "collapse" and the "show" class
+    this.element.classList.remove(COLLAPSE_CLASS, showString);
+    // Set the "aria-expanded" attribute to false
+    this.parent.setAttribute('aria-expanded', false);
+
+    // When the transition is complete, hide it
+    const complete = () => {
+      // Remove the "collapsing" class
+      this.element.classList.remove(COLLAPSING_CLASS)
+      // Add the "collapse" class
+      this.element.classList.add(COLLAPSE_CLASS);
+    };
+    // Set element dimension to 0
+    this.element.style[dimension] = ''
+    executeAfterTransition(complete, this.element, true)
+  };
 };
 
-export const collapse = new Collapse();
+// API implementation
+EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+  if (event.target.tagName === 'A' || (event.delegateTarget && event.delegateTarget.tagName === 'A')) {
+    event.preventDefault()
+  }
+  const test = [].concat(...Element.prototype.querySelectorAll.call(document.documentElement, getSelector(this)))
+  for (const element of test) {
+    new Collapse(this, element).toggle();
+  }
+});
+
+export default Collapse;

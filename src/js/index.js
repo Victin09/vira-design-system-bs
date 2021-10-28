@@ -5,16 +5,16 @@
 * --------------------------------------------------------------------------
 */
 
-import { alert } from './alert';
-import { collapse } from './collapse';
-import { dropdown } from './dropdown';
-import { modal } from './modal';
-import { tab } from './tab';
+import Alert from './alert';
+import Collapse from './collapse';
+import Dropdown from './dropdown';
+import Modal from './modal';
+import Tab from './tab';
 
 export {
-  alert,
-  collapse,
-  dropdown,
-  modal,
-  tab
+  Alert,
+  Collapse,
+  Dropdown,
+  Modal,
+  Tab
 }
