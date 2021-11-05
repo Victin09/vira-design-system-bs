@@ -24,7 +24,6 @@ export const getSelector = element => {
     // The only valid content that could double as a selector are IDs or classes,
     // so everything starting with `#` or `.`. If a "real" URL is used as the selector,
     // `document.querySelector` will rightfully complain it is invalid.
-    // See https://github.com/twbs/bootstrap/issues/32273
     if (!hrefAttr || (!hrefAttr.includes('#') && !hrefAttr.startsWith('.'))) {
       return null
     }
