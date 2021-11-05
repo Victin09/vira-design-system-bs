@@ -42,6 +42,13 @@ $dark-800: darken($dark-100, 14%) !default;
 $dark-900: darken($dark-100, 16%) !default;
 // scss-docs-end dark-color-variables
 
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio:   4.5 !default;
+// Customize the light and dark text colors for use in our color contrast function.
+$color-contrast-dark:      $black !default;
+$color-contrast-light:     $white !default;
+
 // scss-docs-start theme-color-variables
 $primary: var(--blue) !default;
 $secondary: var(--gray) !default;
@@ -213,6 +220,17 @@ $link-color: var(--link-color) !default;
 $link-hover-color: var(--link-hover-color) !default;
 $link-transition: color .3s ease !default;
 
+// Badges
+
+// scss-docs-start badge-variables
+$badge-font-size:                   .75em !default;
+$badge-font-weight:                 $font-weight-bold !default;
+$badge-color:                       $white !default;
+$badge-padding-y:                   .35em !default;
+$badge-padding-x:                   .65em !default;
+$badge-border-radius:               $border-radius !default;
+// scss-docs-end badge-variables
+
 
 // Forms
 
@@ -365,6 +383,74 @@ $dropdown-item-transition: color .3s ease, background-color .3s ease;
 $dropdown-item-disabled-opacity: .5 !default;
 // scss-docs-end dropdown-variables
 
+// Tables
+//
+// scss-docs-start table-variables
+$table-cell-padding-y:        .5rem !default;
+$table-cell-padding-x:        .5rem !default;
+$table-cell-padding-y-sm:     .25rem !default;
+$table-cell-padding-x-sm:     .25rem !default;
+$table-cell-vertical-align:   top !default;
+$table-color:                 $body-color !default;
+$table-bg:                    transparent !default;
+$table-accent-bg:             transparent !default;
+$table-th-font-weight:        null !default;
+$table-striped-color:         $table-color !default;
+$table-striped-bg-factor:     .05 !default;
+$table-striped-bg:            rgba($black, $table-striped-bg-factor) !default;
+$table-active-color:          $table-color !default;
+$table-active-bg-factor:      .1 !default;
+$table-active-bg:             rgba($black, $table-active-bg-factor) !default;
+$table-hover-color:           $table-color !default;
+$table-hover-bg-factor:       .075 !default;
+$table-hover-bg:              rgba($black, $table-hover-bg-factor) !default;
+$table-border-factor:         .1 !default;
+$table-border-width:          $border-width !default;
+$table-border-color:          $border-color !default;
+$table-striped-order:         odd !default;
+$table-group-separator-color: currentColor !default;
+$table-caption-color:         $gray !default;
+$table-bg-scale:              -80% !default;
+
+$table-variants: (
+  "primary":    shift-color($primary, $table-bg-scale),
+  "secondary":  shift-color($secondary, $table-bg-scale),
+  "success":    shift-color($success, $table-bg-scale),
+  "info":       shift-color($info, $table-bg-scale),
+  "warning":    shift-color($warning, $table-bg-scale),
+  "danger":     shift-color($danger, $table-bg-scale),
+  "light":      $light,
+  "dark":       $dark,
+) !default;
+// scss-docs-end table-variables
+
+// List group
+// scss-docs-start list-group-variables
+$list-group-color:                  $gray !default;
+$list-group-bg:                     transparent !default;
+$list-group-border-color:           rgba($black, .125) !default;
+$list-group-border-width:           $border-width !default;
+$list-group-border-radius:          $border-radius !default;
+$list-group-item-padding-y:         .5em * .5 !default;
+$list-group-item-padding-x:         .5em !default;
+$list-group-item-bg-scale:          -80% !default;
+$list-group-item-color-scale:       40% !default;
+$list-group-hover-bg:               rgba($black, $table-hover-bg-factor) !default;
+$list-group-active-color:           $light-active !default;
+$list-group-active-bg:              $primary !default;
+$list-group-active-border-color:    $list-group-active-bg !default;
+$list-group-disabled-color:         $light-900 !default;
+$list-group-disabled-bg:            $list-group-bg !default;
+$list-group-action-color:           $gray !default;
+$list-group-action-hover-color:     $list-group-action-color !default;
+$list-group-action-active-color:    $body-color !default;
+$list-group-action-active-bg:       $gray !default;
+// scss-docs-end list-group-variables
+
+// Avatar
+// scss-docs-start avatar-variables
+$avatar-sizes: 24, 32, 48, 64, 96, 128 !default;
+// scss-docs-end avatar-variables
 
 // Navs
 
@@ -479,6 +565,22 @@ $link-body-hover: var(--link-hover-color) !default;
 $link-headings: var(--headings-color) !default;
 $link-headings-hover: var(--link-hover-color) !default;
 // scss-docs-end link-variables
+
+// Breadcrumbs
+
+// scss-docs-start breadcrumb-variables
+$breadcrumb-font-size:              null !default;
+$breadcrumb-padding-y:              0 !default;
+$breadcrumb-padding-x:              0 !default;
+$breadcrumb-item-padding-x:         .5rem !default;
+$breadcrumb-margin-bottom:          1rem !default;
+$breadcrumb-bg:                     null !default;
+$breadcrumb-divider-color:          $gray !default;
+$breadcrumb-active-color:           $gray !default;
+$breadcrumb-divider:                quote('/') !default;
+$breadcrumb-divider-flipped:        $breadcrumb-divider !default;
+$breadcrumb-border-radius:          null !default;
+// scss-docs-end breadcrumb-variables
 
 // scss-docs-start position-variables
 $fixed-z-index: 3 !default;

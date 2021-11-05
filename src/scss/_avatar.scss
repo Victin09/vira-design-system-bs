@@ -1,0 +1,54 @@
+.avatar-group {
+    .avatar {
+		position: relative;
+		z-index: 2;
+		border: 2px solid $card-bg;
+
+		&:hover {
+			z-index: 3;
+		}
+	}
+    .avatar + .avatar {
+		margin-left: -1rem;
+
+	}
+}
+
+.avatar {
+    color: $white;
+    background-color: $light;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include border-radius($badge-border-radius);
+
+    &.rounded-circle {
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    img {
+        width: 100%;
+        @include border-radius($badge-border-radius);
+    }
+
+    + .avatar-content {
+        display: inline-block;
+        margin-left: .75rem;
+    }
+
+    @include avatar(32);
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        @each $size in $avatar-sizes {
+            .avatar#{$infix}-#{$size} {
+                @include avatar($size);
+            }
+        }
+    }
+}
