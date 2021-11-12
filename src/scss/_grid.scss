@@ -1,7 +1,3 @@
-// Row
-//
-// Rows contain your columns.
-
 @if $enable-grid-classes {
   .row {
     @include make-row();

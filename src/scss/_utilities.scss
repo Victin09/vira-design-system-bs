@@ -349,11 +349,11 @@ $utilities: map-merge(
         info: var(--info),
         warning: var(--warning),
         danger: var(--danger),
-        light: var(--light),
-        dark: var(--dark),
-        white: var(--white),
-        black: var(--black),
-        muted: darken($white, 30%),
+        light: var(--color-basic-100),
+        dark: var(--color-basic-800),
+        white: var(--color-basic-100),
+        black: var(--color-basic-800),
+        muted: darken($color-basic-100, 30%),
         body: var(--body-color),
         reset: inherit
       )
@@ -414,11 +414,11 @@ $utilities: map-merge(
         info: var(--info),
         warning: var(--warning),
         danger: var(--danger),
-        light: var(--light),
-        dark: var(--dark),
+        light: var(--color-basic-100),
+        dark: var(--color-basic-800),
         auto: var(--auto),
-        white: var(--white),
-        black: var(--black),
+        white: var(--color-basic-100),
+        black: var(--color-basic-1000),
         card: var(--card-bg),
         transparent: transparent
       )

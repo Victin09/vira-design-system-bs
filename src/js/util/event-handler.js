@@ -1,9 +1,9 @@
 /**
-* --------------------------------------------------------------------------
-* Vira Design System (v1.0.0): collapse.js
-* Licensed under MIT (https://opensource.org/licenses/mit-license.php)
-* --------------------------------------------------------------------------
-*/
+ * --------------------------------------------------------------------------
+ * Vira Design System (v1.0.0): event-handler.js
+ * Licensed under MIT (https://opensource.org/licenses/mit-license.php)
+ * --------------------------------------------------------------------------
+ */
 
  /**
   * Constants
@@ -85,7 +85,7 @@
    return eventRegistry[uid]
  }
  
- function handler(element, fn) {
+ function vdsHandler(element, fn) {
    return function handler(event) {
      event.delegateTarget = element
  
@@ -97,7 +97,7 @@
    }
  }
  
- function delegationHandler(element, selector, fn) {
+ function vdsDelegationHandler(element, selector, fn) {
    return function handler(event) {
      const domElements = element.querySelectorAll(selector)
  
@@ -188,8 +188,9 @@
    
    const uid = getUidEvent(originalHandler, originalTypeEvent.replace(namespaceRegex, ''))
    const fn = delegation ?
-   delegationHandler(element, handler, delegationFn) :
-   handler(element, handler)
+
+   vdsDelegationHandler(element, handler, delegationFn) :
+   vdsHandler(element, handler)
    
    fn.delegationSelector = delegation ? handler : null
    fn.originalHandler = originalHandler
