@@ -1,7 +1,7 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.1.3): dom/event-handler.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ * Vira Design System (v1.0.0): event-handler.js
+ * Licensed under MIT (https://opensource.org/licenses/mit-license.php)
  * --------------------------------------------------------------------------
  */
 
@@ -85,7 +85,7 @@
    return eventRegistry[uid]
  }
  
- function bootstrapHandler(element, fn) {
+ function vdsHandler(element, fn) {
    return function handler(event) {
      event.delegateTarget = element
  
@@ -97,7 +97,7 @@
    }
  }
  
- function bootstrapDelegationHandler(element, selector, fn) {
+ function vdsDelegationHandler(element, selector, fn) {
    return function handler(event) {
      const domElements = element.querySelectorAll(selector)
  
@@ -188,8 +188,8 @@
    
    const uid = getUidEvent(originalHandler, originalTypeEvent.replace(namespaceRegex, ''))
    const fn = delegation ?
-   bootstrapDelegationHandler(element, handler, delegationFn) :
-   bootstrapHandler(element, handler)
+   vdsDelegationHandler(element, handler, delegationFn) :
+   vdsHandler(element, handler)
    
    fn.delegationSelector = delegation ? handler : null
    fn.originalHandler = originalHandler

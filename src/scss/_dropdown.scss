@@ -90,12 +90,18 @@
   @include border-radius($dropdown-item-border-radius);
   @include transition($dropdown-item-transition);
 
-  &:is(:hover, :focus, :active, .active) {
+  &:hover, &:focus {
     color: $dropdown-item-hover-color;
     background-color: $dropdown-item-hover-bg;
     outline: 0;
   }
 
+  &.active {
+    color: $color-basic-800;
+    background-color: $dropdown-item-active-bg;
+    outline: 0;
+  }
+  
   &:is(:disabled, .disabled) {
     pointer-events: none;
     opacity: $dropdown-item-disabled-opacity;

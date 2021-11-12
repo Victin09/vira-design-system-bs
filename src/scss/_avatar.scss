@@ -15,8 +15,8 @@
 }
 
 .avatar {
-    color: $white;
-    background-color: $light;
+    color: $color-basic-100;
+    background-color: var(--color-basic-100);
     display: inline-flex;
     align-items: center;
     justify-content: center;
