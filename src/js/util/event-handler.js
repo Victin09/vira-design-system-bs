@@ -188,6 +188,7 @@
    
    const uid = getUidEvent(originalHandler, originalTypeEvent.replace(namespaceRegex, ''))
    const fn = delegation ?
+
    vdsDelegationHandler(element, handler, delegationFn) :
    vdsHandler(element, handler)
    
