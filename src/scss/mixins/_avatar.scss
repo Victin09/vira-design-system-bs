@@ -1,6 +1,0 @@
-@mixin avatar($size) {
-    height: $size + px;
-    width: $size + px;
-    font-size: round(($size / 3) * 2) + px;
-    line-height: $size + px;
-}
