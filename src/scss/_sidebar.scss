@@ -1,0 +1,116 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style: none;
+  height: 100%;
+}
+
+.side-link {
+  display: block;
+  color: $nav-link-color;
+
+  &.disabled {
+    pointer-events: none;
+    opacity: $nav-link-disabled-opacity;
+  }
+}
+
+//
+// Sub menu
+//
+.side-menu {
+  padding-left: 0;
+  list-style: none;
+  > .side-item {
+    .side-link {
+      padding-left: 1.5em;
+    }
+  }
+}
+
+//
+// Tabs
+//
+
+.side-tabs {
+  padding: $nav-tabs-padding;
+  background-color: $nav-tabs-bg;
+  // @include border-radius($nav-tabs-border-radius);
+
+  .side-link {
+    padding: $nav-tabs-link-padding;
+    @include border-radius($nav-tabs-link-border-radius);
+    transition-property: color, background-color;
+  }
+
+  .side-link:is(.active, .show) {
+    color: $nav-tabs-link-active-color;
+    background-color: $nav-tabs-link-active-bg;
+  }
+
+  .side-link[aria-expanded="true"] {
+    color: $link-color;
+  }
+}
+
+//
+// Pills
+//
+
+.side-pills {
+  .side-link {
+    padding: $nav-pills-link-padding;
+    @include border-radius($nav-pills-link-border-radius);
+
+    &:is(.active, .show) {
+      color: $nav-pills-link-active-color;
+      background-color: $nav-pills-link-active-bg;
+    }
+  }
+}
+
+//
+// Justified variants
+//
+
+.side-fill {
+  > .side-link,
+  .side-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.side-justified {
+  > .side-link,
+  .side-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+.side-fill,
+.side-justified {
+  .side-item {
+    .side-link {
+      width: 100%; // Make sure button will grow
+    }
+  }
+}
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 node_modules
 dist
@@ -9,3 +10,7 @@ src/elements/view.js
 src/behaviors/view.js
 test.html
 play
+=======
+node_modules/
+dist/
+>>>>>>> 2f201adc389308386694aacdca9024298ff147c3

@@ -1,0 +1,531 @@
+// Variables
+
+/* Color system */
+$color-primary-100: #FBD2FF;
+$color-primary-200: #F2A4FF;
+$color-primary-300: #E378FF;
+$color-primary-400: #D156FF;
+$color-primary-500: #B41EFF;
+$color-primary-600: #8C15DB;
+$color-primary-700: #690FB7;
+$color-primary-800: #4B0993;
+$color-primary-900: #35057A;
+$color-success-100: #F6FECD;
+$color-success-200: #EBFD9B;
+$color-success-300: #DBF969;
+$color-success-400: #C9F444;
+$color-success-500: #B0ED09;
+$color-success-600: #91CB06;
+$color-success-700: #75AA04;
+$color-success-800: #5A8902;
+$color-success-900: #477101;
+$color-info-100: #CCFEF7;
+$color-info-200: #99FEF8;
+$color-info-300: #66FBFE;
+$color-info-400: #40EBFD;
+$color-info-500: #02D2FC;
+$color-info-600: #01A4D8;
+$color-info-700: #01A4D8;
+$color-info-800: #017BB5;
+$color-info-900: #005892;
+$color-warning-100: #FFF8D4;
+$color-warning-200: #FFF0AA;
+$color-warning-300: #FFE57F;
+$color-warning-400: #FFDB60;
+$color-warning-500: #FFCA2B;
+$color-warning-600: #DBA71F;
+$color-warning-700: #B78615;
+$color-warning-800: #93670D;
+$color-warning-900: #7A5208;
+$color-danger-100: #FFEDE0;
+$color-danger-200: #FFD6C2;
+$color-danger-300: #FFBBA4;
+$color-danger-400: #FFA08D;
+$color-danger-500: #FF7568;
+$color-danger-600: #DB4C4C;
+$color-danger-700: #B7343E;
+$color-danger-800: #932133;
+$color-danger-900: #7A132C;
+$color-basic-100: #ffffff;
+$color-basic-200: #f7f9fc;
+$color-basic-300: #edf1f7;
+$color-basic-400: #e4e9f2;
+$color-basic-500: #c5cee0;
+$color-basic-600: #8f9bb3;
+$color-basic-700: #2e3a59;
+$color-basic-800: #222b45;
+$color-basic-900: #1a2138;
+$color-basic-1000: #151a30;
+$color-basic-1100: #101426;
+
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio:   4.5 !default;
+// Customize the light and dark text colors for use in our color contrast function.
+$color-contrast-dark:      $color-basic-800 !default;
+$color-contrast-light:     $color-basic-100 !default;
+
+/* Themes */
+$primary: var(--color-primary-500) !default;
+$secondary: var(--color-basic-400) !default;
+$success: var(--color-success-500) !default;
+$info: var(--color-info-500) !default;
+$warning: var(--color-warning-500) !default;
+$danger: var(--color-danger-500) !default;
+
+$lightmode: (
+  "auto": var(--color-basic-100),
+  "auto-hover": var(--color-basic-300),
+  "auto-active": var(--color-basic-200),
+  "body-color": var($color-basic-200),
+  "headings-color": #212529,
+  "link-color": var(--primary),
+  "link-hover-color": var(--color-primary-700),
+  "fill-hover-color": var(--body-color),
+  "body-bg": var(--color-basic-200),
+  "card-bg": var(--color-basic-100),
+  "fill-bg": var(--color-basic-300),
+  "fill-hover-bg": var(--color-basic-500),
+  "form-check-input-bg": var(--color-basic-600),
+  "box-shadow": .25rem .5rem 1rem .5rem rgba($color-basic-800, .03)
+) !default;
+
+$darkmode: (
+  "auto": var(--color-basic-800),
+  "auto-hover": var(--color-basic-900),
+  "auto-active": var(--color-basic-700),
+  "headings-color": var(--color-basic-100),
+  "link-color": var(--color-basic-300),
+  "link-hover-color": var(--color-basic-500),
+  "fill-hover-color": var(--color-basic-300),
+  "body-bg": var(--color-basic-800),
+  "card-bg": var(--color-basic-800),
+  "fill-bg": var(--color-basic-800),
+  "fill-hover-bg": #545463,
+  "form-check-input-bg": #595969,
+  "box-shadow": none
+) !default;
+
+/* Options */
+$enable-rounded: true !default;
+$enable-shadows: true !default;
+$enable-transitions: true !default;
+$enable-reduced-motion: true !default;
+$enable-grid-classes: true !default;
+$enable-important-utilities: true !default;
+
+/* Grid */
+$grid-columns: 12 !default;
+$grid-gutter-width: 1rem !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+/* Container */
+$container-padding-x: $grid-gutter-width;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+/* Font */
+$font-family-inter: "Hack", monospace !default;
+
+$font-family-base: $font-family-inter !default;
+
+$font-size-base: 1rem !default;
+$font-size-sm: $font-size-base * .875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+
+$font-weight-lighter: lighter !default;
+$font-weight-thin: 100 !default;
+$font-weight-extra-light: 200 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-extra-bold: 800 !default;
+$font-weight-black: 900 !default;
+$font-weight-bolder: bolder !default;
+
+$font-weight-base: $font-weight-medium !default;
+
+$line-height-tight: 1 !default;
+$line-height-snug: 1.25 !default;
+$line-height-relaxed: 1.5 !default;
+$line-height-loose: 2 !default;
+
+$line-height-base: $line-height-relaxed !default;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+$font: $font-weight-base #{$font-size-base}/#{$line-height-base} $font-family-base !default;
+
+/* Border */
+$border-width: 1.5px !default;
+$border-color: var(--color-basic-400) !default;
+
+$border-radius: .5rem !default;
+$border-radius-pill: 50rem !default;
+
+/* Body */
+$body-color: var(--body-color) !default;
+$body-bg: var(--body-bg) !default;
+
+/* Typography */
+$hr-margin-y: 2rem !default;
+$hr-bg: var(--fill-bg) !default;
+$hr-height: $border-width !default;
+
+$headings-font-weight: $font-weight-semi-bold !default;
+$headings-line-height: 1.2 !default;
+$headings-color: var(--headings-color) !default;
+
+$small-font-size: $font-size-sm !default;
+
+/* Links */
+$link-color: var(--link-color) !default;
+$link-hover-color: var(--link-hover-color) !default;
+$link-transition: color .3s ease !default;
+
+/* Badges */
+$badge-font-size:                   .75em !default;
+$badge-font-weight:                 $font-weight-bold !default;
+$badge-color:                       $color-basic-100 !default;
+$badge-padding-y:                   .35em !default;
+$badge-padding-x:                   .65em !default;
+$badge-border-radius:               $border-radius !default;
+
+/* Forms */
+$input-padding-y: .75rem !default;
+$input-padding-x: 1rem !default;
+
+$input-padding-y-sm: .5rem !default;
+$input-padding-x-sm: 1rem !default;
+
+$input-padding-lg: 1rem !default;
+
+$input-bg: var(--fill-bg) !default;
+$input-border-radius: $border-radius !default;
+
+$input-placeholder-color: var(--body-color) !default;
+
+$input-disabled-opacity: .5 !default;
+
+$form-label-margin-bottom: 1rem !default;
+$form-label-font-weight: $font-weight-semi-bold !default;
+$form-label-color: $headings-color !default;
+
+$form-check-min-height: 1.5rem !default;
+$form-check-padding-start: 2em !default;
+
+$form-check-input-width: 1em !default;
+$form-check-input-margin-bottom: .25em !default;
+$form-check-input-bg: var(--form-check-input-bg) !default;
+$form-check-input-border: 1px solid transparent !default;
+
+$form-check-input-border-radius: .25em !default;
+$form-check-radio-border-radius: 50% !default;
+
+$form-check-input-active-filter: brightness(90%) !default;
+
+$form-check-input-checked-bg-color: var(--primary) !default;
+$form-check-input-checked-bg-size: .75em !default;
+
+$form-check-input-checked-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M4 8.5L6.5 11l6-6'/%3e%3c/svg%3e") !default;
+$form-check-radio-checked-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e") !default;
+
+$form-check-input-disabled-opacity: .5 !default;
+$form-check-label-disabled-opacity: $form-check-input-disabled-opacity !default;
+
+$form-switch-padding-start: 2.5em !default;
+$form-switch-width: 1.5em !default;
+$form-switch-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") !default;
+$form-switch-border-radius: 2em !default;
+$form-switch-transition: background-color .3s ease, background-position .3s ease !default;
+
+$form-switch-checked-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") !default;
+
+/* Input group */
+$input-group-item-padding-x: 1rem !default;
+$input-group-item-bg: var(--fill-bg) !default;
+$input-group-item-border-radius: $border-radius !default;
+
+/* Buttons */
+$btn-padding-y: .75rem !default;
+$btn-padding-x: 1.5rem !default;
+$btn-padding-y-sm: .5rem !default;
+$btn-padding-x-sm: 1rem !default;
+$btn-padding-y-lg: 1rem !default;
+$btn-padding-x-lg: 2rem !default;
+
+$btn-border-radius: $border-radius !default;
+$btn-transition: color .3s ease, background-color .3s ease;
+$btn-disabled-opacity: .5 !default;
+
+$btn-primary-color: var(--color-basic-100) !default;
+$btn-primary-bg: var(--primary) !default;
+$btn-primary-hover-bg: var(--color-primary-700) !default;
+$btn-primary-active-bg: var(--color-primary-600) !default;
+
+$btn-secondary-color: var(--color-basic-800) !default;
+$btn-secondary-bg: var(--secondary) !default;
+$btn-secondary-hover-bg: var(--color-basic-600) !default;
+$btn-secondary-active-bg: var(--color-basic-500) !default;
+
+$btn-success-color: var(--color-basic-800) !default;
+$btn-success-bg: var(--success) !default;
+$btn-success-hover-bg: var(--color-success-700) !default;
+$btn-success-active-bg: var(--color-success-600) !default;
+
+$btn-info-color: var(--color-basic-800) !default;
+$btn-info-bg: var(--info) !default;
+$btn-info-hover-bg: var(--color-info-700) !default;
+$btn-info-active-bg: var(--color-info-600) !default;
+
+$btn-warning-color: var(--color-basic-800) !default;
+$btn-warning-bg: var(--warning) !default;
+$btn-warning-hover-bg: var(--color-warning-700) !default;
+$btn-warning-active-bg: var(--color-warning-600) !default;
+
+$btn-danger-color: var(--color-basic-100) !default;
+$btn-danger-bg: var(--danger) !default;
+$btn-danger-hover-bg: var(--color-danger-700) !default;
+$btn-danger-active-bg: var(--color-danger-600) !default;
+
+$btn-light-color: var(--color-basic-800) !default;
+$btn-light-bg: var(--color-basic-100) !default;
+$btn-light-hover-bg: var(--color-basic-300) !default;
+$btn-light-active-bg: var(--color-basic-200) !default;
+
+$btn-dark-color: var(--color-basic-100) !default;
+$btn-dark-bg: var(--color-basic-800) !default;
+$btn-dark-hover-bg: var(--color-basic-900) !default;
+$btn-dark-active-bg: var(--color-basic-700) !default;
+
+$btn-auto-color: var(--body-color) !default;
+$btn-auto-bg: var(--auto) !default;
+$btn-auto-hover-bg: var(--auto-hover) !default;
+$btn-auto-active-bg: var(--auto-active) !default;
+
+/* Transitions */
+$transition-fade: opacity .15s linear !default;
+$transition-collapse: height .35s ease !default;
+$transition-fill: fill .3s ease !default;
+
+/* Dropdown */
+$dropdown-z-index: 1 !default;
+$dropdown-min-width: 12rem !default;
+$dropdown-padding: .75rem !default;
+$dropdown-spacer: .25rem !default;
+$dropdown-bg: var(--fill-bg) !default;
+$dropdown-border-radius: $border-radius !default;
+
+$dropdown-item-padding: .75rem !default;
+$dropdown-item-color: var(--body-color) !default;
+$dropdown-item-hover-color: var(--fill-hover-color) !default;
+$dropdown-item-hover-bg: var(--fill-hover-bg) !default;
+$dropdown-item-active-bg: var(--primary) !default;
+$dropdown-item-border-radius: $border-radius !default;
+$dropdown-item-transition: color .3s ease, background-color .3s ease;
+$dropdown-item-disabled-opacity: .5 !default;
+
+/* Tables */
+$table-cell-padding-y:        .5rem !default;
+$table-cell-padding-x:        .5rem !default;
+$table-cell-padding-y-sm:     .25rem !default;
+$table-cell-padding-x-sm:     .25rem !default;
+$table-cell-vertical-align:   top !default;
+$table-color:                 $body-color !default;
+$table-bg:                    transparent !default;
+$table-accent-bg:             transparent !default;
+$table-th-font-weight:        null !default;
+$table-striped-color:         $table-color !default;
+$table-striped-bg-factor:     .05 !default;
+$table-striped-bg:            rgba($color-basic-800, $table-striped-bg-factor) !default;
+$table-active-color:          $table-color !default;
+$table-active-bg-factor:      .1 !default;
+$table-active-bg:             rgba($color-basic-800, $table-active-bg-factor) !default;
+$table-hover-color:           $table-color !default;
+$table-hover-bg-factor:       .075 !default;
+$table-hover-bg:              rgba($color-basic-800, $table-hover-bg-factor) !default;
+$table-border-factor:         .1 !default;
+$table-border-width:          $border-width !default;
+$table-border-color:          $border-color !default;
+$table-striped-order:         odd !default;
+$table-group-separator-color: currentColor !default;
+$table-caption-color:         $color-basic-600 !default;
+$table-bg-scale:              -80% !default;
+
+/* List group */
+$list-group-color:                  $color-basic-800 !default;
+$list-group-bg:                     transparent !default;
+$list-group-border-color:           $border-color;
+$list-group-border-width:           $border-width !default;
+$list-group-border-radius:          $border-radius !default;
+$list-group-item-padding-y:         1em * .5 !default;
+$list-group-item-padding-x:         1em !default;
+$list-group-item-bg-scale:          -80% !default;
+$list-group-item-color-scale:       40% !default;
+$list-group-hover-bg:               rgba($color-basic-800, $table-hover-bg-factor) !default;
+$list-group-active-color:           var(--color-basic-200) !default;
+$list-group-active-bg:              $primary !default;
+$list-group-active-border-color:    $list-group-active-bg !default;
+$list-group-disabled-color:         var(--color-basic-600) !default;
+$list-group-disabled-bg:            $list-group-bg !default;
+$list-group-action-color:           $color-basic-600 !default;
+$list-group-action-hover-color:     $list-group-action-color !default;
+$list-group-action-active-color:    $body-color !default;
+$list-group-action-active-bg:       $color-basic-600 !default;
+
+/* Avatar */
+$avatar-sizes: 24, 32, 48, 64, 96, 128 !default;
+
+/* Navs */
+$nav-link-color: var(--body-color) !default;
+$nav-link-disabled-opacity: .5 !default;
+
+$nav-tabs-padding: .5rem !default;
+$nav-tabs-bg: var(--color-basic-100) !default;
+$nav-tabs-border-radius: $border-radius !default;
+
+$nav-tabs-link-padding: .5rem !default;
+$nav-tabs-link-border-radius: $border-radius !default;
+
+$nav-tabs-link-active-color: var(--link-color) !default;
+$nav-tabs-link-active-bg: var(--fill-hover-bg) !default;
+
+$nav-pills-link-padding-y: .75rem !default;
+$nav-pills-link-padding-x: 1rem !default;
+$nav-pills-link-padding: $nav-pills-link-padding-y $nav-pills-link-padding-x;
+$nav-pills-link-border-radius: $border-radius !default;
+
+$nav-pills-link-active-color: var(--color-basic-100) !default;
+$nav-pills-link-active-bg: var(--primary) !default;
+
+// Navbar
+$navbar-padding-y: 1.5rem !default;
+$navbar-bg: var(--card-bg) !default;
+$navbar-box-shadow: var(--box-shadow) !default;
+$navbar-dropdown-spacer: 1rem !default;
+$navbar-nav-spacer: 2rem !default;
+$navbar-nav-item-spacer: 1rem !default;
+$navbar-nav-link-color: var(--link-color) !default;
+$navbar-input-max-width: 9rem !default;
+
+/* Card */
+$card-padding: 2rem !default;
+$card-bg: var(--card-bg) !default;
+$card-border-radius: $border-radius !default;
+$card-box-shadow: var(--box-shadow) !default;
+
+/* Modals */
+$modal-z-index: 5 !default;
+
+$modal-dialog-margin: .5rem !default;
+$modal-dialog-margin-y-sm-up: 1.75rem !default;
+
+$modal-content-bg: var(--card-bg) !default;
+$modal-content-border-radius: $border-radius !default;
+
+$modal-backdrop-z-index: 4 !default;
+$modal-backdrop-bg: var(--color-basic-800) !default;
+$modal-backdrop-opacity: .5 !default;
+
+$modal-header-padding-y: 2rem !default;
+$modal-header-padding-x: 1rem !default;
+$modal-header-padding: $modal-header-padding-y $modal-header-padding-x !default;
+$modal-header-padding-sm-up: 2rem !default;
+$modal-header-z-index: 1 !default;
+$modal-header-box-shadow: var(--box-shadow) !default;
+$modal-body-bg: var(--body-bg) !default;
+
+$modal-sm: 300px !default;
+$modal-md: 500px !default;
+$modal-lg: 800px !default;
+$modal-xl: 1140px !default;
+
+$modal-transition: transform .3s ease !default;
+$modal-fade-transform: translate(0, -50px) !default;
+
+/* Links */
+$link-primary: var(--primary) !default;
+$link-primary-hover: #0b5ed7 !default;
+
+$link-secondary: var(--secondary) !default;
+$link-secondary-hover: #5c636a !default;
+
+$link-success: var(--success) !default;
+$link-success-hover: #157347 !default;
+
+$link-info: var(--info) !default;
+$link-info-hover: #31d2f2 !default;
+
+$link-warning: var(--warning) !default;
+$link-warning-hover: #ffca2c !default;
+
+$link-danger: var(--danger) !default;
+$link-danger-hover: #bb2d3b !default;
+
+$link-light: var(--color-basic-100) !default;
+$link-light-hover: #e8e8e8 !default;
+
+$link-dark: var(--color-basic-800) !default;
+$link-dark-hover: #444450 !default;
+
+$link-body: var(--body-color) !default;
+$link-body-hover: var(--link-hover-color) !default;
+
+$link-headings: var(--headings-color) !default;
+$link-headings-hover: var(--link-hover-color) !default;
+
+/* Breadcrumbs */
+$breadcrumb-font-size:              null !default;
+$breadcrumb-padding-y:              0 !default;
+$breadcrumb-padding-x:              0 !default;
+$breadcrumb-item-padding-x:         .5rem !default;
+$breadcrumb-margin-bottom:          1rem !default;
+$breadcrumb-bg:                     null !default;
+$breadcrumb-divider-color:          $color-basic-600 !default;
+$breadcrumb-active-color:           $color-basic-600 !default;
+$breadcrumb-divider:                quote('/') !default;
+$breadcrumb-divider-flipped:        $breadcrumb-divider !default;
+$breadcrumb-border-radius:          null !default;
+
+/* Positions */
+$fixed-z-index: 3 !default;
+$sticky-z-index: 2 !default;
+
+$position-values: (
+  0: 0,
+  50: 50%,
+  100: 100%
+) !default;
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 5
+) !default;
+
+/* Callout */
+$callout-bg: var(--color-basic-100) !default;

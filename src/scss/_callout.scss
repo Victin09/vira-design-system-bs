@@ -1,0 +1,30 @@
+.callout {
+    padding: 2rem;
+    margin: 0;
+    background-color: $callout-bg;
+    border-radius: .5rem;
+
+    &.callout-success {
+        border-left-style: solid;
+        border-left-width: 4px;
+        border-left-color: $success;
+    }
+
+    &.callout-info {
+        border-left-style: solid;
+        border-left-width: 4px;
+        border-left-color: $info;
+    }
+
+    &.callout-warning {
+        border-left-style: solid;
+        border-left-width: 4px;
+        border-left-color: $warning;
+    }
+
+    &.callout-danger {
+        border-left-style: solid;
+        border-left-width: 4px;
+        border-left-color: $danger;
+    }
+}
