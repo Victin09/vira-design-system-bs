@@ -1,0 +1,96 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "tenphi",
+      "name": "Andrey Yamanov",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/327209?v=4",
+      "profile": "https://tenphi.me",
+      "contributions": [
+        "code",
+        "bug",
+        "business",
+        "design",
+        "doc",
+        "ideas",
+        "test"
+      ]
+    },
+    {
+      "login": "shubham-kaushal",
+      "name": "Shubham Kaushal",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/63925481?v=4",
+      "profile": "https://github.com/shubham-kaushal",
+      "contributions": [
+        "bug",
+        "business",
+        "design",
+        "doc",
+        "ideas",
+        "test"
+      ]
+    },
+    {
+      "login": "timeshift92",
+      "name": "Nurbek Akhmedov",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/13614530?v=4",
+      "profile": "https://github.com/timeshift92",
+      "contributions": [
+        "test",
+        "bug",
+        "ideas"
+      ]
+    },
+    {
+      "login": "katrinLuna",
+      "name": "katrinLuna",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/29942902?v=4",
+      "profile": "https://www.facebook.com/profile.php?id=100003949341124",
+      "contributions": [
+        "doc",
+        "test",
+        "bug",
+        "ideas"
+      ]
+    },
+    {
+      "login": "ovr",
+      "name": "Dmitry Patsura",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/572096?v=4",
+      "profile": "https://resume.dmtry.me/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "andrey-skl",
+      "name": "Andrey Skladchikov",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4318513?v=4",
+      "profile": "https://github.com/andrey-skl",
+      "contributions": [
+        "bug",
+        "ideas"
+      ]
+    },
+    {
+      "login": "YakovlevCoded",
+      "name": "Leonid Yakovlev",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/30028681?v=4",
+      "profile": "https://dev.to/leonid_cube_dev",
+      "contributions": [
+        "ideas",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "vds",
+  "projectOwner": "vira",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
