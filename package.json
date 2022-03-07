@@ -1,0 +1,61 @@
+{
+    "name": "vira-design-system",
+    "version": "0.0.2",
+    "description": "Front-end framework with a built-in dark mode and full customizability using CSS variables; great for building dashboards and tools",
+    "source": "js/index.js",
+    "main": "dist/js/vira-design-system.js",
+    "module": "dist/js/vira-design-system.esm.js",
+    "scripts": {
+        "css": "npm run css-compile && npm run css-prefix && npm run css-rtl && npm run css-minify",
+        "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/css/",
+        "css-rtl": "cross-env NODE_ENV=RTL postcss --config postcss.config.js --dir \"dist/css\" --ext \".rtl.css\" \"dist/css/*.css\" \"!dist/css/*.min.css\" \"!dist/css/*.rtl.css\"",
+        "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*.css\" \"!dist/css/*.min.css\"",
+        "css-prefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
+        "js": "microbundle",
+        "build": "npm run css && npm run js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ksenginew/vira-design-system.git"
+    },
+    "keywords": [
+        "halfmoon",
+        "vira-design-system",
+        "css",
+        "javascript",
+        "dark-theme",
+        "dark-mode",
+        "dashboard",
+        "web-framework",
+        "css-framework",
+        "css-variables",
+        "css-custom-properties"
+    ],
+    "author": "Kavindu Santhusa",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ksenginew/vira-design-system/issues"
+    },
+    "homepage": "https://github.com/ksenginew/vira-design-system#readme",
+    "devDependencies": {
+        "autoprefixer": "^10.4.2",
+        "clean-css-cli": "^5.5.0",
+        "cross-env": "^7.0.3",
+        "microbundle": "^0.14.2",
+        "postcss": "^8.4.5",
+        "postcss-cli": "^9.1.0",
+        "postcss-combine-duplicated-selectors": "^10.0.3",
+        "postcss-preset-env": "^7.2.3",
+        "postcss-sort-media-queries": "^4.2.1",
+        "rtlcss": "^3.5.0",
+        "sass": "^1.48.0"
+    },
+    "style": "dist/css/vira-design-system.min.css",
+    "sass": "scss/vira-design-system.scss",
+    "files": [
+        "scss",
+        "dist",
+        "src"
+    ]
+}
