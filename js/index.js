@@ -262,11 +262,21 @@ var halfmoon = {
 
     // Toggles sidebar
     toggleSidebar: function () {
+        console.log('entro sidebar', this.pageWrapper);
         if (this.pageWrapper) {
+            console.log('this.pageWrapper.getAttribute()', this.pageWrapper.getAttribute('data-sidebar-hidden'))
             if (this.pageWrapper.getAttribute('data-sidebar-hidden')) {
                 this.pageWrapper.removeAttribute('data-sidebar-hidden');
             } else {
                 this.pageWrapper.setAttribute('data-sidebar-hidden', 'hidden');
+            }
+        } else {
+            const pageWrapper = document.getElementsByClassName('page-wrapper')[0]
+            console.log('pageWrapper', pageWrapper)
+            if (pageWrapper.getAttribute('data-sidebar-hidden')) {
+                pageWrapper.removeAttribute('data-sidebar-hidden');
+            } else {
+                pageWrapper.setAttribute('data-sidebar-hidden', 'hidden');
             }
         }
     },
