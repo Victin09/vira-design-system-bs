@@ -23,7 +23,7 @@
     "url": "git+https://github.com/Victin09/vira-design-system.git"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.15",
+    "@babel/core": "^7.17.7",
     "@github/hotkey": "^1.4.4",
     "@open-wc/testing": "^2.5.32",
     "@rollup/plugin-commonjs": "^19.0.0",
