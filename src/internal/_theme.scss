@@ -1,0 +1,51 @@
+/* v1 Color scheme for Vira Design System */
+
+$vds--black: #000000;
+$vds--white: #ffffff;
+$vds--primary: #f03d4d;
+$vds--primary-light: #ffdadd;
+$vds--accent-hover: #d62939;
+$vds--accent-border: #c21b2b;
+$vds--light: #f6f9fc;
+$vds--light-gray: #f8f9fa;
+$vds--gray: #d5d7dc;
+$vds--dark-gray: #909090;
+$vds--dark: #363636;
+$vds--link: #5e5cc7;
+$vds--link-dark: #4643e2;
+$vds--info: #2972fa;
+$vds--success: #0dd157;
+$vds--warning: #fab633;
+$vds--danger: #fb4143;
+
+$vds--light-hover: #d9e6f2;
+$vds--dark-hover: #424242;
+$vds--info-hover: #2368e9;
+$vds--link-hover: #f8f7ff;
+$vds--success-hover: #00b147;
+$vds--warning-hover: #f9a90e;
+$vds--danger-hover: #f1393c;
+
+$vds--fg: #0f172a;
+$vds--bg: $vds--white;
+
+$vds--select-bg: rgba(0, 161, 255, 0.2);
+$vds--input-border: rgb(61, 171, 240);
+
+$vds--code-bg: var($vds--primary-light);
+$vds--code-fg: #dc4753;
+
+$vds--form-group-bg: var($vds--light-gray);
+$vds--form-group-fg: var($vds--dark-gray);
+
+$toast-primary-bg: rgba(49, 59, 80, 0.9);
+
+$tooltip-primary-bg: rgba(69, 77, 93, 0.9);
+
+$placeholder-fg: #a9a9a9;
+
+$animation-duration: 0.2s;
+$focus-opacity: 0.55;
+
+$focus-size: 0 0 0.1rem 0.15rem;
+$focus-color: rgba(240, 61, 77, 0.13);

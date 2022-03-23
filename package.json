@@ -1,86 +1,76 @@
 {
-  "name": "vds",
-  "version": "1.1.2",
-  "description": "Atomic UI Framework based on Web Components and Runtime CSS Generation for rapidly building interfaces that follow your Design System",
-  "module": "dist/index.js",
-  "keywords": [
-    "css-framework",
-    "runtime-css-framework",
-    "functional-css",
-    "design-system",
-    "web-components",
-    "responsive",
-    "markup-language",
-    "utility-classes",
-    "css-generator",
-    "ui-components",
-    "ui-framework",
-    "themes",
-    "vds"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Victin09/vira-design-system.git"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.13.15",
-    "@github/hotkey": "^1.4.4",
-    "@open-wc/testing": "^2.5.32",
-    "@rollup/plugin-commonjs": "^19.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.0.0",
-    "@rollup/plugin-replace": "^2.4.2",
-    "@size-limit/preset-big-lib": "^4.9.1",
-    "@web/test-runner": "^0.13.2",
-    "date-fns": "^2.20.1",
-    "email-validator": "^2.0.4",
-    "inline-assets": "^1.4.8",
-    "json-form-data": "^1.7.2",
-    "parcel-bundler": "^1.12.5",
-    "parcel-plugin-svelte": "^4.0.8",
-    "remarkable": "^2.0.1",
-    "remarkable-numl": "^0.1.7",
-    "rollup": "^2.45.1",
-    "rollup-plugin-svelte": "^7.1.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "size-limit": "^4.10.2",
-    "svelte": "^3.37.0"
+  "name": "vds-ui",
+  "version": "0.7.0",
+  "description": "A lightweight UI framework written in SCSS",
+  "main": "./dist/vds-.min.css",
+  "filename": "vds-.min.css",
+  "directories": {
+    "doc": "docs"
   },
   "scripts": {
-    "build": "mkdir -p dist && rm -vrf dist/* && rollup -c && size-limit",
-    "build-only": "mkdir -p dist && rm -vrf dist/* && rollup -c",
-    "dev": "rollup -c -w",
-    "test": "web-test-runner test/**/*.test.js --node-resolve",
-    "test-watch": "web-test-runner test/**/*.test.js --node-resolve --watch",
-    "play": "mkdir -p play && rm -vrf play/* && parcel --out-dir play index.html",
-    "build-play": "mkdir -p playground && rm -vrf playground/* && parcel build --out-dir playground index.html",
-    "now": "npm run build-play && now --prod playground --name vds",
-    "size": "size-limit",
-    "start": "npm run play",
-    "generate-docs": "node ./generate/backend.js",
-    "prepublishOnly": "npm run build-only && npm run test",
-    "publish-beta": "npm publish --tag beta"
+    "test": "jest",
+    "build": "gulp minify",
+    "watch": "gulp watch",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
-  "files": [
-    "dist"
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": "git+https://github.com/Victin09/vira-design-system.git",
+  "keywords": [
+    "vds-",
+    "css",
+    "UI",
+    "framework"
   ],
-  "sideEffects": false,
-  "size-limit": [
-    {
-      "name": "Vds Core",
-      "path": [
-        "dist/index.js"
-      ]
-    }
-  ],
+  "author": "Víctor Gómez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Victin09/vira-design-system/issues"
+  },
+  "homepage": "https://github.com/Victin09/vira-design-system",
+  "autoupdate": {
+    "source": "git",
+    "target": "git://github.com/Victin09/vira-design-system.git",
+    "basePath": "dist",
+    "files": [
+      "vds-.min.css",
+      "vds-.css"
+    ]
+  },
+  "devDependencies": {
+    "clipboard": "^2.0.6",
+    "glob": "^7.2.0",
+    "global": "^4.3.1",
+    "gulp": "^4.0.2",
+    "gulp-build": "^0.5.3",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^2.0.5",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^4.1.1",
+    "gulp-size": "^3.0.0",
+    "jest": "^27.3.1",
+    "sass": "^1.43.4",
+    "sass-true": "^6.0.1"
+  },
   "browserslist": [
-    "iOS 10",
-    "last 10 Chrome versions",
-    "last 5 Firefox versions",
-    "last 3 Safari versions"
+    "last 1 major version",
+    ">= 1%",
+    "Chrome >= 36",
+    "Firefox >= 38",
+    "Edge >= 12",
+    "Explorer >= 10",
+    "iOS >= 9",
+    "Safari >= 9",
+    "Android >= 4.4",
+    "Opera >= 30"
   ],
   "dependencies": {
-    "src": "^1.1.2"
+    "@snyk/protect": "^1.707.0"
   },
-  "license": "MIT"
+  "snyk": true
 }

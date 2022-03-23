@@ -1,0 +1,62 @@
+@use "../internal" as *;
+
+$generate-utility: should-generate-classes($CODE);
+
+@if $generate-utility {
+  /* CODE */
+  code {
+    --vds--code-label-fg: #{fill("gray", "600")};
+    padding: 0.3rem;
+    margin: 0.5em 0;
+    overflow: auto;
+    background-color: var(--vds--code-bg);
+    color: var(--vds--code-fg);
+    border-radius: 3px;
+
+    &:before {
+      color: var(--vds--code-label-fg);
+      content: attr(data-lang);
+      font-size: 0.9rem;
+      position: absolute;
+      right: 1rem;
+      top: 0.7rem;
+    }
+
+    /* Dark theme for code */
+    &.dark {
+      --vds--code-bg: #{fill("gray", "800")};
+      --vds--code-fg: #{fill("gray", "000")};
+      --vds--border-left-bg: #{fill("gray", "900")};
+      --vds--code-label-fg: #{fill("gray", "400")};
+    }
+  }
+
+  pre > code {
+    --vds--code-bg: #{fill("gray", "000")};
+    --vds--code-fg: #{fill("gray", "800")};
+    --vds--border-left-bg: #{fill("gray", "200")};
+    background-color: var(--vds--code-bg);
+    font-size: 14px;
+    display: block;
+    padding: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    text-align: left;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    border-left: 0.3rem solid var(--vds--border-left-bg);
+    margin: 0;
+    position: relative;
+    color: var(--vds--code-fg);
+
+    &[data-lang]:not([data-lang=""]) {
+      padding: 2rem 1.5rem 1rem;
+    }
+  }
+}
