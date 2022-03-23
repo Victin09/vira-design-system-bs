@@ -149,7 +149,7 @@ Or clone locally:
 
 ```bash
 $ git clone git@github.com:Victin09/vira-design-system.git
-$ cd cirrus
+$ cd vds
 $ yarn install
 $ yarn watch
 ```
