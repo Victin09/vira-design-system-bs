@@ -1,0 +1,36 @@
+@forward "internal";
+
+// @use "vds--ext" with (
+//   $config: (
+//     viewports: (
+//       CLEARFIX: true,
+//       DISPLAY: true,
+//       FLEX: true,
+//       FLOAT: true,
+//       OVERFLOW: true,
+//       POSITION: true,
+//       TEXT: true,
+//       MARGIN-PADDING: true,
+//       OPACITY: true,
+//       BACKGROUND-OPACITY: true,
+//       COLOR-OPACITY: true,
+//       WIDTHS: true,
+//       HEIGHTS: true,
+//       ZINDEX: true,
+//       ABSOLUTES: true,
+//       GAP: true,
+//       MIN-HEIGHT: true,
+//       MAX-HEIGHT: true,
+//       MIN-WIDTH: true,
+//       MAX-WIDTH: true,
+//       GRID: true,
+//       ROUND: true,
+//       SHADOWS: true,
+//       LETTER-SPACING: true,
+//     ),
+//   )
+// );
+
+// @forward "vds--ext";
+@forward "builds/core.scss";
+@forward "builds/ext.scss";

@@ -13,9 +13,76 @@ const environment = {
     isCi: process.env.CI ?? false, // Github actions default variable is always set to true
 };
 
-generateGulpBuild(`ext`, `src/vds--ext.scss`, `vds-`);
-generateGulpBuild(`core`, `src/vds--core.scss`, `vds--core`);
-generateGulpBuild(`all`, `src/vds--all.scss`, `vds--all`);
+// generateGulpBuild(`vds`, `src/vds.scss`, `vds`);
+// function generateGulpBuild(taskName, sassFilePath, outputName) {
+//     gulp.task(taskName, () => {
+//         console.log('TASKNAME', {taskName})
+//         return gulp
+//             .src([sassFilePath])
+//             .pipe($.concat(`${outputName}.css`))
+//             .pipe($.header(head))
+//             .pipe($.size())
+//             .pipe(gulp.dest('./dist/'))
+//             .on('error', (err) => {
+//                 console.error(err);
+//                 process.exit(1);
+//             });
+//     });
+
+//     gulp.task(
+//         `minify-${taskName}`,
+//         gulp.series(taskName, () => {
+//             return gulp
+//                 .src([`./dist/${outputName}.css`])
+//                 .pipe(
+//                     minify({
+//                             level: {
+//                                 1: {
+//                                     all: true,
+//                                     normalizeUrls: false,
+//                                 },
+//                                 2: {
+//                                     all: false,
+//                                     removeDuplicateRules: true,
+//                                     reduceNonAdjacentRules: true,
+//                                     removeDuplicateFontRules: true,
+//                                     removeDuplicateMediaBlocks: true,
+//                                     mergeAdjacentRules: true,
+//                                     mergeIntoShorthands: true,
+//                                     mergeMedia: true,
+//                                     mergeNonAdjacentRules: true,
+//                                     mergeSemantically: false,
+//                                     removeEmpty: true,
+//                                 },
+//                             },
+//                         },
+//                         (details) => {
+//                             console.log('FULL');
+//                             console.log(details.name + ': ' + details.stats.originalSize);
+//                             console.log(`${outputName}.min.css ${details.stats.minifiedSize}`);
+//                         }
+//                     )
+//                 )
+//                 .pipe($.header(head))
+//                 .pipe($.size())
+//                 .pipe($.concat(`${outputName}.min.css`))
+//                 .pipe(gulp.dest('./dist/'))
+//                 .on('error', (err) => {
+//                     console.error(`Error encountered for task ${taskName}. Failing.`);
+//                     process.exit(1);
+//                 });
+//         })
+//     );
+// }
+
+// gulp.task('watch', () => gulp.watch('./src/**/*.scss', gulp.parallel('minify-vds')));
+
+// gulp.task('default', gulp.parallel('minify-vds'));
+
+
+generateGulpBuild(`ext`, `src/vds-ext.scss`, `vds-`);
+generateGulpBuild(`core`, `src/vds-core.scss`, `vds--core`);
+generateGulpBuild(`all`, `src/vds-all.scss`, `vds--all`);
 
 // source file name
 // file name
@@ -23,16 +90,6 @@ function generateGulpBuild(taskName, sassFilePath, outputName) {
     gulp.task(taskName, () => {
         return gulp
             .src([sassFilePath])
-            .pipe(
-                sass.sync().on('error', function(err) {
-                    sass.logError.call(this, err);
-
-                    // Fail job if in CI
-                    if (environment.isCi) {
-                        throw err;
-                    }
-                })
-            )
             .pipe($.concat(`${outputName}.css`))
             .pipe($.header(head))
             .pipe($.size())

@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+:root {
+  --vds-fg: #010101;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  --scrollbar-bg: #fcfdfd;
+  --scrollbar-color: #c5c1b9;
+  --scrollbar-corner-bg: #b7b7b7;
+  --scrollbar-thumb-bg: #dddddd;
+}
+
+iframe {
+  height: 500px;
+}
+
+main > div:focus {
+  box-shadow: none;
+}
+
+table tbody {
+  max-height: 250px;
+}
+
+.content {
+  width: 95%;
+}
+
+.padtop {
+  padding-top: 6rem;
+}
+
+.tabpage {
+  display: none;
+}
+
+.tag {
+  margin-right: 0.25rem;
+}
+
+.tabpage.tabpage--shown {
+  display: block;
+}
+
+.desc {
+  font-size: 11px;
+  font-family: "Nunito Sans";
+  margin-left: 10px;
+  vertical-align: bottom;
+}
+
+.form-ext-control {
+  margin-bottom: 0.75rem;
+}
+
+.tree-nav-body .tree-nav {
+  min-width: 17rem !important;
+}
+
+/* Code */
+.class-table pre > code {
+  border-left: none;
+  padding: 0;
+}
+
+code {
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--scrollbar-bg);
+  color: var(--scrollbar-color);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: var(--scrollbar-corner-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    width: 80%;
+  }
+}

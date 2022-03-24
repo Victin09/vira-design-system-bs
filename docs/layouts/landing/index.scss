@@ -1,0 +1,50 @@
+.header {
+  &.header-landing {
+    backdrop-filter: blur(1px);
+    padding: 1.5rem;
+    // --header-link-color: #fff;
+    // --header-link-color-hover: #ddd;
+
+    &.translucent {
+      background: rgba(255, 255, 255, 0.87) !important;
+    }
+  }
+
+  &.header-light {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+  }
+  button,
+  a {
+    color: inherit;
+  }
+
+  button a {
+    color: inherit;
+    font-weight: semibold;
+  }
+}
+
+.transition {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.0001),
+    #fff
+  );
+  bottom: 0;
+  height: 175px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s;
+
+  &.transition--visible {
+    opacity: 1;
+    transition: all 0.3s;
+  }
+
+  &.transition--tall {
+    height: 550px;
+  }
+}
