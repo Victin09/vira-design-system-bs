@@ -1,93 +1,108 @@
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { loadScripts } from '../../../utils/scripts';
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { loadScripts } from "../../../utils/scripts";
 
-import runGtag from '../../../static/js/gtag.js';
+import runGtag from "../../../static/js/gtag.js";
 export interface HeaderProps {
-    extraClasses?: string;
-    centerNavChildren?: JSX.Element;
-    rightNavChildren?: JSX.Element;
+  extraClasses?: string;
+  centerNavChildren?: JSX.Element;
+  rightNavChildren?: JSX.Element;
 }
 
 export const Header: React.FC<HeaderProps> = (props) => {
-    const [menuShown, setMenuShown] = useState(false);
+  const [menuShown, setMenuShown] = useState(false);
 
-    loadScripts(['https://www.googletagmanager.com/gtag/js?id=G-EDX1VR130P'], () => runGtag(), []);
+  loadScripts(
+    ["https://www.googletagmanager.com/gtag/js?id=G-EDX1VR130P"],
+    () => runGtag(),
+    []
+  );
 
-    useEffect(() => {
-        runGtag();
-    });
+  useEffect(() => {
+    runGtag();
+  });
 
-    useEffect(() => {
-        const hamburgerButtonClick = (e: any) => {
-            const headerMenu = document.querySelector('#header-menu');
-            const navButton = document.querySelector('.nav-btn');
-            const header = document.querySelector('#header');
+  useEffect(() => {
+    const hamburgerButtonClick = (e: any) => {
+      const headerMenu = document.querySelector("#header-menu");
+      const navButton = document.querySelector(".nav-btn");
+      const header = document.querySelector("#header");
 
-            headerMenu?.classList.toggle('active');
-            navButton?.classList.toggle('active');
-            header?.classList.toggle('translucent');
+      headerMenu?.classList.toggle("active");
+      navButton?.classList.toggle("active");
+      header?.classList.toggle("translucent");
 
-            setMenuShown(navButton.classList.contains('active'));
-        };
-        const hamburgerButton = document.querySelector('#header-btn')!;
-        hamburgerButton.addEventListener('click', hamburgerButtonClick);
+      setMenuShown(navButton.classList.contains("active"));
+    };
+    const hamburgerButton = document.querySelector("#header-btn")!;
+    hamburgerButton.addEventListener("click", hamburgerButtonClick);
 
-        return () => hamburgerButton.removeEventListener('click', hamburgerButtonClick);
-    }, []);
+    return () =>
+      hamburgerButton.removeEventListener("click", hamburgerButtonClick);
+  }, []);
 
-    return (
-        <div
-            id="header"
-            className={`header header-fixed unselectable header-animated doc-header ${menuShown ? 'translucent' : ''} ${
-                props.extraClasses ?? ''
-            }`}
-        >
-            <div className="w-100p">
-                <div className="header__contents mx-auto">
-                    <div className="header-brand">
-                        <div className="nav-item no-hover">
-                            <Link href="/">
-                                <a>
-                                    <h6 className="title">Vira Design System</h6>
-                                </a>
-                            </Link>
-                        </div>
-                        <div className="nav-item nav-btn" id="header-btn">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div className="header-nav" id="header-menu">
-                        <div className="nav-left">
-                            <div className="nav-item">
-                                <a
-                                    className="smoothScroll"
-                                    href="/fundamentals/colors"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <span className="icon">
-                                        <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'palette']} />
-                                    </span>
-                                </a>
-                            </div>
-                            <div className="nav-item">
-                                <a className="smoothScroll" href="/buttons">
-                                    <span className="icon">
-                                        <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'pencil-ruler']} />
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-
-                        {props.centerNavChildren && <div className="nav-center">{props.centerNavChildren}</div>}
-                        {props.rightNavChildren && <div className="nav-right">{props.rightNavChildren}</div>}
-                    </div>
-                </div>
+  return (
+    <div
+      id="header"
+      className={`header header-fixed unselectable header-animated doc-header ${
+        menuShown ? "translucent" : ""
+      } ${props.extraClasses ?? ""}`}
+    >
+      <div className="w-100p">
+        <div className="header__contents mx-auto">
+          <div className="header-brand">
+            <div className="nav-item no-hover">
+              <Link href="/">
+                <a>
+                  <h6 className="title">Vira Design System</h6>
+                </a>
+              </Link>
             </div>
+            <div className="nav-item nav-btn" id="header-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div className="header-nav" id="header-menu">
+            <div className="nav-left">
+              <div className="nav-item">
+                <a
+                  className="smoothScroll"
+                  href="/fundamentals/colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="icon">
+                    <FontAwesomeIcon
+                      className="fa-wrapper small"
+                      icon={["fas", "palette"]}
+                    />
+                  </span>
+                </a>
+              </div>
+              <div className="nav-item">
+                <a className="smoothScroll" href="/buttons/basics">
+                  <span className="icon">
+                    <FontAwesomeIcon
+                      className="fa-wrapper small"
+                      icon={["fas", "pencil-ruler"]}
+                    />
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            {props.centerNavChildren && (
+              <div className="nav-center">{props.centerNavChildren}</div>
+            )}
+            {props.rightNavChildren && (
+              <div className="nav-right">{props.rightNavChildren}</div>
+            )}
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
