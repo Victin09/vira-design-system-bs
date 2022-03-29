@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Table - UIkit tests</title>
+        <title>Table - Vira Design System tests</title>
         <script src="js/test.js"></script>
     </head>
 
@@ -313,13 +313,13 @@
 
         <script>
 
-            var options = UIkit.util.$$('#js-size-switcher option').map(function (option) { return option.value; });
+            var options = Vira Design System.util.$$('#js-size-switcher option').map(function (option) { return option.value; });
 
-            UIkit.util.on('#js-size-switcher', 'change', function () {
+            Vira Design System.util.on('#js-size-switcher', 'change', function () {
                 var value = this.value;
-                UIkit.util.$$('.vds-table').forEach(function (table) {
-                    UIkit.util.removeClass(table, options);
-                    UIkit.util.addClass(table, value);
+                Vira Design System.util.$$('.vds-table').forEach(function (table) {
+                    Vira Design System.util.removeClass(table, options);
+                    Vira Design System.util.addClass(table, value);
                 });
             });
 

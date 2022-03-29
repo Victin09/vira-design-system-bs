@@ -1,12 +1,12 @@
 {
-    "name": "uikit/uikit",
+    "name": "vds/vds",
     "type": "library",
-    "description": "UIkit is a lightweight and modular front-end framework for developing fast and powerful web interfaces.",
+    "description": "Vira Design System is a lightweight and modular front-end framework for developing fast and powerful web interfaces.",
     "keywords": [],
-    "homepage": "https://getuikit.com/",
+    "homepage": "https://getvds.com/",
     "authors": [],
     "support": {
-        "issues": "https://github.com/uikit/uikit/issues"
+        "issues": "https://github.com/vds/vds/issues"
     },
     "license": "MIT",
     "extra": {

@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Lightbox - UIkit tests</title>
+        <title>Lightbox - Vira Design System tests</title>
         <script src="js/test.js"></script>
     </head>
 
@@ -273,7 +273,7 @@
 
         <script>
 
-            var util = UIkit.util;
+            var util = Vira Design System.util;
 
             util.on('#js-animation-switcher', 'change', function() {
                 util.attr(util.$('#js-lightbox-animation'), 'animation', this.value);
@@ -282,7 +282,7 @@
             util.on('#js-lightbox', 'click', function (e) {
                 e.preventDefault();
 
-                UIkit.lightboxPanel({
+                Vira Design System.lightboxPanel({
                     items: [
                         {source: 'images/size1.jpg', caption: '900x600'},
                         {source: 'images/size2.jpg', caption: '700x500'},

@@ -1,6 +1,6 @@
-# Contributing to UIkit
+# Contributing to Vira Design System
 
-You want to contribute to UIkit? Awesome. Please take a few moments to
+You want to contribute to Vira Design System? Awesome. Please take a few moments to
 review the following guidelines to get you started. Cheers.
 
 * [Communication channels](#communication)
@@ -20,21 +20,21 @@ for you to check out. You might find that others have had similar
 questions or that your question rather belongs in one place than another.
 
 * Chat: https://discord.gg/NEt4Pv7
-* Website: https://getuikit.com
-* Twitter: https://twitter.com/getuikit
+* Website: https://getvds.com
+* Twitter: https://twitter.com/getvds
 
 
 <a name="team"></a>
 ## Team members
 
-UIkit is developed as an open source project by [YOOtheme](http://yootheme.com)
+Vira Design System is developed as an open source project by [YOOtheme](http://yootheme.com)
 in Hamburg, Germany. The core maintainers you will encounter in this project
 are all part of YOOtheme.
 
 ## Documentation
 
-The UIkit documentation is maintained as a collection of Markdown files in its
-[own repository](https://github.com/uikit/uikit-site). Any pull requests are highly appreciated.
+The Vira Design System documentation is maintained as a collection of Markdown files in its
+[own repository](https://github.com/Victin09/vira-design-system/vds-site). Any pull requests are highly appreciated.
 
 <a name="issues"></a>
 ## Using the issue tracker
@@ -66,14 +66,14 @@ help. Thanks for taking the time to contribute.
 otherwise you risk spending a lot of time working on something that the
 project's developers might not want to merge into the project.
 
-UIkit follows the [GitFlow branching model](http://nvie.com/posts/a-successful-git-branching-model). The ```master``` branch always reflects a production-ready state while the latest development is taking place in the ```develop``` branch.
+Vira Design System follows the [GitFlow branching model](http://nvie.com/posts/a-successful-git-branching-model). The ```master``` branch always reflects a production-ready state while the latest development is taking place in the ```develop``` branch.
 
 Each time you want to work on a fix or a new feature, create a new branch based on the ```develop``` branch: ```git checkout -b BRANCH_NAME develop```. Only pull requests to the ```develop``` branch will be merged.
 
 <a name="commit-message-convention"></a>
 ## Commit Message Convention
 
-UIkit adapts the [Vue's commit convention](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md). Commit messages can have the following types:
+Vira Design System adapts the [Vue's commit convention](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md). Commit messages can have the following types:
 
 - `build:` Changes that affect the build system or external dependencies
 - `chore:` Changes to readme, etc
@@ -88,7 +88,7 @@ UIkit adapts the [Vue's commit convention](https://github.com/vuejs/vue/blob/dev
 
 ## Versioning
 
-UIkit is maintained by using the [Semantic Versioning Specification (SemVer)](http://semver.org).
+Vira Design System is maintained by using the [Semantic Versioning Specification (SemVer)](http://semver.org).
 
 <a name="license"></a>
 ## License

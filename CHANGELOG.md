@@ -17,7 +17,7 @@
 
 ### Fixed
 
--   Fix importing UIkit in Next.js
+-   Fix importing Vira Design System in Next.js
 
 ## 3.13.2 (March 25, 2022)
 
@@ -41,7 +41,7 @@
 -   Fix Switcher component with disabled toggles
 -   Fix responsiveness in Responsive component
 -   Fix video autoplay
--   Fix importing UIkit in Next.js
+-   Fix importing Vira Design System in Next.js
 
 ## 3.13.1 (March 18, 2022)
 
@@ -1392,7 +1392,7 @@
 
 ### Fixed
 
--   Fix `UIkit.mixin()`
+-   Fix `ViraDesignSystem.mixin()`
 -   Fix issue with list bullet in combination with multi-column layouts
 -   Allow for special characters in URI hash in Scroll Component
 -   Height Match also sets a `height` in IE
@@ -1451,7 +1451,7 @@
 
 -   Allow icons to shrink in Iconnav
 -   Add more margin between accordion title and icon
--   `UIkit.mixin` can now be used to extend existing components
+-   `ViraDesignSystem.mixin` can now be used to extend existing components
 
 ### Removed
 
@@ -1539,11 +1539,11 @@
 
 ### Added
 
--   Add development builds to npm registry (`npm i uikit@dev` / `yarn add uikit@dev`)
+-   Add development builds to npm registry (`npm i vds@dev` / `yarn add vds@dev`)
 
 ### Fixed
 
--   Fix single components to auto-install only when UIkit is attached to window object
+-   Fix single components to auto-install only when Vira Design System is attached to window object
 -   Fix component naming (camelCase) in single component auto-install wrapper
 -   Fix active row style for striped table
 -   Fix height of Masonry Grid
@@ -1578,7 +1578,7 @@
 ### Changed
 
 -   Improve Lightbox type detection
--   UIkit.icon.add supports resetting component icons now
+-   ViraDesignSystem.icon.add supports resetting component icons now
 
 ### Fixed
 
@@ -1681,7 +1681,7 @@
 ### Fixed
 
 -   Fix using Scrollspy component with default values
--   Fix Scrollspy if UIkit is loaded async
+-   Fix Scrollspy if Vira Design System is loaded async
 -   Fix YouTube short urls in Lightbox component
 -   Fix empty select in Form Custom component
 -   Fix Slider reactivity
@@ -1754,10 +1754,10 @@
 -   Add file size restriction `maxSize` to Upload component
 -   Add option to pass `data-alt=""` to images in Lightbox component
 -   Component DOM attributes like `vds-grid` are being observed for changes
--   Improve `UIkit.container` setter (allows for assigning selector strings)
+-   Improve `ViraDesignSystem.container` setter (allows for assigning selector strings)
 -   Make some util methods more error resilient
 -   Add config options to build scripts, type `./build/build.js -h` for options
--   Add UIkit version banner to generated CSS files
+-   Add Vira Design System version banner to generated CSS files
 -   Add option to skip minification during Less compiling (`./build/less.js -d`)
 -   Add parametrization for prefix and scope scripts. Use `scope/prefix -h` (e.g. `npm run prefix -- -h`) to list the available options.
 
@@ -2104,7 +2104,7 @@
 -   Fix queued Toggle
 -   Fix closing Offcanvas with swipe gesture (Android)
 -   Fix Toggle icons preventing Drops from opening
--   Fix loading UIkit deferred
+-   Fix loading Vira Design System deferred
 
 ## 3.0.0 beta 19 (March 31, 2017)
 
@@ -2153,7 +2153,7 @@
 
 ### Fixed
 
--   Fix deferred UIKit loading
+-   Fix deferred Vira Design System loading
 -   Fix Dropdowns not closing immediately upon hovering other navbar item in Navbar component
 -   Fix navbar groups center left/right (IE 11)
 -   Fix "sticky on up" behaviour in Sticky component
@@ -2339,7 +2339,7 @@
 
 ### Changed
 
--   UIkit observes `<body>` element too now
+-   Vira Design System observes `<body>` element too now
 -   Performance improvements
 
 ### Fixed
@@ -2377,7 +2377,7 @@
 
 ### Added
 
--   Enable deferred loading of UIkit
+-   Enable deferred loading of Vira Design System
 
 ### Changed
 

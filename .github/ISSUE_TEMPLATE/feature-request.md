@@ -7,13 +7,13 @@ assignees: ''
 
 <!--
 
-👋 Hi, thank you for using UIKit!
+👋 Hi, thank you for using Vira Design System!
 
-Please open an issues only for a bug report or feature request. Make sure no one else has already opened a similar issue. If you need help or have questions about UIkit, there are few places to start:
+Please open an issues only for a bug report or feature request. Make sure no one else has already opened a similar issue. If you need help or have questions about Vira Design System, there are few places to start:
 
-- Search our public documentation: https://getuikit.com/docs
+- Search our public documentation: https://getvds.com/docs
 - Ask the community in the Discord chat: https://discord.gg/NEt4Pv7
-- Look for an answer on Stack Overflow: https://stackoverflow.com/questions/ask?tags=getuikit
+- Look for an answer on Stack Overflow: https://stackoverflow.com/questions/ask?tags=getvds
 
 -->
 

@@ -4,12 +4,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Scroll - UIkit tests</title>
+        <title>Scroll - Vira Design System tests</title>
         <script src="js/test.js"></script>
         <script>
 
-            UIkit.util.on(document, 'change', '#offset', function (e) {
-                UIkit.util.$$('[vds-scroll]').forEach(function (el) {
+            Vira Design System.util.on(document, 'change', '#offset', function (e) {
+                Vira Design System.util.$$('[vds-scroll]').forEach(function (el) {
                     el.setAttribute('data-offset', e.target.value);
                 })
             })
@@ -87,7 +87,7 @@
 
             <script>
 
-                UIkit.util.on('#js-top-callback', 'scrolled', function () {
+                Vira Design System.util.on('#js-top-callback', 'scrolled', function () {
                     alert('Done.');
                 });
 

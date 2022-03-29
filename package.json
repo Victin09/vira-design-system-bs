@@ -1,10 +1,10 @@
 {
-    "name": "uikit",
-    "title": "UIkit",
-    "description": "UIkit is a lightweight and modular front-end framework for developing fast and powerful web interfaces.",
+    "name": "vds",
+    "title": "Vira Design System",
+    "description": "Vira Design System is a lightweight and modular front-end framework for developing fast and powerful web interfaces.",
     "version": "3.13.5",
-    "main": "dist/js/uikit.js",
-    "style": "dist/css/uikit.css",
+    "main": "dist/js/vds.js",
+    "style": "dist/css/vds.css",
     "sideEffects": [
         "*.css",
         "./src/js/*.js",
@@ -26,13 +26,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/uikit/uikit.git"
+        "url": "git+https://github.com/vds/vds.git"
     },
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/uikit/uikit/issues"
+        "url": "https://github.com/vds/vds/issues"
     },
-    "homepage": "https://getuikit.com",
+    "homepage": "https://getvds.com",
     "devDependencies": {
         "@babel/core": "^7.17.8",
         "@babel/preset-env": "^7.16.4",

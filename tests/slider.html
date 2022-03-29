@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Slider - UIkit tests</title>
+        <title>Slider - Vira Design System tests</title>
         <script src="js/test.js"></script>
         <style>
 
@@ -546,8 +546,8 @@
         <script>
 
             ['finite', 'center', 'sets'].forEach(function(attr) {
-                UIkit.util.on('#js-'+attr+'-switcher', 'change', function () {
-                    UIkit.util.attr(UIkit.util.$$('[vds-slider]'), attr, this.value);
+                Vira Design System.util.on('#js-'+attr+'-switcher', 'change', function () {
+                    Vira Design System.util.attr(Vira Design System.util.$$('[vds-slider]'), attr, this.value);
                 });
             });
 

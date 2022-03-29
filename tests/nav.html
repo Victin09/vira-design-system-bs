@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nav - UIkit tests</title>
+        <title>Nav - Vira Design System tests</title>
         <script src="js/test.js"></script>
     </head>
 
@@ -360,13 +360,13 @@
 
         <script>
 
-            var options = UIkit.util.$$('#js-divider-switcher option').map(function (option) { return option.value; });
+            var options = Vira Design System.util.$$('#js-divider-switcher option').map(function (option) { return option.value; });
 
-            UIkit.util.on('#js-divider-switcher', 'change', function () {
+            Vira Design System.util.on('#js-divider-switcher', 'change', function () {
                 var value = this.value;
-                UIkit.util.$$('.vds-nav').forEach(function (table) {
-                    UIkit.util.removeClass(table, options);
-                    UIkit.util.addClass(table, value);
+                Vira Design System.util.$$('.vds-nav').forEach(function (table) {
+                    Vira Design System.util.removeClass(table, options);
+                    Vira Design System.util.addClass(table, value);
                 });
             });
 

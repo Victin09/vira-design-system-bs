@@ -1,21 +1,21 @@
-[![uikit banner](https://cloud.githubusercontent.com/assets/321047/21769911/474d7d9e-d681-11e6-9fe0-d95f8ccfd3a9.jpg)](https://getuikit.com/)
+[![vds banner](https://cloud.githubusercontent.com/assets/321047/21769911/474d7d9e-d681-11e6-9fe0-d95f8ccfd3a9.jpg)](https://getvds.com/)
 
-# UIkit
+# Vira Design System
 
 [![Discord](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/NEt4Pv7)
-[![Build](https://circleci.com/gh/uikit/uikit.svg?style=shield)](https://circleci.com/gh/uikit/uikit)
-[![jsdelivr](https://data.jsdelivr.com/v1/package/npm/uikit/badge?style=rounded)](https://www.jsdelivr.com/package/npm/uikit)
+[![Build](https://circleci.com/gh/vds/vds.svg?style=shield)](https://circleci.com/gh/vds/vds)
+[![jsdelivr](https://data.jsdelivr.com/v1/package/npm/vds/badge?style=rounded)](https://www.jsdelivr.com/package/npm/vds)
 
-UIkit is a lightweight and modular front-end framework for developing fast and powerful web interfaces.
+Vira Design System is a lightweight and modular front-end framework for developing fast and powerful web interfaces.
 
-* [Homepage](https://getuikit.com) - Learn more about UIkit
-* [@getuikit](https://twitter.com/getuikit) - Get the latest buzz on Twitter
+* [Homepage](https://getvds.com) - Learn more about Vira Design System
+* [@getvds](https://twitter.com/getvds) - Get the latest buzz on Twitter
 * [Discord Chat](https://discord.gg/NEt4Pv7) - Join our developer chat on Discord.
 
 ---
 
 <p align="center">
-  <b>UIkit is an Open Source project developed by YOOtheme.</b>
+  <b>Vira Design System is an Open Source project developed by YOOtheme.</b>
   <br><br>
   <a href="https://yootheme.com" align="center">
       <img width="134" height="30" src="https://yootheme.com/site/images/yootheme-logo.svg" alt="YOOtheme">
@@ -26,21 +26,21 @@ UIkit is a lightweight and modular front-end framework for developing fast and p
 
 ## Getting started
 
-You have the following options to get UIkit:
+You have the following options to get Vira Design System:
 
-- Download the [latest release](https://github.com/uikit/uikit/releases/latest) with pre-built CSS and JS.
-- Install with [npm](https://npmjs.com) to get all source files as they are available on GitHub: ```npm install uikit```
-- Install with [yarn](https://yarnpkg.com/) to get all source files as they are available on GitHub: ```yarn add uikit```
-- Directly load UIkit from [jsDelivr](https://www.jsdelivr.com): https://www.jsdelivr.com/package/npm/uikit
-- Clone the repo to get all source files including build scripts: `git clone git://github.com/uikit/uikit.git`
+- Download the [latest release](https://github.com/Victin09/vira-design-system/vds/releases/latest) with pre-built CSS and JS.
+- Install with [npm](https://npmjs.com) to get all source files as they are available on GitHub: ```npm install vds```
+- Install with [yarn](https://yarnpkg.com/) to get all source files as they are available on GitHub: ```yarn add vds```
+- Directly load Vira Design System from [jsDelivr](https://www.jsdelivr.com): https://www.jsdelivr.com/package/npm/vds
+- Clone the repo to get all source files including build scripts: `git clone git://github.com/Victin09/vira-design-system/vds.git`
 
 ## Developers
 
-To always have the latest development version of UIkit, even before a release, you may want to use npm or yarn with the `dev` tag.
+To always have the latest development version of Vira Design System, even before a release, you may want to use npm or yarn with the `dev` tag.
 
-- Using npm: ```npm install uikit@dev```
-- Using yarn: ```yarn add uikit@dev```
-- Using [cdn](cdn.jsdelivr.net): https://cdn.jsdelivr.net/npm/uikit@dev
+- Using npm: ```npm install vds@dev```
+- Using yarn: ```yarn add vds@dev```
+- Using [cdn](cdn.jsdelivr.net): https://cdn.jsdelivr.net/npm/vds@dev
 
 ## Contributing
 
@@ -48,7 +48,7 @@ Finding bugs, sending pull requests or improving our docs - any contribution is 
 
 ## Versioning
 
-UIkit is maintained by using the [Semantic Versioning Specification (SemVer)](https://semver.org).
+Vira Design System is maintained by using the [Semantic Versioning Specification (SemVer)](https://semver.org).
 
 ## Browser Support
 

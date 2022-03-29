@@ -11,7 +11,7 @@ executors:
 jobs:
   build:
     executor: executor
-    working_directory: ~/uikit
+    working_directory: ~/vds
     steps:
       # Install node
       - node/install:
