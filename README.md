@@ -2,18 +2,6 @@
 
 Vira Design System is a lightweight and modular front-end framework for developing fast and powerful web interfaces.
 
----
-
-<p align="center">
-  <b>Vira Design System is an Open Source project developed by YOOtheme.</b>
-  <br><br>
-  <a href="https://yootheme.com" align="center">
-      <img width="134" height="30" src="https://yootheme.com/site/images/yootheme-logo.svg" alt="YOOtheme">
-  </a>
-</p>
-
----
-
 ## Getting started
 
 You have the following options to get Vira Design System:
