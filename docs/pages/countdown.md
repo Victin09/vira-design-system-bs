@@ -17,7 +17,7 @@ Add the following classes to child elements to apply the necessary functionality
 | `.vds-countdown-number`  | This class adds the neccessary style to a countdown number. |
 
 ```html
-<div vds-countdown="date: {%isodate%}">
+<div vds-countdown="date: 2022-04-05T14:22:31+00:00">
     <span class="vds-countdown-number vds-countdown-days"></span>
     <span class="vds-countdown-number vds-countdown-hours"></span>
     <span class="vds-countdown-number vds-countdown-minutes"></span>
@@ -26,7 +26,7 @@ Add the following classes to child elements to apply the necessary functionality
 ```
 
 ```example
-<div class="vds-grid-small vds-child-width-auto vds-margin" vds-grid vds-countdown="date: {%isodate%}">
+<div class="vds-grid-small vds-child-width-auto vds-margin" vds-grid vds-countdown="date: 2022-04-05T14:22:31+00:00">
     <div>
         <div class="vds-countdown-number vds-countdown-days"></div>
     </div>
@@ -49,7 +49,7 @@ Add the following classes to child elements to apply the necessary functionality
 To insert a separator between each number, use the `.vds-countdown-separator` class.
 
 ```html
-<div vds-countdown="date: {%isodate%}">
+<div vds-countdown="date: 2022-04-05T14:22:31+00:00">
     <span class="vds-countdown-number vds-countdown-days"></span>
     <span class="vds-countdown-separator">:</span>
     <span class="vds-countdown-number vds-countdown-hours"></span>
@@ -61,7 +61,7 @@ To insert a separator between each number, use the `.vds-countdown-separator` cl
 ```
 
 ```example
-<div class="vds-grid-small vds-child-width-auto vds-margin" vds-grid vds-countdown="date: {%isodate%}">
+<div class="vds-grid-small vds-child-width-auto vds-margin" vds-grid vds-countdown="date: 2022-04-05T14:22:31+00:00">
     <div>
         <div class="vds-countdown-number vds-countdown-days"></div>
     </div>
@@ -94,7 +94,7 @@ To add a label to each number, use the `.vds-countdown-label` class.
 ```
 
 ```example
-<div class="vds-grid-small vds-child-width-auto" vds-grid vds-countdown="date: {%isodate%}">
+<div class="vds-grid-small vds-child-width-auto" vds-grid vds-countdown="date: 2022-04-05T14:22:31+00:00">
     <div>
         <div class="vds-countdown-number vds-countdown-days"></div>
         <div class="vds-countdown-label vds-margin-small vds-text-center vds-visible@s">Days</div>
