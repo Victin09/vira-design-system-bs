@@ -20,15 +20,15 @@ jobs:
             sudo apt-get install rsync
       - node/install:
           lts: true
-          install-npm: false
-          install-yarn: true
+          install-npm: true
+          install-yarn: false
       - checkout
       - node/install-packages:
           pkg-manager: yarn
       - run:
           name: Compile
           command: |
-            yarn compile
+            npm run compile
       - run:
           name: Replace Build Number
           command: |
