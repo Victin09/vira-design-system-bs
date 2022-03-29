@@ -1,0 +1,191 @@
+// Name:            Notification
+// Description:     Component to create notification messages
+//
+// Component:       `vds-notification`
+//
+// Sub-objects:     `vds-notification-message`
+//
+// Adopted:         `vds-notification-close`
+//
+// Modifiers:       `vds-notification-top-center`
+//                  `vds-notification-top-right`
+//                  `vds-notification-bottom-left`
+//                  `vds-notification-bottom-center`
+//                  `vds-notification-bottom-right`
+//                  `vds-notification-message-primary`
+//                  `vds-notification-message-success`
+//                  `vds-notification-message-warning`
+//                  `vds-notification-message-danger`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@notification-position:                               10px;
+@notification-z-index:                                @global-z-index + 40;
+@notification-width:                                  350px;
+
+@notification-message-margin-top:                     10px;
+@notification-message-padding:                        @global-small-gutter;
+@notification-message-background:                     @global-muted-background;
+@notification-message-color:                          @global-color;
+@notification-message-font-size:                      @global-medium-font-size;
+@notification-message-line-height:                    1.4;
+
+@notification-close-top:                              @notification-message-padding + 5px;
+@notification-close-right:                            @notification-message-padding;
+
+@notification-message-primary-color:                  @global-primary-background;
+@notification-message-success-color:                  @global-success-background;
+@notification-message-warning-color:                  @global-warning-background;
+@notification-message-danger-color:                   @global-danger-background;
+
+
+/* ========================================================================
+   Component: Notification
+ ========================================================================== */
+
+/*
+ * 1. Set position
+ * 2. Dimensions
+ */
+
+.vds-notification {
+    /* 1 */
+    position: fixed;
+    top: @notification-position;
+    left: @notification-position;
+    z-index: @notification-z-index;
+    /* 2 */
+    box-sizing: border-box;
+    width: @notification-width;
+    .hook-notification();
+}
+
+
+/* Position modifiers
+========================================================================== */
+
+.vds-notification-top-right,
+.vds-notification-bottom-right {
+    left: auto;
+    right: @notification-position;
+}
+
+.vds-notification-top-center,
+.vds-notification-bottom-center {
+    left: 50%;
+    margin-left: (@notification-width / -2);
+}
+
+.vds-notification-bottom-left,
+.vds-notification-bottom-right,
+.vds-notification-bottom-center {
+    top: auto;
+    bottom: @notification-position;
+}
+
+
+/* Responsiveness
+========================================================================== */
+
+/* Phones portrait and smaller */
+@media (max-width: @breakpoint-xsmall-max) {
+
+    .vds-notification {
+        left: @notification-position;
+        right: @notification-position;
+        width: auto;
+        margin: 0;
+    }
+
+}
+
+
+/* Message
+========================================================================== */
+
+.vds-notification-message {
+    position: relative;
+    padding: @notification-message-padding;
+    background: @notification-message-background;
+    color: @notification-message-color;
+    font-size: @notification-message-font-size;
+    line-height: @notification-message-line-height;
+    cursor: pointer;
+    .hook-notification-message();
+}
+
+* + .vds-notification-message { margin-top: @notification-message-margin-top; }
+
+
+/* Close
+ * Adopts `vds-close`
+ ========================================================================== */
+
+.vds-notification-close {
+    display: none;
+    position: absolute;
+    top: @notification-close-top;
+    right: @notification-close-right;
+    .hook-notification-close();
+}
+
+.vds-notification-message:hover .vds-notification-close { display: block; }
+
+
+/* Style modifiers
+ ========================================================================== */
+
+/*
+ * Primary
+ */
+
+.vds-notification-message-primary {
+    color: @notification-message-primary-color;
+    .hook-notification-message-primary();
+}
+
+/*
+ * Success
+ */
+
+.vds-notification-message-success {
+    color: @notification-message-success-color;
+    .hook-notification-message-success();
+}
+
+/*
+ * Warning
+ */
+
+.vds-notification-message-warning {
+    color: @notification-message-warning-color;
+    .hook-notification-message-warning();
+}
+
+/*
+ * Danger
+ */
+
+.vds-notification-message-danger {
+    color: @notification-message-danger-color;
+    .hook-notification-message-danger();
+}
+
+
+// Hooks
+// ========================================================================
+
+.hook-notification-misc();
+
+.hook-notification() {}
+.hook-notification-message() {}
+.hook-notification-close() {}
+.hook-notification-message-primary() {}
+.hook-notification-message-success() {}
+.hook-notification-message-warning() {}
+.hook-notification-message-danger() {}
+.hook-notification-misc() {}

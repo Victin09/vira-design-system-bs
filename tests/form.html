@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Form - UIkit tests</title>
+        <script src="js/test.js"></script>
+    </head>
+
+    <body>
+
+        <div class="vds-container">
+
+            <h1>Form</h1>
+
+            <div vds-grid>
+                <div class="vds-width-2-3@s">
+
+                    <h2>Horizontal</h2>
+
+                    <form class="vds-form-horizontal">
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-h-text">Text</label>
+                            <div class="vds-form-controls">
+                                <input class="vds-input vds-form-width-large" id="form-h-text" type="text" placeholder="Some text...">
+                            </div>
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-h-select">Select</label>
+                            <div class="vds-form-controls">
+                                <select class="vds-select vds-form-width-large" id="form-h-select">
+                                    <option>Option 01</option>
+                                    <option>Option 02</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-h-datalist">Datalist</label>
+                            <div class="vds-form-controls">
+                                <input class="vds-input vds-form-width-large" id="form-h-datalist" list="datalist" type="text" placeholder="Some text...">
+                                <datalist id="datalist">
+                                    <option value="Chrome">
+                                    <option value="Edge">
+                                    <option value="Firefox">
+                                    <option value="Safari">
+                                </datalist>
+                            </div>
+                        </div>
+
+                         <div class="vds-margin">
+                            <label class="vds-form-label" for="form-h-textarea">Textarea</label>
+                            <div class="vds-form-controls">
+                                <textarea class="vds-textarea vds-form-width-large" id="form-h-textarea" rows="5" placeholder="Some text..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="vds-margin">
+                            <span class="vds-form-label">Radio</span>
+                            <div class="vds-form-controls vds-form-controls-text">
+                                <label><input class="vds-radio" type="radio" name="radio1"> Option 01</label><br>
+                                <label><input class="vds-radio" type="radio" name="radio1"> Option 02</label>
+                                <div class="vds-margin vds-grid-small vds-child-width-auto" vds-grid>
+                                    <label><input class="vds-radio" type="radio" name="radio2"> A</label>
+                                    <label><input class="vds-radio" type="radio" name="radio2"> B</label>
+                                    <label><input class="vds-radio" type="radio" name="radio2"> C</label>
+                                    <label><input class="vds-radio" type="radio" name="radio2"> D</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="vds-margin">
+                            <span class="vds-form-label">Checkbox</span>
+                            <div class="vds-form-controls vds-form-controls-text">
+                                <label><input class="vds-checkbox" type="checkbox"> Option 01</label><br>
+                                <label><input class="vds-checkbox" type="checkbox"> Option 02</label>
+                                <div class="vds-margin vds-grid-small vds-child-width-auto" vds-grid>
+                                    <label><input class="vds-checkbox" type="checkbox"> A</label>
+                                    <label><input class="vds-checkbox" type="checkbox"> B</label>
+                                    <label><input class="vds-checkbox" type="checkbox"> C</label>
+                                    <label><input class="vds-checkbox" type="checkbox"> D</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-h-multiple">Multiple</label>
+                            <div class="vds-form-controls">
+                                <select class="vds-select vds-form-width-large" id="form-h-multiple" multiple>
+                                    <option>Option 01</option>
+                                    <option>Option 02</option>
+                                    <option>Option 03</option>
+                                    <option>Option 04</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-h-range">Range</label>
+                            <div class="vds-form-controls vds-form-controls-text">
+                                <input class="vds-range vds-form-width-large" id="form-h-range" type="range" value="2" min="0" max="10" step="0.1">
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <h2>Sizes</h2>
+
+                    <form>
+
+                        <div class="vds-margin" vds-margin>
+                            <textarea class="vds-textarea vds-form-width-small vds-form-large" rows="2" placeholder="Some text..."></textarea>
+                            <input class="vds-input vds-form-width-small vds-form-large" type="text" placeholder="Some text...">
+                            <select class="vds-select vds-form-width-small vds-form-large">
+                                <option>Option 01</option>
+                                <option>Option 02</option>
+                            </select>
+                            <button class="vds-button vds-button-default vds-button-large">Button</button>
+                            <label><input class="vds-checkbox" type="checkbox"> Checkbox</label>
+                        </div>
+
+                        <div class="vds-margin" vds-margin>
+                            <textarea class="vds-textarea vds-form-width-small" rows="2" placeholder="Some text..."></textarea>
+                            <input class="vds-input vds-form-width-small" type="text" placeholder="Some text...">
+                            <select class="vds-select vds-form-width-small">
+                                <option>Option 01</option>
+                                <option>Option 02</option>
+                            </select>
+                            <button class="vds-button vds-button-default">Button</button>
+                            <label><input class="vds-checkbox" type="checkbox"> Checkbox</label>
+                        </div>
+
+                        <div class="vds-margin" vds-margin>
+                            <textarea class="vds-textarea vds-form-width-small vds-form-small" rows="2" placeholder="Some text..."></textarea>
+                            <input class="vds-input vds-form-width-small vds-form-small" type="text" placeholder="Some text...">
+                            <select class="vds-select vds-form-width-small vds-form-small">
+                                <option>Option 01</option>
+                                <option>Option 02</option>
+                            </select>
+                            <button class="vds-button vds-button-default vds-button-small">Button</button>
+                            <label><input class="vds-checkbox" type="checkbox"> Checkbox</label>
+                        </div>
+
+                    </form>
+
+                    <h2>Widths</h2>
+
+                    <form>
+
+                        <div class="vds-margin" vds-margin>
+                            <input class="vds-input vds-form-width-large" type="text" placeholder="form-width-large">
+                        </div>
+
+                        <div class="vds-margin" vds-margin>
+                            <select class="vds-select vds-form-width-large">
+                                <option>form-width-large</option>
+                            </select>
+                        </div>
+
+                        <div class="vds-margin" vds-margin>
+                            <textarea class="vds-textarea vds-form-width-large" rows="1" placeholder="form-width-large"></textarea>
+                        </div>
+
+                        <div class="vds-margin" vds-margin>
+                            <input class="vds-input vds-form-width-medium" type="text" placeholder="form-width-medium">
+                            <input class="vds-input vds-form-width-small" type="text" placeholder="form-width-small">
+                            <input class="vds-input vds-form-width-xsmall" type="text" placeholder="form-width-xsmall">
+                        </div>
+
+                        <div class="vds-margin" vds-margin>
+                            <select class="vds-select vds-form-width-medium">
+                                <option>form-width-medium</option>
+                            </select>
+                            <select class="vds-select vds-form-width-small">
+                                <option>form-width-small</option>
+                            </select>
+                            <select class="vds-select vds-form-width-xsmall">
+                                <option>form-width-xsmall</option>
+                            </select>
+                        </div>
+
+                        <div class="vds-margin" vds-margin>
+                            <textarea class="vds-textarea vds-form-width-medium" rows="1" placeholder="form-width-medium"></textarea>
+                            <textarea class="vds-textarea vds-form-width-small" rows="1" placeholder="form-width-small"></textarea>
+                        </div>
+
+                    </form>
+
+                    <h2>Icon</h2>
+
+                    <form class="vds-form-stacked vds-child-width-auto@m" vds-grid>
+                        <div>
+
+                            <div class="vds-margin">
+
+                                <span class="vds-form-label">Not clickable</span>
+
+                                <div class="vds-inline">
+                                    <span class="vds-form-icon" vds-icon="icon: user"></span>
+                                    <input class="vds-input vds-form-width-medium" type="text">
+                                </div>
+
+                            </div>
+
+                            <div class="vds-margin">
+
+                                <div class="vds-inline">
+                                    <span class="vds-form-icon vds-form-icon-flip" vds-icon="icon: lock"></span>
+                                    <input class="vds-input vds-form-width-medium" type="text">
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div>
+
+                            <div class="vds-margin">
+
+                                <span class="vds-form-label">Clickable</span>
+
+                                <div class="vds-inline">
+                                    <a class="vds-form-icon" href="#" vds-icon="icon: pencil"></a>
+                                    <input class="vds-input" type="text">
+                                </div>
+
+                            </div>
+
+                            <div class="vds-margin">
+
+                                <div class="vds-inline">
+                                    <a class="vds-form-icon vds-form-icon-flip" href="#" vds-icon="icon: link"></a>
+                                    <input class="vds-input" type="text">
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </form>
+
+                    <h2>Select</h2>
+
+                    <select class="vds-select vds-form-width-large">
+                        <option>Option 01</option>
+                        <option>Option 02</option>
+                    </select>
+
+                    <p class="vds-margin-small">
+                        <select class="vds-select vds-form-width-large" disabled>
+                            <option>Option 01</option>
+                            <option>Option 02</option>
+                        </select>
+                    </p>
+
+                    <p class="vds-margin-small">
+                        <select class="vds-select vds-form-width-large" multiple="multiple">
+                            <option>Option 01</option>
+                            <option>Option 02</option>
+                            <option>Option 03</option>
+                            <option>Option 04</option>
+                        </select>
+                    </p>
+
+                    <h2>Radio, Checkbox and Select</h2>
+
+                    <form class="vds-form-stacked vds-child-width-1-3@m" vds-grid>
+                        <div>
+
+                            <span class="vds-form-label">Radio</span>
+                            <label><input class="vds-radio" type="radio" name="radio1" checked> Checked</label><br>
+                            <label><input class="vds-radio" type="radio" name="radio1"> Unchecked</label><br>
+                            <label><input class="vds-radio" type="radio" name="radio1"> Unchecked</label><br>
+                            <label><input class="vds-radio" type="radio" name="radio2" disabled> Disabled</label><br>
+                            <label><input class="vds-radio" type="radio" name="radio2" disabled checked> Disabled Checked</label>
+                            <div class="vds-margin vds-grid-small vds-child-width-auto" vds-grid>
+                                <label><input class="vds-radio" type="radio" name="radio3" checked> A</label>
+                                <label><input class="vds-radio" type="radio" name="radio3"> B</label>
+                                <label><input class="vds-radio" type="radio" name="radio4" disabled> C</label>
+                                <label><input class="vds-radio" type="radio" name="radio4" disabled checked> D</label>
+                            </div>
+
+                        </div>
+                        <div>
+
+                            <span class="vds-form-label">Checkbox</span>
+                            <label><input class="vds-checkbox" type="checkbox" checked> Checked</label><br>
+                            <label><input class="vds-checkbox" type="checkbox"> Unchecked</label><br>
+                            <label><input class="vds-checkbox" type="checkbox"> Unchecked</label><br>
+                            <label><input class="vds-checkbox" type="checkbox" disabled> Disabled</label><br>
+                            <label><input class="vds-checkbox" type="checkbox" disabled checked> Disabled Checked</label><br>
+                            <div class="vds-margin vds-grid-small vds-child-width-auto" vds-grid>
+                                <label><input class="vds-checkbox" type="checkbox" checked> A</label>
+                                <label><input class="vds-checkbox" type="checkbox"> B</label>
+                                <label><input class="vds-checkbox" type="checkbox" disabled> C</label>
+                                <label><input class="vds-checkbox" type="checkbox" disabled checked> D</label>
+                            </div>
+
+                        </div>
+                        <div>
+
+                            <span class="vds-form-label">Checkbox</span>
+                            <label><input class="vds-checkbox js-indeterminate" type="checkbox"> Indeterminate</label><br>
+                            <label><input class="vds-checkbox" type="checkbox"> Unchecked</label><br>
+                            <label><input class="vds-checkbox" type="checkbox"> Unchecked</label><br>
+                            <label><input class="vds-checkbox" type="checkbox" disabled> Disabled</label><br>
+                            <label><input class="vds-checkbox js-indeterminate" type="checkbox" disabled> Disabled Indeterminate</label>
+                            <div class="vds-margin vds-grid-small vds-child-width-auto" vds-grid>
+                                <label><input class="vds-checkbox js-indeterminate" type="checkbox"> A</label>
+                                <label><input class="vds-checkbox" type="checkbox"> B</label>
+                                <label><input class="vds-checkbox" type="checkbox" disabled> C</label>
+                                <label><input class="vds-checkbox js-indeterminate" type="checkbox" disabled> D</label>
+                            </div>
+
+                            <script>UIkit.util.$$('.js-indeterminate').forEach(function (el) { el.indeterminate = true; })</script>
+
+                        </div>
+
+                    </form>
+
+                    <h2>Custom Controls</h2>
+
+                    <form class="vds-form-stacked vds-child-width-1-2@m" vds-grid>
+                        <div>
+
+                            <h3>File</h3>
+
+                            <div class="vds-margin">
+
+                                <div vds-form-custom>
+                                    <input type="file">
+                                    <button class="vds-button vds-button-default" type="button" tabindex="-1">Select</button>
+                                </div>
+
+                            </div>
+
+                            <div class="vds-margin">
+                                <span class="vds-text-middle">Here is a text</span>
+                                <div vds-form-custom>
+                                    <input type="file">
+                                    <span class="vds-link">upload</span>
+                                </div>
+                            </div>
+
+                            <div class="vds-margin" vds-margin>
+
+                                <div vds-form-custom="target: true">
+                                    <input type="file">
+                                    <input class="vds-input vds-form-width-medium" type="text" placeholder="Select file" disabled>
+                                </div>
+
+                                <button class="vds-button vds-button-default">Submit</button>
+
+                            </div>
+
+                        </div>
+                        <div>
+
+                            <h3>Select</h3>
+
+                            <div class="vds-margin">
+
+                                <div vds-form-custom="target: true">
+                                    <select>
+                                        <option value="1">Option 01</option>
+                                        <option value="2">Option 02</option>
+                                        <option value="3">Option 03</option>
+                                        <option value="4">Option 04</option>
+                                    </select>
+                                    <span></span>
+                                </div>
+
+                            </div>
+
+                            <div class="vds-margin">
+
+                                <div vds-form-custom="target: > * > span:last-child">
+                                    <select>
+                                        <option value="1">Option 01</option>
+                                        <option value="2">Option 02</option>
+                                        <option value="3">Option 03</option>
+                                        <option value="4">Option 04</option>
+                                    </select>
+                                    <span class="vds-link">
+                                        <span vds-icon="icon: pencil"></span>
+                                        <span></span>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <div class="vds-margin">
+
+                                <div vds-form-custom="target: > * > span:first-child">
+                                    <select>
+                                        <option value="">Please select...</option>
+                                        <option value="1">Option 01</option>
+                                        <option value="2">Option 02</option>
+                                        <option value="3">Option 03</option>
+                                        <option value="4">Option 04</option>
+                                    </select>
+                                    <button class="vds-button vds-button-default" type="button" tabindex="-1">
+                                        <span></span>
+                                        <span vds-icon="icon: chevron-down"></span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <div class="vds-margin">
+
+                                <div vds-form-custom="target: true">
+                                    <select>
+                                        <option value="">Please select...</option>
+                                        <option value="1">Option 01</option>
+                                        <option value="2">Option 02</option>
+                                        <option value="3">Option 03</option>
+                                        <option value="4">Option 04</option>
+                                    </select>
+                                    <span class="vds-select vds-form-width-medium"></span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </form>
+
+                    <p><span class="vds-label">Note</span> The hover and focus state for <code>vds-form-custom</code> are not styled by default, but you could use the adjacent sibling selector to do so.</p>
+
+                </div>
+                <form class="vds-form-stacked vds-width-1-3@s">
+
+                    <h2>Stacked</h2>
+
+                    <div class="vds-margin">
+                        <span class="vds-form-label">States and styles</span>
+                        <div class="vds-margin-small vds-grid-small vds-child-width-1-2" vds-grid>
+                            <div>
+                                <input class="vds-input" type="text" placeholder=":disabled" disabled>
+                            </div>
+                            <div>
+                                <input class="vds-input" type="text" placeholder=":disabled" value="Some text..." disabled>
+                            </div>
+                        </div>
+                        <div class="vds-margin-small vds-grid-small" vds-grid>
+                            <div class="vds-width-expand">
+                                <input class="vds-input" type="text" placeholder=":focus" autofocus required>
+                            </div>
+                            <div class="vds-width-auto">
+                                <button class="vds-button vds-button-default vds-width-1-1">Required</button>
+                            </div>
+                        </div>
+                        <div class="vds-margin-small">
+                            <input class="vds-input vds-form-danger" type="text" placeholder="form-danger" value="form-danger">
+                        </div>
+                        <div class="vds-margin-small">
+                            <input class="vds-input vds-form-success" type="text" placeholder="form-success" value="form-success">
+                        </div>
+                        <div class="vds-margin-small">
+                            <input class="vds-input vds-form-blank" type="text" placeholder="form-blank">
+                        </div>
+                    </div>
+
+                    <fieldset class="vds-fieldset">
+
+                        <legend class="vds-legend">Legend</legend>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-text">Text</label>
+                            <input class="vds-input" id="form-s-text" type="text" placeholder="Some text...">
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-select">Select</label>
+                            <select class="vds-select" id="form-s-select">
+                                <option>Option 01</option>
+                                <option>Option 02</option>
+                            </select>
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-textarea">Textarea</label>
+                            <textarea class="vds-textarea" id="form-s-textarea" rows="5" placeholder="Some text..."></textarea>
+                        </div>
+
+                        <div class="vds-margin">
+                            <span class="vds-form-label">Radio</span>
+                            <label><input class="vds-radio" type="radio" name="radio1"> Option 01</label><br>
+                            <label><input class="vds-radio" type="radio" name="radio1"> Option 02</label>
+                            <div class="vds-margin vds-grid-small vds-child-width-auto" vds-grid>
+                                <label><input class="vds-radio" type="radio" name="radio2"> A</label>
+                                <label><input class="vds-radio" type="radio" name="radio2"> B</label>
+                                <label><input class="vds-radio" type="radio" name="radio2"> C</label>
+                                <label><input class="vds-radio" type="radio" name="radio2"> D</label>
+                            </div>
+                        </div>
+
+                        <div class="vds-margin">
+                            <span class="vds-form-label">Checkbox</span>
+                            <label><input class="vds-checkbox" type="checkbox"> Option 01</label><br>
+                            <label><input class="vds-checkbox" type="checkbox"> Option 02</label>
+                            <div class="vds-margin vds-grid-small vds-child-width-auto" vds-grid>
+                                <label><input class="vds-checkbox" type="checkbox"> A</label>
+                                <label><input class="vds-checkbox" type="checkbox"> B</label>
+                                <label><input class="vds-checkbox" type="checkbox"> C</label>
+                                <label><input class="vds-checkbox" type="checkbox"> D</label>
+                            </div>
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-multiple">Multiple</label>
+                            <select class="vds-select" id="form-s-multiple" multiple>
+                                <option>Option 01</option>
+                                <option>Option 02</option>
+                                <option>Option 03</option>
+                                <option>Option 04</option>
+                            </select>
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-range">Range</label>
+                            <input class="vds-range" id="form-s-range" type="range" value="2" min="0" max="10" step="0.1">
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-number">Number</label>
+                            <input class="vds-input" id="form-s-number" type="number" min="0" max="10" value="5">
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-password">Password</label>
+                            <input class="vds-input" id="form-s-password" type="password" placeholder="Password">
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-email">Email</label>
+                            <input class="vds-input" id="form-s-email" type="email" placeholder="name@domain.com">
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-search">Search</label>
+                            <input class="vds-input" id="form-s-search" type="search" placeholder="Search">
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-tel">Tel</label>
+                            <input class="vds-input" id="form-s-tel" type="tel" placeholder="+49 555 123456">
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-url">URL</label>
+                            <input class="vds-input" id="form-s-url" type="url" placeholder="http://">
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-file">File</label>
+                            <input class="vds-width-1-1" id="form-s-file" type="file">
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-color">Color</label>
+                            <input class="vds-input" id="form-s-color" type="color" placeholder="#000000">
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-date">Date</label>
+                            <input class="vds-input" id="form-s-date" type="date" placeholder="1970-01-01">
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-month">Month</label>
+                            <input class="vds-input" id="form-s-month" type="month" placeholder="1970-01">
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-week">Week</label>
+                            <input class="vds-input" id="form-s-week" type="week" placeholder="1970-W01">
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-time">Time</label>
+                            <input class="vds-input" id="form-s-time" type="time" placeholder="00:00:00">
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-datetime">Datetime</label>
+                            <input class="vds-input" id="form-s-datetime" type="datetime" placeholder="1970-01-01T00:00:00Z">
+                        </div>
+
+                        <div class="vds-margin">
+                            <label class="vds-form-label" for="form-s-datetimelocal">Datetime local</label>
+                            <input class="vds-input" id="form-s-datetimelocal" type="datetime-local" placeholder="1970-01-01T00:00">
+                        </div>
+
+                    </fieldset>
+
+                </form>
+            </div>
+
+            <h2>JavaScript Options</h2>
+
+            <div class="vds-overflow-auto">
+                <table class="vds-table vds-table-striped">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Value</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>target</code></td>
+                            <td>CSS selector | Boolean</td>
+                            <td>false</td>
+                            <td>Value display target.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </body>
+</html>

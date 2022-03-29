@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Alert - UIkit tests</title>
+        <script src="js/test.js"></script>
+    </head>
+
+    <body>
+
+        <div class="vds-container">
+
+            <h1>Alert</h1>
+
+            <div vds-alert>
+                <a href="#" class="vds-alert-close" vds-close></a>
+                <p><strong>Alert!</strong> Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div class="vds-alert-primary" vds-alert>
+                <a href="#" class="vds-alert-close" vds-close></a>
+                <p><strong>Primary!</strong> Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div class="vds-alert-success" vds-alert>
+                <a href="#" class="vds-alert-close" vds-close></a>
+                <p><strong>Success!</strong> Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div class="vds-alert-warning" vds-alert>
+                <a href="#" class="vds-alert-close" vds-close></a>
+                <p><strong>Warning!</strong> Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div class="vds-alert-danger" vds-alert>
+                <a href="#" class="vds-alert-close" vds-close></a>
+                <p><strong>Danger!</strong> Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <h2>More Content</h2>
+
+            <div vds-alert>
+                <button class="vds-alert-close" type="button" vds-close></button>
+                <h3>Alert!</h3>
+                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <div class="vds-alert-primary" vds-alert>
+                <button class="vds-alert-close" type="button" vds-close></button>
+                <h3>Primary!</h3>
+                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <div class="vds-alert-success" vds-alert>
+                <button class="vds-alert-close" type="button" vds-close></button>
+                <h3>Success!</h3>
+                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <div class="vds-alert-warning" vds-alert>
+                <button class="vds-alert-close" type="button" vds-close></button>
+                <h3>Warning!</h3>
+                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <div class="vds-alert-danger" vds-alert>
+                <button class="vds-alert-close" type="button" vds-close></button>
+                <h3>Danger!</h3>
+                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <h2>Animations</h2>
+
+            <div vds-alert="animation: vds-animation-scale-up; duration:1000">
+                <a href="#" class="vds-alert-close" vds-close></a>
+                <p><strong>Alert!</strong> Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div class="vds-alert-primary" vds-alert="animation: vds-animation-scale-down">
+                <a href="#" class="vds-alert-close" vds-close></a>
+                <p><strong>Primary!</strong> Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <h2>JavaScript Options</h2>
+
+            <div class="vds-overflow-auto">
+                <table class="vds-table vds-table-striped">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Value</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>animation</code></td>
+                            <td>Boolean|String</td>
+                            <td>true</td>
+                            <td>On close fade out or use given animation.</td>
+                        </tr>
+                        <tr>
+                            <td><code>duration</code></td>
+                            <td>Number</td>
+                            <td>150</td>
+                            <td>The animation duration.</td>
+                        </tr>
+                        <tr>
+                            <td><code>sel-close</code></td>
+                            <td>CSS selector</td>
+                            <td>.vds-alert-close</td>
+                            <td>The close trigger element.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </body>
+</html>

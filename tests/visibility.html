@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Visibility - UIkit tests</title>
+        <script src="js/test.js"></script>
+    </head>
+
+    <body>
+
+        <div class="vds-container">
+
+            <h1>Visibility</h1>
+
+            <h2>Hidden</h2>
+
+            <div class="vds-child-width-1-2@s vds-child-width-1-4@m vds-text-center" vds-grid>
+                <div>
+                    <div class="vds-panel">
+                        <div class="vds-alert vds-margin-remove vds-alert-success">✔ Small<br>(Phone Landscape)</div>
+                        <div class="vds-alert vds-position-cover vds-margin-remove vds-hidden@s">Small<br>(Phone Landscape)</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="vds-panel">
+                        <div class="vds-alert vds-margin-remove vds-alert-success">✔ Medium<br>(Tablet Landscape)</div>
+                        <div class="vds-alert vds-position-cover vds-margin-remove vds-hidden@m">Medium<br>(Tablet Landscape)</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="vds-panel">
+                        <div class="vds-alert vds-margin-remove vds-alert-success">✔ Large<br>(Desktop)</div>
+                        <div class="vds-alert vds-position-cover vds-margin-remove vds-hidden@l">Large<br>(Desktop)</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="vds-panel">
+                        <div class="vds-alert vds-margin-remove vds-alert-success">✔ X-Large<br>(Large Screens)</div>
+                        <div class="vds-alert vds-position-cover vds-margin-remove vds-hidden@xl">X-Large<br>(Large Screens)</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Visible</h2>
+
+            <div class="vds-child-width-1-2@s vds-child-width-1-4@m vds-text-center" vds-grid>
+                <div>
+                    <div class="vds-panel">
+                        <div class="vds-alert vds-margin-remove">Small<br>(Phone Landscape)</div>
+                        <div class="vds-alert vds-alert-success vds-position-cover vds-margin-remove vds-visible@s">✔ Small<br>(Phone Landscape)</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="vds-panel">
+                        <div class="vds-alert vds-margin-remove">Medium<br>(Tablet Landscape)</div>
+                        <div class="vds-alert vds-alert-success vds-position-cover vds-margin-remove vds-visible@m">✔ Medium<br>(Tablet Landscape)</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="vds-panel">
+                        <div class="vds-alert vds-margin-remove">Large<br>(Desktop)</div>
+                        <div class="vds-alert vds-alert-success vds-position-cover vds-margin-remove vds-visible@l">✔ Large<br>(Desktop)</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="vds-panel">
+                        <div class="vds-alert vds-margin-remove">X-Large<br>(Large Screens)</div>
+                        <div class="vds-alert vds-alert-success vds-position-cover vds-margin-remove vds-visible@xl">✔ X-Large<br>(Large Screens)</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Toggle (Hover + Focus)</h2>
+
+            <div class="vds-child-width-1-2@s vds-child-width-1-4@m vds-text-center" vds-grid>
+                <div>
+                    <div class="vds-panel vds-visible-toggle" tabindex="0">
+                        <div class="vds-alert vds-margin-remove">Hidden Hover<br><br></div>
+                        <div class="vds-alert vds-alert-success vds-position-cover vds-margin-remove vds-hidden-hover">✔ Hidden Hover<br><a href>Focus Test</a></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="vds-panel vds-visible-toggle" tabindex="0">
+                        <div class="vds-alert vds-margin-remove">Invisible Hover<br><br></div>
+                        <div class="vds-alert vds-alert-success vds-position-cover vds-margin-remove vds-invisible-hover">✔ Invisible Hover<br><a href>Focus Test</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Touch</h2>
+
+            <div class="vds-child-width-1-2@s vds-child-width-1-4@m vds-text-center" vds-grid>
+                <div>
+                    <div class="vds-panel">
+                        <div class="vds-alert vds-margin-remove vds-alert-success">✔ Hidden Touch</div>
+                        <div class="vds-alert vds-position-cover vds-margin-remove vds-hidden-touch">Hidden Touch</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="vds-panel">
+                        <div class="vds-alert vds-margin-remove vds-alert-success">✔ Hidden No-Touch</div>
+                        <div class="vds-alert vds-position-cover vds-margin-remove vds-hidden-notouch">Hidden No-Touch</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>

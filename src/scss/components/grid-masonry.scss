@@ -1,0 +1,100 @@
+// Name:            Grid
+// Description:     Component to create two dimensional grids
+//
+// Component:       `vds-grid2`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+$grid-column-xsmall: 100px !default;
+$grid-column-small: 200px !default;
+$grid-column-medium: 300px !default;
+$grid-column-large: 400px !default;
+$grid-column-xlarge: 500px !default;
+$grid-column-xxlarge: 600px !default;
+
+$grid-gap-small: $global-small-gutter !default;
+$grid-gap-medium: $global-gutter !default;
+$grid-gap-large: $global-large-gutter !default;
+
+/* ========================================================================
+   Component: Grid
+ ========================================================================== */
+
+.vds-grid-masonry {
+    display: grid;
+}
+.vds-grid-inline {
+    display: inline-grid;
+}
+
+/* Columns Width
+ ========================================================================== */
+
+.vds-grid-column-xsmall {
+    grid-template-columns: repeat(auto-fill, minmax($grid-column-xsmall, 1fr));
+}
+.vds-grid-column-small {
+    grid-template-columns: repeat(auto-fill, minmax($grid-column-small, 1fr));
+}
+.vds-grid-column-medium {
+    grid-template-columns: repeat(auto-fill, minmax($grid-column-medium, 1fr));
+}
+.vds-grid-column-large {
+    grid-template-columns: repeat(auto-fill, minmax($grid-column-large, 1fr));
+}
+.vds-grid-column-xlarge {
+    grid-template-columns: repeat(auto-fill, minmax($grid-column-xlarge, 1fr));
+}
+.vds-grid-column-xxlarge {
+    grid-template-columns: repeat(auto-fill, minmax($grid-column-xxlarge, 1fr));
+}
+
+/* Gap
+ ========================================================================== */
+
+.vds-grid-gap-none {
+    grid-gap: 0;
+}
+.vds-grid-gap-small {
+    grid-gap: $grid-gap-small;
+}
+.vds-grid-gap-medium {
+    grid-gap: $grid-gap-medium;
+}
+.vds-grid-gap-large {
+    grid-gap: $grid-gap-large;
+}
+
+/* Auto Placement
+ ========================================================================== */
+
+// Default
+.vds-grid-auto-flow-row {
+    grid-auto-flow: row;
+}
+.vds-grid-auto-flow-column {
+    grid-auto-flow: column;
+}
+.vds-grid-auto-flow-dense {
+    grid-auto-flow: dense;
+}
+
+/* Item Span
+ ========================================================================== */
+
+// TODO Fix implicit tracks if span is too large
+.vds-grid-item-span-2 {
+    grid-column-start: span 2;
+}
+.vds-grid-item-span-3 {
+    grid-column-start: span 3;
+}
+.vds-grid-item-span-4 {
+    grid-column-start: span 4;
+}
+.vds-grid-item-span-5 {
+    grid-column-start: span 5;
+}

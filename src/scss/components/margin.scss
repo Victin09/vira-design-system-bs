@@ -1,0 +1,360 @@
+// Name:            Margin
+// Description:     Utilities for margins
+//
+// Component:       `vds-margin-*`
+//                  `vds-margin-small-*`
+//                  `vds-margin-medium-*`
+//                  `vds-margin-large-*`
+//                  `vds-margin-xlarge-*`
+//                  `vds-margin-remove-*`
+//                  `vds-margin-auto-*`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+$margin-margin: $global-margin !default;
+
+$margin-small-margin: $global-small-margin !default;
+
+$margin-medium-margin: $global-medium-margin !default;
+
+$margin-large-margin: $global-medium-margin !default;
+$margin-large-margin-l: $global-large-margin !default;
+
+$margin-xlarge-margin: $global-large-margin !default;
+$margin-xlarge-margin-l: $global-xlarge-margin !default;
+
+/* ========================================================================
+   Component: Margin
+ ========================================================================== */
+
+/*
+ * Default
+ */
+
+.vds-margin {
+    margin-bottom: $margin-margin;
+}
+* + .vds-margin {
+    margin-top: $margin-margin !important;
+}
+
+.vds-margin-top {
+    margin-top: $margin-margin !important;
+}
+.vds-margin-bottom {
+    margin-bottom: $margin-margin !important;
+}
+.vds-margin-left {
+    margin-left: $margin-margin !important;
+}
+.vds-margin-right {
+    margin-right: $margin-margin !important;
+}
+
+/* Small
+ ========================================================================== */
+
+.vds-margin-small {
+    margin-bottom: $margin-small-margin;
+}
+* + .vds-margin-small {
+    margin-top: $margin-small-margin !important;
+}
+
+.vds-margin-small-top {
+    margin-top: $margin-small-margin !important;
+}
+.vds-margin-small-bottom {
+    margin-bottom: $margin-small-margin !important;
+}
+.vds-margin-small-left {
+    margin-left: $margin-small-margin !important;
+}
+.vds-margin-small-right {
+    margin-right: $margin-small-margin !important;
+}
+
+/* Medium
+ ========================================================================== */
+
+.vds-margin-medium {
+    margin-bottom: $margin-medium-margin;
+}
+* + .vds-margin-medium {
+    margin-top: $margin-medium-margin !important;
+}
+
+.vds-margin-medium-top {
+    margin-top: $margin-medium-margin !important;
+}
+.vds-margin-medium-bottom {
+    margin-bottom: $margin-medium-margin !important;
+}
+.vds-margin-medium-left {
+    margin-left: $margin-medium-margin !important;
+}
+.vds-margin-medium-right {
+    margin-right: $margin-medium-margin !important;
+}
+
+/* Large
+ ========================================================================== */
+
+.vds-margin-large {
+    margin-bottom: $margin-large-margin;
+}
+* + .vds-margin-large {
+    margin-top: $margin-large-margin !important;
+}
+
+.vds-margin-large-top {
+    margin-top: $margin-large-margin !important;
+}
+.vds-margin-large-bottom {
+    margin-bottom: $margin-large-margin !important;
+}
+.vds-margin-large-left {
+    margin-left: $margin-large-margin !important;
+}
+.vds-margin-large-right {
+    margin-right: $margin-large-margin !important;
+}
+
+/* Desktop and bigger */
+@media (min-width: $breakpoint-large) {
+    .vds-margin-large {
+        margin-bottom: $margin-large-margin-l;
+    }
+    * + .vds-margin-large {
+        margin-top: $margin-large-margin-l !important;
+    }
+
+    .vds-margin-large-top {
+        margin-top: $margin-large-margin-l !important;
+    }
+    .vds-margin-large-bottom {
+        margin-bottom: $margin-large-margin-l !important;
+    }
+    .vds-margin-large-left {
+        margin-left: $margin-large-margin-l !important;
+    }
+    .vds-margin-large-right {
+        margin-right: $margin-large-margin-l !important;
+    }
+}
+
+/* XLarge
+ ========================================================================== */
+
+.vds-margin-xlarge {
+    margin-bottom: $margin-xlarge-margin;
+}
+* + .vds-margin-xlarge {
+    margin-top: $margin-xlarge-margin !important;
+}
+
+.vds-margin-xlarge-top {
+    margin-top: $margin-xlarge-margin !important;
+}
+.vds-margin-xlarge-bottom {
+    margin-bottom: $margin-xlarge-margin !important;
+}
+.vds-margin-xlarge-left {
+    margin-left: $margin-xlarge-margin !important;
+}
+.vds-margin-xlarge-right {
+    margin-right: $margin-xlarge-margin !important;
+}
+
+/* Desktop and bigger */
+@media (min-width: $breakpoint-large) {
+    .vds-margin-xlarge {
+        margin-bottom: $margin-xlarge-margin-l;
+    }
+    * + .vds-margin-xlarge {
+        margin-top: $margin-xlarge-margin-l !important;
+    }
+
+    .vds-margin-xlarge-top {
+        margin-top: $margin-xlarge-margin-l !important;
+    }
+    .vds-margin-xlarge-bottom {
+        margin-bottom: $margin-xlarge-margin-l !important;
+    }
+    .vds-margin-xlarge-left {
+        margin-left: $margin-xlarge-margin-l !important;
+    }
+    .vds-margin-xlarge-right {
+        margin-right: $margin-xlarge-margin-l !important;
+    }
+}
+
+/* Auto
+ ========================================================================== */
+
+.vds-margin-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.vds-margin-auto-top {
+    margin-top: auto !important;
+}
+.vds-margin-auto-bottom {
+    margin-bottom: auto !important;
+}
+.vds-margin-auto-left {
+    margin-left: auto !important;
+}
+.vds-margin-auto-right {
+    margin-right: auto !important;
+}
+
+.vds-margin-auto-vertical {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: $breakpoint-small) {
+    .vds-margin-auto\@s {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .vds-margin-auto-left\@s {
+        margin-left: auto !important;
+    }
+    .vds-margin-auto-right\@s {
+        margin-right: auto !important;
+    }
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: $breakpoint-medium) {
+    .vds-margin-auto\@m {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .vds-margin-auto-left\@m {
+        margin-left: auto !important;
+    }
+    .vds-margin-auto-right\@m {
+        margin-right: auto !important;
+    }
+}
+
+/* Desktop and bigger */
+@media (min-width: $breakpoint-large) {
+    .vds-margin-auto\@l {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .vds-margin-auto-left\@l {
+        margin-left: auto !important;
+    }
+    .vds-margin-auto-right\@l {
+        margin-right: auto !important;
+    }
+}
+
+/* Large screen and bigger */
+@media (min-width: $breakpoint-xlarge) {
+    .vds-margin-auto\@xl {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .vds-margin-auto-left\@xl {
+        margin-left: auto !important;
+    }
+    .vds-margin-auto-right\@xl {
+        margin-right: auto !important;
+    }
+}
+
+/* Remove
+ ========================================================================== */
+
+.vds-margin-remove {
+    margin: 0 !important;
+}
+.vds-margin-remove-top {
+    margin-top: 0 !important;
+}
+.vds-margin-remove-bottom {
+    margin-bottom: 0 !important;
+}
+.vds-margin-remove-left {
+    margin-left: 0 !important;
+}
+.vds-margin-remove-right {
+    margin-right: 0 !important;
+}
+
+.vds-margin-remove-vertical {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.vds-margin-remove-adjacent + *,
+.vds-margin-remove-first-child > :first-child {
+    margin-top: 0 !important;
+}
+.vds-margin-remove-last-child > :last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: $breakpoint-small) {
+    .vds-margin-remove-left\@s {
+        margin-left: 0 !important;
+    }
+    .vds-margin-remove-right\@s {
+        margin-right: 0 !important;
+    }
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: $breakpoint-medium) {
+    .vds-margin-remove-left\@m {
+        margin-left: 0 !important;
+    }
+    .vds-margin-remove-right\@m {
+        margin-right: 0 !important;
+    }
+}
+
+/* Desktop and bigger */
+@media (min-width: $breakpoint-large) {
+    .vds-margin-remove-left\@l {
+        margin-left: 0 !important;
+    }
+    .vds-margin-remove-right\@l {
+        margin-right: 0 !important;
+    }
+}
+
+/* Large screen and bigger */
+@media (min-width: $breakpoint-xlarge) {
+    .vds-margin-remove-left\@xl {
+        margin-left: 0 !important;
+    }
+    .vds-margin-remove-right\@xl {
+        margin-right: 0 !important;
+    }
+}
+
+// Hooks
+// ========================================================================
+
+@if (mixin-exists(hook-margin-misc)) {
+    @include hook-margin-misc();
+}
+
+// @mixin hook-margin-misc(){}

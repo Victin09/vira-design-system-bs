@@ -1,0 +1,194 @@
+// Name:            Transition
+// Description:     Utilities for transitions
+//
+// Component:       `vds-transition-*`
+//
+// Modifiers:       `vds-transition-fade`
+//                  `vds-transition-scale-up`
+//                  `vds-transition-scale-down`
+//                  `vds-transition-slide-top-*`
+//                  `vds-transition-slide-bottom-*`
+//                  `vds-transition-slide-left-*`
+//                  `vds-transition-slide-right-*`
+//                  `vds-transition-opaque`
+//                  `vds-transition-slow`
+//
+// Sub-objects:     `vds-transition-toggle`,
+//                  `vds-transition-active`
+//
+// States:          `vds-active`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+$transition-duration: 0.3s !default;
+
+$transition-scale: 1.03 !default;
+
+$transition-slide-small-translate: 10px !default;
+$transition-slide-medium-translate: 50px !default;
+
+$transition-slow-duration: 0.7s !default;
+
+/* ========================================================================
+   Component: Transition
+ ========================================================================== */
+
+/* Transitions
+ ========================================================================== */
+
+/*
+ * The toggle is triggered on touch devices by two methods:
+ * 1. Using `:focus` and tabindex
+ * 2. Using `:hover` and a `touchstart` event listener registered on the document
+ *    (Doesn't work on Surface touch devices)
+ */
+
+:where(.vds-transition-fade),
+:where([class*='vds-transition-scale']),
+:where([class*='vds-transition-slide']) {
+    --vds-position-translate-x: 0;
+    --vds-position-translate-y: 0;
+}
+
+.vds-transition-fade,
+[class*='vds-transition-scale'],
+[class*='vds-transition-slide'] {
+    --vds-translate-x: 0;
+    --vds-translate-y: 0;
+    --vds-scale-x: 1;
+    --vds-scale-y: 1;
+    transform: translate(var(--vds-position-translate-x), var(--vds-position-translate-y))
+        translate(var(--vds-translate-x), var(--vds-translate-y))
+        scale(var(--vds-scale-x), var(--vds-scale-y));
+    transition: $transition-duration ease-out;
+    transition-property: opacity, transform, filter;
+    opacity: 0;
+}
+
+/*
+ * Fade
+ */
+
+.vds-transition-toggle:hover .vds-transition-fade,
+.vds-transition-toggle:focus .vds-transition-fade,
+.vds-transition-toggle .vds-transition-fade:focus-within,
+.vds-transition-active.vds-active .vds-transition-fade {
+    opacity: 1;
+}
+
+/*
+ * Scale
+ * 1. Make image rendering the same during the transition as before and after. Prefixed because of Safari.
+ */
+
+/* 1 */
+[class*='vds-transition-scale'] {
+    -webkit-backface-visibility: hidden;
+}
+
+.vds-transition-scale-up {
+    --vds-scale-x: 1;
+    --vds-scale-y: 1;
+}
+.vds-transition-scale-down {
+    --vds-scale-x: #{$transition-scale};
+    --vds-scale-y: #{$transition-scale};
+}
+
+/* Show */
+.vds-transition-toggle:hover .vds-transition-scale-up,
+.vds-transition-toggle:focus .vds-transition-scale-up,
+.vds-transition-toggle .vds-transition-scale-up:focus-within,
+.vds-transition-active.vds-active .vds-transition-scale-up {
+    --vds-scale-x: #{$transition-scale};
+    --vds-scale-y: #{$transition-scale};
+    opacity: 1;
+}
+
+.vds-transition-toggle:hover .vds-transition-scale-down,
+.vds-transition-toggle:focus .vds-transition-scale-down,
+.vds-transition-toggle .vds-transition-scale-down:focus-within,
+.vds-transition-active.vds-active .vds-transition-scale-down {
+    --vds-scale-x: 1;
+    --vds-scale-y: 1;
+    opacity: 1;
+}
+
+/*
+ * Slide
+ */
+
+.vds-transition-slide-top {
+    --vds-translate-y: -100%;
+}
+.vds-transition-slide-bottom {
+    --vds-translate-y: 100%;
+}
+.vds-transition-slide-left {
+    --vds-translate-x: -100%;
+}
+.vds-transition-slide-right {
+    --vds-translate-x: 100%;
+}
+
+.vds-transition-slide-top-small {
+    --vds-translate-y: calc(-1 * #{$transition-slide-small-translate});
+}
+.vds-transition-slide-bottom-small {
+    --vds-translate-y: #{$transition-slide-small-translate};
+}
+.vds-transition-slide-left-small {
+    --vds-translate-x: calc(-1 * #{$transition-slide-small-translate});
+}
+.vds-transition-slide-right-small {
+    --vds-translate-x: #{$transition-slide-small-translate};
+}
+
+.vds-transition-slide-top-medium {
+    --vds-translate-y: calc(-1 * #{$transition-slide-medium-translate});
+}
+.vds-transition-slide-bottom-medium {
+    --vds-translate-y: #{$transition-slide-medium-translate};
+}
+.vds-transition-slide-left-medium {
+    --vds-translate-x: calc(-1 * #{$transition-slide-medium-translate});
+}
+.vds-transition-slide-right-medium {
+    --vds-translate-x: #{$transition-slide-medium-translate};
+}
+
+/* Show */
+.vds-transition-toggle:hover [class*='vds-transition-slide'],
+.vds-transition-toggle:focus [class*='vds-transition-slide'],
+.vds-transition-toggle [class*='vds-transition-slide']:focus-within,
+.vds-transition-active.vds-active [class*='vds-transition-slide'] {
+    --vds-translate-x: 0;
+    --vds-translate-y: 0;
+    opacity: 1;
+}
+
+/* Opacity modifier
+ ========================================================================== */
+
+.vds-transition-opaque {
+    opacity: 1;
+}
+
+/* Duration modifiers
+ ========================================================================== */
+
+.vds-transition-slow {
+    transition-duration: $transition-slow-duration;
+}
+
+// Hooks
+// ========================================================================
+
+@if (mixin-exists(hook-transition-misc)) {
+    @include hook-transition-misc();
+}
+
+// @mixin hook-transition-misc(){}

@@ -1,0 +1,81 @@
+// Name:            Padding
+// Description:     Utilities for padding
+//
+// Component:       `vds-padding`
+//                  `vds-padding-large`
+//                  `vds-padding-remove-*`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@padding-padding:                                       @global-gutter;
+@padding-padding-l:                                     @global-medium-gutter;
+
+@padding-small-padding:                                 @global-small-gutter;
+
+@padding-large-padding:                                 @global-medium-gutter;
+@padding-large-padding-l:                               @global-large-gutter;
+
+
+/* ========================================================================
+   Component: Padding
+ ========================================================================== */
+
+.vds-padding { padding: @padding-padding; }
+
+/* Desktop and bigger */
+@media (min-width: @breakpoint-large) {
+
+    .vds-padding { padding: @padding-padding-l; }
+
+}
+
+
+/* Small
+ ========================================================================== */
+
+.vds-padding-small { padding: @padding-small-padding; }
+
+
+/* Large
+ ========================================================================== */
+
+.vds-padding-large { padding: @padding-large-padding; }
+
+/* Desktop and bigger */
+@media (min-width: @breakpoint-large) {
+
+    .vds-padding-large { padding: @padding-large-padding-l; }
+
+}
+
+
+/* Remove
+ ========================================================================== */
+
+.vds-padding-remove { padding: 0 !important; }
+.vds-padding-remove-top { padding-top: 0 !important; }
+.vds-padding-remove-bottom { padding-bottom: 0 !important; }
+.vds-padding-remove-left { padding-left: 0 !important; }
+.vds-padding-remove-right { padding-right: 0 !important; }
+
+.vds-padding-remove-vertical {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.vds-padding-remove-horizontal {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+// Hooks
+// ========================================================================
+
+.hook-padding-misc();
+
+.hook-padding-misc() {}

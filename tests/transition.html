@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Transition - UIkit tests</title>
+        <script src="js/test.js"></script>
+    </head>
+
+    <body>
+
+        <div class="vds-container">
+
+            <h1>Transition</h1>
+
+            <div class="vds-grid-small vds-child-width-1-3@s vds-child-width-1-6@m" vds-grid>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-fade vds-position-bottom vds-overlay vds-overlay-default"><a href="#">Overlay</a></div>
+                    </div>
+                    <p class="vds-margin-small-top">Fade</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-fade vds-position-cover vds-overlay vds-overlay-default vds-flex vds-flex-center vds-flex-middle">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Fade Cover</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-fade vds-position-cover vds-position-small vds-overlay vds-overlay-default vds-flex vds-flex-center vds-flex-middle">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Fade Cover Small</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle vds-light" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-fade vds-overlay-default vds-position-cover"></div>
+                        <div class="vds-position-center">Headline</div>
+                    </div>
+                    <p class="vds-margin-small-top">Without Text</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle vds-light" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <span class="vds-position-center vds-transition-fade" vds-icon="icon: plus; ratio: 2"></span>
+                    </div>
+                    <p class="vds-margin-small-top">Icon</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle vds-light" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <img class="vds-transition-fade vds-position-cover" src="images/dark.jpg" alt="">
+                    </div>
+                    <p class="vds-margin-small-top">Fade 2 Images</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle vds-light" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-position-center vds-transition-scale-up">Headline</div>
+                    </div>
+                    <p class="vds-margin-small-top">Scale Up</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-scale-down vds-overlay vds-overlay-default vds-position-cover vds-position-small vds-flex vds-flex-center vds-flex-middle">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Scale Down Cover</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img class="vds-transition-scale-up vds-transition-opaque" src="images/photo.jpg" width="1800" height="1200" alt="">
+                    </div>
+                    <p class="vds-margin-small-top">Scale Up Image</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img class="vds-transition-scale-down vds-transition-opaque" src="images/photo.jpg" width="1800" height="1200" alt="">
+                    </div>
+                    <p class="vds-margin-small-top">Scale Down Image</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <img class="vds-transition-scale-up vds-position-cover" src="images/dark.jpg" alt="">
+                    </div>
+                    <p class="vds-margin-small-top">2 Images</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle vds-light" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <img class="vds-transition-scale-up vds-position-cover" src="images/dark.jpg" alt="">
+                        <span class="vds-position-center vds-transition-fade" vds-icon="icon: plus; ratio: 2"></span>
+                    </div>
+                    <p class="vds-margin-small-top">2 Images + Icon</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-slide-top vds-position-top vds-overlay vds-overlay-default">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Top</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-slide-bottom vds-position-bottom vds-overlay vds-overlay-default">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Bottom</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-slide-left vds-position-left vds-overlay vds-overlay-default">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Left</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-slide-right vds-position-right vds-overlay vds-overlay-default">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Right</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-slide-top vds-position-cover vds-overlay vds-overlay-default vds-flex vds-flex-center vds-flex-middle">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Top Cover</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-slide-bottom vds-position-cover vds-position-small vds-overlay vds-overlay-default vds-flex vds-flex-center vds-flex-middle">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Bottom Cover</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle vds-light" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-position-center">
+                            <div class="vds-transition-slide-top-small">Headline</div>
+                            <div class="vds-transition-slide-bottom-small">Subheadline</div>
+                        </div>
+                    </div>
+                    <p class="vds-margin-small-top">Small Top + Bottom</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle vds-light" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-position-center">
+                            <div class="vds-transition-slide-left-small">Headline</div>
+                            <div class="vds-transition-slide-right-small">Subheadline</div>
+                        </div>
+                    </div>
+                    <p class="vds-margin-small-top">Small Left + Right</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-slide-top-small vds-overlay vds-overlay-default vds-position-cover vds-position-small vds-flex vds-flex-center vds-flex-middle">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Top Small</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-slide-bottom-small vds-overlay vds-overlay-default vds-position-cover vds-position-small vds-flex vds-flex-center vds-flex-middle">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Bottom Small</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-slide-left-small vds-overlay vds-overlay-default vds-position-cover vds-position-small vds-flex vds-flex-center vds-flex-middle">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Left Small</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-slide-right-small vds-overlay vds-overlay-default vds-position-cover vds-position-small vds-flex vds-flex-center vds-flex-middle">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Right Small</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle vds-light" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-position-center">
+                            <div class="vds-transition-slide-top-medium">Headline</div>
+                            <div class="vds-transition-slide-bottom-medium">Subheadline</div>
+                        </div>
+                    </div>
+                    <p class="vds-margin-small-top">Medium Top + Bottom</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle vds-light" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-position-center">
+                            <div class="vds-transition-slide-left-medium">Headline</div>
+                            <div class="vds-transition-slide-right-medium">Subheadline</div>
+                        </div>
+                    </div>
+                    <p class="vds-margin-small-top">Medium Left + Right</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-slide-top-medium vds-overlay vds-overlay-default vds-position-cover vds-position-small vds-flex vds-flex-center vds-flex-middle">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Top Medium</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-slide-bottom-medium vds-overlay vds-overlay-default vds-position-cover vds-position-small vds-flex vds-flex-center vds-flex-middle">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Bottom Medium</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-slide-left-medium vds-overlay vds-overlay-default vds-position-cover vds-position-small vds-flex vds-flex-center vds-flex-middle">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Left Medium</p>
+                </div>
+                <div class="vds-text-center">
+                    <div class="vds-inline-clip vds-transition-toggle" tabindex="0">
+                        <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                        <div class="vds-transition-slide-right-medium vds-overlay vds-overlay-default vds-position-cover vds-position-small vds-flex vds-flex-center vds-flex-middle">Overlay</div>
+                    </div>
+                    <p class="vds-margin-small-top">Right Medium</p>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>

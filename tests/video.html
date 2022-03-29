@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Video - UIkit tests</title>
+        <script src="js/test.js"></script>
+    </head>
+
+    <body>
+
+        <div class="vds-container">
+
+            <h1>Video</h1>
+
+            <div class="vds-grid vds-child-width-1-2@s">
+                <div>
+
+                    <h3>Autoplay</h3>
+
+                    <button class="vds-button vds-button-default vds-margin-bottom" type="button" vds-toggle="target: +">Toggle Video</button>
+                    <video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" width="1920" height="1080" controls playsinline vds-video="automute: true"></video>
+
+                </div>
+                <div>
+
+                    <h3>Autoplay Inview</h3>
+
+                    <button class="vds-button vds-button-default vds-margin-bottom" type="button" vds-toggle="target: +">Toggle Video</button>
+                    <iframe src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" width="1920" height="1080" allowfullscreen vds-responsive vds-video="automute: true; autoplay: inview"></iframe>
+                </div>
+            </div>
+
+            <h2>JavaScript Options</h2>
+
+            <table class="vds-table vds-table-striped">
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Value</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>autoplay</code></td>
+                        <td>Boolean|String</td>
+                        <td><code>true</code></td>
+                        <td>The video automatically plays/pauses when visible/hidden on the page. A value of `inview` will delay loading the video and play/pause the video as it enters/leaves the viewport.</td>
+                    </tr>
+                    <tr>
+                        <td><code>automute</code></td>
+                        <td>Boolean</td>
+                        <td><code>false</code></td>
+                        <td>Automatically mute YouTube or Vimeo videos.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </body>
+</html>

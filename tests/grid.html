@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Grid - UIkit tests</title>
+        <script src="js/test.js"></script>
+        <style>
+
+            .vds-panel {
+                padding: 10px;
+                text-align: center;
+            }
+
+            :nth-child(10n-9) > .vds-panel { background: rgba(0,0,0,0.1); }
+            :nth-child(10n-8) > .vds-panel { background: rgba(0,0,0,0.15); }
+            :nth-child(10n-7) > .vds-panel { background: rgba(0,0,0,0.2); }
+            :nth-child(10n-6) > .vds-panel { background: rgba(0,0,0,0.25); }
+            :nth-child(10n-5) > .vds-panel { background: rgba(0,0,0,0.3); }
+            :nth-child(10n-4) > .vds-panel { background: rgba(0,0,0,0.35); }
+            :nth-child(10n-3) > .vds-panel { background: rgba(0,0,0,0.40); }
+            :nth-child(10n-2) > .vds-panel { background: rgba(0,0,0,0.45); }
+            :nth-child(10n-1) > .vds-panel { background: rgba(0,0,0,0.50); }
+            :nth-child(10n) > .vds-panel { background: rgba(0,0,0,0.55); }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="vds-container">
+
+            <h1>Grid</h1>
+
+            <div class="vds-child-width-1-2" vds-grid>
+                <div><div class="vds-panel">1-2</div></div>
+                <div><div class="vds-panel">1-2</div></div>
+            </div>
+
+            <div class="vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-child-width-1-2@l" vds-grid>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-child-width-1-4@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-4-M<br>...<br>...</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-2@m">
+                    <div class="vds-child-width-1-2@l vds-grid-match" vds-grid>
+                        <div><div class="vds-panel">1-2-L<br>...</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-panel">1-2-M</div>
+                    <div class="vds-panel vds-margin-medium">1-2-M</div>
+                </div>
+            </div>
+
+            <div vds-grid>
+                <div class="vds-width-1-2@m"><div class="vds-panel">1-2-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-3-5@m"><div class="vds-panel">3-5-M</div></div>
+            </div>
+
+            <div vds-grid>
+                <div class="vds-width-auto@m"><div class="vds-panel">Auto-M</div></div>
+                <div class="vds-width-1-3@m"><div class="vds-panel">1-3-M</div></div>
+                <div class="vds-width-expand@m"><div class="vds-panel">Expand-M</div></div>
+            </div>
+
+            <h3>Divider</h3>
+
+            <div class="vds-grid-divider vds-child-width-1-2" vds-grid>
+                <div><div class="vds-panel">1-2</div></div>
+                <div><div class="vds-panel">1-2</div></div>
+            </div>
+
+            <div class="vds-grid-divider vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-grid-divider vds-child-width-1-2@l" vds-grid>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-divider vds-child-width-1-4@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-4-M<br>...<br>...</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-2@m">
+                    <div class="vds-grid-divider vds-child-width-1-2@l vds-grid-match" vds-grid>
+                        <div><div class="vds-panel">1-2-L<br>...</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-divider vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-panel">1-2-M</div>
+                    <div class="vds-panel vds-margin-medium">1-2-M</div>
+                </div>
+            </div>
+
+            <div class="vds-grid-divider" vds-grid>
+                <div class="vds-width-1-2@m"><div class="vds-panel">1-2-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-3-5@m"><div class="vds-panel">3-5-M</div></div>
+            </div>
+
+            <div class="vds-grid-divider" vds-grid>
+                <div class="vds-width-auto@m"><div class="vds-panel">Auto-M</div></div>
+                <div class="vds-width-1-3@m"><div class="vds-panel">1-3-M</div></div>
+                <div class="vds-width-expand@m"><div class="vds-panel">Expand-M</div></div>
+            </div>
+
+            <h2>Small</h2>
+
+            <div class="vds-grid-small vds-child-width-1-2" vds-grid>
+                <div><div class="vds-panel">1-2</div></div>
+                <div><div class="vds-panel">1-2</div></div>
+            </div>
+
+            <div class="vds-grid-small vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-grid-small vds-child-width-1-2@l" vds-grid>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-small vds-child-width-1-4@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-4-M<br>...<br>...</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-2@m">
+                    <div class="vds-grid-small vds-child-width-1-2@l vds-grid-match" vds-grid>
+                        <div><div class="vds-panel">1-2-L<br>...</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-small vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-panel">1-2-M</div>
+                    <div class="vds-panel vds-margin">1-2-M</div>
+                </div>
+            </div>
+
+            <div class="vds-grid-small" vds-grid>
+                <div class="vds-width-1-2@m"><div class="vds-panel">1-2-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-3-5@m"><div class="vds-panel">3-5-M</div></div>
+            </div>
+
+            <div class="vds-grid-small" vds-grid>
+                <div class="vds-width-auto@m"><div class="vds-panel">Auto-M</div></div>
+                <div class="vds-width-1-3@m"><div class="vds-panel">1-3-M</div></div>
+                <div class="vds-width-expand@m"><div class="vds-panel">Expand-M</div></div>
+            </div>
+
+            <h3>Divider</h3>
+
+            <div class="vds-grid-small vds-grid-divider vds-child-width-1-2" vds-grid>
+                <div><div class="vds-panel">1-2</div></div>
+                <div><div class="vds-panel">1-2</div></div>
+            </div>
+
+            <div class="vds-grid-small vds-grid-divider vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-grid-small vds-grid-divider vds-child-width-1-2@l" vds-grid>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-small vds-grid-divider vds-child-width-1-4@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-4-M<br>...<br>...</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-2@m">
+                    <div class="vds-grid-small vds-grid-divider vds-child-width-1-2@l vds-grid-match" vds-grid>
+                        <div><div class="vds-panel">1-2-L<br>...</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-small vds-grid-divider vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-panel">1-2-M</div>
+                    <div class="vds-panel vds-margin">1-2-M</div>
+                </div>
+            </div>
+
+            <div class="vds-grid-small vds-grid-divider" vds-grid>
+                <div class="vds-width-1-2@m"><div class="vds-panel">1-2-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-3-5@m"><div class="vds-panel">3-5-M</div></div>
+            </div>
+
+            <div class="vds-grid-small vds-grid-divider" vds-grid>
+                <div class="vds-width-auto@m"><div class="vds-panel">Auto-M</div></div>
+                <div class="vds-width-1-3@m"><div class="vds-panel">1-3-M</div></div>
+                <div class="vds-width-expand@m"><div class="vds-panel">Expand-M</div></div>
+            </div>
+
+            <h2>Medium</h2>
+
+            <div class="vds-grid-medium vds-child-width-1-2" vds-grid>
+                <div><div class="vds-panel">1-2</div></div>
+                <div><div class="vds-panel">1-2</div></div>
+            </div>
+
+            <div class="vds-grid-medium vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-grid-medium vds-child-width-1-2@l" vds-grid>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-medium vds-child-width-1-4@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-4-M<br>...<br>...</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-2@m">
+                    <div class="vds-grid-medium vds-child-width-1-2@l vds-grid-match" vds-grid>
+                        <div><div class="vds-panel">1-2-L<br>...</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-medium vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-panel">1-2-M</div>
+                    <div class="vds-panel vds-margin-medium">1-2-M</div>
+                </div>
+            </div>
+
+            <div class="vds-grid-medium" vds-grid>
+                <div class="vds-width-1-2@m"><div class="vds-panel">1-2-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-3-5@m"><div class="vds-panel">3-5-M</div></div>
+            </div>
+
+            <div class="vds-grid-medium" vds-grid>
+                <div class="vds-width-auto@m"><div class="vds-panel">Auto-M</div></div>
+                <div class="vds-width-1-3@m"><div class="vds-panel">1-3-M</div></div>
+                <div class="vds-width-expand@m"><div class="vds-panel">Expand-M</div></div>
+            </div>
+
+            <h3>Divider</h3>
+
+            <div class="vds-grid-medium vds-grid-divider vds-child-width-1-2" vds-grid>
+                <div><div class="vds-panel">1-2</div></div>
+                <div><div class="vds-panel">1-2</div></div>
+            </div>
+
+            <div class="vds-grid-medium vds-grid-divider vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-grid-medium vds-grid-divider vds-child-width-1-2@l" vds-grid>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-medium vds-grid-divider vds-child-width-1-4@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-4-M<br>...<br>...</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-2@m">
+                    <div class="vds-grid-medium vds-grid-divider vds-child-width-1-2@l vds-grid-match" vds-grid>
+                        <div><div class="vds-panel">1-2-L<br>...</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-medium vds-grid-divider vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-panel">1-2-M</div>
+                    <div class="vds-panel vds-margin-medium">1-2-M</div>
+                </div>
+            </div>
+
+            <div class="vds-grid-medium vds-grid-divider" vds-grid>
+                <div class="vds-width-1-2@m"><div class="vds-panel">1-2-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-3-5@m"><div class="vds-panel">3-5-M</div></div>
+            </div>
+
+            <div class="vds-grid-medium vds-grid-divider" vds-grid>
+                <div class="vds-width-auto@m"><div class="vds-panel">Auto-M</div></div>
+                <div class="vds-width-1-3@m"><div class="vds-panel">1-3-M</div></div>
+                <div class="vds-width-expand@m"><div class="vds-panel">Expand-M</div></div>
+            </div>
+
+            <h2>Large</h2>
+
+            <div class="vds-grid-large vds-child-width-1-2" vds-grid>
+                <div><div class="vds-panel">1-2</div></div>
+                <div><div class="vds-panel">1-2</div></div>
+            </div>
+
+            <div class="vds-grid-large vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-grid-large vds-child-width-1-2@l" vds-grid>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-large vds-child-width-1-4@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-4-M<br>...<br>...</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-2@m">
+                    <div class="vds-grid-large vds-child-width-1-2@l vds-grid-match" vds-grid>
+                        <div><div class="vds-panel">1-2-L<br>...</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-large vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-panel">1-2-M</div>
+                    <div class="vds-panel vds-margin-large">1-2-M</div>
+                </div>
+            </div>
+
+            <div class="vds-grid-large" vds-grid>
+                <div class="vds-width-1-2@m"><div class="vds-panel">1-2-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-3-5@m"><div class="vds-panel">3-5-M</div></div>
+            </div>
+
+            <div class="vds-grid-large" vds-grid>
+                <div class="vds-width-auto@m"><div class="vds-panel">Auto-M</div></div>
+                <div class="vds-width-1-3@m"><div class="vds-panel">1-3-M</div></div>
+                <div class="vds-width-expand@m"><div class="vds-panel">Expand-M</div></div>
+            </div>
+
+            <h3>Divider</h3>
+
+            <div class="vds-grid-large vds-grid-divider vds-child-width-1-2" vds-grid>
+                <div><div class="vds-panel">1-2</div></div>
+                <div><div class="vds-panel">1-2</div></div>
+            </div>
+
+            <div class="vds-grid-large vds-grid-divider vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-grid-large vds-grid-divider vds-child-width-1-2@l" vds-grid>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-large vds-grid-divider vds-child-width-1-4@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-4-M<br>...<br>...</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-2@m">
+                    <div class="vds-grid-large vds-grid-divider vds-child-width-1-2@l vds-grid-match" vds-grid>
+                        <div><div class="vds-panel">1-2-L<br>...</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-large vds-grid-divider vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-panel">1-2-M</div>
+                    <div class="vds-panel vds-margin-large">1-2-M</div>
+                </div>
+            </div>
+
+            <div class="vds-grid-large vds-grid-divider" vds-grid>
+                <div class="vds-width-1-2@m"><div class="vds-panel">1-2-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-3-5@m"><div class="vds-panel">3-5-M</div></div>
+            </div>
+
+            <div class="vds-grid-large vds-grid-divider" vds-grid>
+                <div class="vds-width-auto@m"><div class="vds-panel">Auto-M</div></div>
+                <div class="vds-width-1-3@m"><div class="vds-panel">1-3-M</div></div>
+                <div class="vds-width-expand@m"><div class="vds-panel">Expand-M</div></div>
+            </div>
+
+            <h2>Collapse</h2>
+
+            <div class="vds-grid-collapse vds-child-width-1-2" vds-grid>
+                <div><div class="vds-panel">1-2</div></div>
+                <div><div class="vds-panel">1-2</div></div>
+            </div>
+
+            <div class="vds-grid-collapse vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-grid-collapse vds-child-width-1-2@l" vds-grid>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-collapse vds-child-width-1-4@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-4-M<br>...<br>...</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-2@m">
+                    <div class="vds-grid-collapse vds-child-width-1-2@l vds-grid-match" vds-grid>
+                        <div><div class="vds-panel">1-2-L<br>...</div></div>
+                        <div><div class="vds-panel">1-2-L</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vds-grid-collapse vds-child-width-1-2@m vds-grid-match" vds-grid>
+                <div><div class="vds-panel">1-2-M</div></div>
+                <div>
+                    <div class="vds-panel">1-2-M</div>
+                    <div class="vds-panel">1-2-M</div>
+                </div>
+            </div>
+
+            <div class="vds-grid-collapse" vds-grid>
+                <div class="vds-width-1-2@m"><div class="vds-panel">1-2-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-4@m"><div class="vds-panel">1-4-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-1-5@m"><div class="vds-panel">1-5-M</div></div>
+                <div class="vds-width-3-5@m"><div class="vds-panel">3-5-M</div></div>
+            </div>
+
+            <div class="vds-grid-collapse" vds-grid>
+                <div class="vds-width-auto@m"><div class="vds-panel">Auto-M</div></div>
+                <div class="vds-width-1-3@m"><div class="vds-panel">1-3-M</div></div>
+                <div class="vds-width-expand@m"><div class="vds-panel">Expand-M</div></div>
+            </div>
+
+            <h2>Column and Row</h2>
+
+            <h3>Small / Large</h3>
+
+            <div class="vds-grid-column-small vds-grid-row-large vds-child-width-1-4@m" vds-grid>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+            </div>
+
+            <h3>Medium / Small</h3>
+
+            <div class="vds-grid-divider vds-grid-column-medium vds-grid-row-small vds-child-width-1-4@m" vds-grid>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+                <div><div class="vds-panel">1-4-M</div></div>
+            </div>
+
+            <h2>Divider</h2>
+
+            <h3>Order</h3>
+
+            <div class="vds-grid-divider vds-child-width-1-2@m" vds-grid>
+                <div>
+
+                    <div class="vds-grid-small vds-grid-divider vds-child-width-1-4@m" vds-grid>
+                        <div><div class="vds-panel">First</div></div>
+                        <div class="vds-flex-last"><div class="vds-panel">Second</div></div>
+                        <div><div class="vds-panel">Third</div></div>
+                        <div class="vds-flex-first"><div class="vds-panel">Last</div></div>
+                    </div>
+
+                </div>
+                <div>
+
+                    <div class="vds-grid-small vds-grid-divider vds-child-width-1-4@m" vds-grid>
+                        <div class="vds-flex-last"><div class="vds-panel">First</div></div>
+                        <div><div class="vds-panel">Second</div></div>
+                        <div><div class="vds-panel">Third</div></div>
+                        <div class="vds-flex-first"><div class="vds-panel">Last</div></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <h3>Wrap + Order</h3>
+
+            <div class="vds-grid-divider vds-child-width-1-4@m" vds-grid>
+                <div>
+
+                    <div class="vds-grid-small vds-grid-divider vds-child-width-1-2@m vds-flex-middle" vds-grid>
+                        <div><div class="vds-panel">First</div></div>
+                        <div><div class="vds-panel">Last<br>...<br>...</div></div>
+                        <div><div class="vds-panel">Wrap</div></div>
+                    </div>
+
+                </div>
+                <div>
+
+                    <div class="vds-grid-small vds-grid-divider vds-child-width-1-2@m vds-flex-middle" vds-grid>
+                        <div><div class="vds-panel">First</div></div>
+                        <div class="vds-flex-first"><div class="vds-panel">Last<br>...<br>...</div></div>
+                        <div><div class="vds-panel">Wrap</div></div>
+                    </div>
+
+                </div>
+                <div>
+
+                    <div class="vds-grid-small vds-grid-divider vds-child-width-1-2@m vds-flex-middle" vds-grid>
+                        <div><div class="vds-panel">First<br>...<br>...</div></div>
+                        <div class="vds-flex-first"><div class="vds-panel">Last</div></div>
+                        <div><div class="vds-panel">Wrap</div></div>
+                    </div>
+
+                </div>
+                <div>
+
+                    <div class="vds-grid-small vds-grid-divider vds-child-width-1-2@m vds-flex-middle" vds-grid>
+                        <div class="vds-flex-last"><div class="vds-panel">First</div></div>
+                        <div><div class="vds-panel">Last<br>...<br>...</div></div>
+                        <div><div class="vds-panel">Wrap</div></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="vds-grid-divider vds-child-width-1-2@m" vds-grid>
+                <div>
+
+                    <h3>Stack</h3>
+
+                    <div class="vds-grid-small vds-grid-divider vds-child-width-1-1" vds-grid>
+                        <div><div class="vds-panel">First</div></div>
+                        <div><div class="vds-panel">Second</div></div>
+                        <div class="vds-flex-first"><div class="vds-panel">Last</div></div>
+                    </div>
+
+                </div>
+                <div>
+
+                    <h3>Align</h3>
+
+                    <div class="vds-grid-small vds-grid-divider vds-child-width-1-4@s vds-flex-center" vds-grid>
+                        <div class="vds-flex-last"><div class="vds-panel">First</div></div>
+                        <div><div class="vds-panel">Second</div></div>
+                        <div><div class="vds-panel">Third</div></div>
+                        <div><div class="vds-panel">Forth</div></div>
+                        <div class="vds-flex-first"><div class="vds-panel">Fifth</div></div>
+                        <div><div class="vds-panel">Last</div></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <h2>JavaScript Options</h2>
+
+            <div class="vds-overflow-auto">
+                <table class="vds-table vds-table-striped">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Value</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>margin</code></td>
+                            <td>String</td>
+                            <td>vds-grid-margin</td>
+                            <td>This class is added to items that break into the next row, typically to create margin to the previous row.</td>
+                        </tr>
+                        <tr>
+                            <td><code>first-column</code></td>
+                            <td>String</td>
+                            <td>vds-first-column</td>
+                            <td>This class is added to the first element in each row.</td>
+                        </tr>
+                        <tr>
+                            <td><code>masonry</code></td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                            <td>Enables masonry layout for this grid.</td>
+                        </tr>
+                        <tr>
+                            <td><code>parallax</code></td>
+                            <td>Number</td>
+                            <td>0</td>
+                            <td>Parallax translation value. The value must be a positive integer. Falsy disables the parallax effect (default).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </body>
+</html>

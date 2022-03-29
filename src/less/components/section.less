@@ -1,0 +1,212 @@
+// Name:            Section
+// Description:     Component to create horizontal layout section
+//
+// Component:       `vds-section`
+//
+// Modifiers:       `vds-section-xsmall`
+//                  `vds-section-small`
+//                  `vds-section-large`
+//                  `vds-section-xlarge`
+//                  `vds-section-default`
+//                  `vds-section-muted`
+//                  `vds-section-primary`
+//                  `vds-section-secondary`
+//                  `vds-section-overlap`
+//
+// States:          `vds-preserve-color`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@section-padding-vertical:                        @global-medium-margin;
+@section-padding-vertical-m:                      @global-large-margin;
+
+@section-xsmall-padding-vertical:                 @global-margin;
+
+@section-small-padding-vertical:                  @global-medium-margin;
+
+@section-large-padding-vertical:                  @global-large-margin;
+@section-large-padding-vertical-m:                @global-xlarge-margin;
+
+@section-xlarge-padding-vertical:                 @global-xlarge-margin;
+@section-xlarge-padding-vertical-m:               (@global-large-margin + @global-xlarge-margin);
+
+@section-default-background:                      @global-background;
+
+@section-muted-background:                        @global-muted-background;
+
+@section-primary-background:                      @global-primary-background;
+@section-primary-color-mode:                      light;
+
+@section-secondary-background:                    @global-secondary-background;
+@section-secondary-color-mode:                    light;
+
+
+/* ========================================================================
+   Component: Section
+ ========================================================================== */
+
+/*
+ * 1. Make it work with `100vh` and height in general
+ */
+
+.vds-section {
+    display: flow-root;
+    box-sizing: border-box; /* 1 */
+    padding-top: @section-padding-vertical;
+    padding-bottom: @section-padding-vertical;
+    .hook-section();
+}
+
+/* Desktop and bigger */
+@media (min-width: @breakpoint-medium) {
+
+    .vds-section {
+        padding-top: @section-padding-vertical-m;
+        padding-bottom: @section-padding-vertical-m;
+    }
+
+}
+
+/*
+ * Remove margin from the last-child
+ */
+
+.vds-section > :last-child { margin-bottom: 0; }
+
+
+/* Size modifiers
+ ========================================================================== */
+
+/*
+ * XSmall
+ */
+
+.vds-section-xsmall {
+    padding-top: @section-xsmall-padding-vertical;
+    padding-bottom: @section-xsmall-padding-vertical;
+}
+
+/*
+ * Small
+ */
+
+.vds-section-small {
+    padding-top: @section-small-padding-vertical;
+    padding-bottom: @section-small-padding-vertical;
+}
+
+/*
+ * Large
+ */
+
+.vds-section-large {
+    padding-top: @section-large-padding-vertical;
+    padding-bottom: @section-large-padding-vertical;
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: @breakpoint-medium) {
+
+    .vds-section-large {
+        padding-top: @section-large-padding-vertical-m;
+        padding-bottom: @section-large-padding-vertical-m;
+    }
+
+}
+
+
+/*
+ * XLarge
+ */
+
+.vds-section-xlarge {
+    padding-top: @section-xlarge-padding-vertical;
+    padding-bottom: @section-xlarge-padding-vertical;
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: @breakpoint-medium) {
+
+    .vds-section-xlarge {
+        padding-top: @section-xlarge-padding-vertical-m;
+        padding-bottom: @section-xlarge-padding-vertical-m;
+    }
+
+}
+
+
+/* Style modifiers
+ ========================================================================== */
+
+/*
+ * Default
+ */
+
+.vds-section-default {
+    background: @section-default-background;
+    .hook-section-default();
+}
+
+/*
+ * Muted
+ */
+
+.vds-section-muted {
+    background: @section-muted-background;
+    .hook-section-muted();
+}
+
+/*
+ * Primary
+ */
+
+.vds-section-primary {
+    background: @section-primary-background;
+    .hook-section-primary();
+}
+
+.vds-section-primary:not(.vds-preserve-color):extend(.vds-light all) when (@section-primary-color-mode = light) {}
+.vds-section-primary:not(.vds-preserve-color):extend(.vds-dark all) when (@section-primary-color-mode = dark) {}
+
+/*
+ * Secondary
+ */
+
+.vds-section-secondary {
+    background: @section-secondary-background;
+    .hook-section-secondary();
+}
+
+.vds-section-secondary:not(.vds-preserve-color):extend(.vds-light all) when (@section-secondary-color-mode = light) {}
+.vds-section-secondary:not(.vds-preserve-color):extend(.vds-dark all) when (@section-secondary-color-mode = dark) {}
+
+
+/* Overlap modifier
+ ========================================================================== */
+
+/*
+ * Reserved modifier to make a section overlap another section with an border image
+ * Implemented by the theme
+ */
+
+.vds-section-overlap {
+    .hook-section-overlap();
+}
+
+
+// Hooks
+// ========================================================================
+
+.hook-section-misc();
+
+.hook-section() {}
+.hook-section-default() {}
+.hook-section-muted() {}
+.hook-section-secondary() {}
+.hook-section-primary() {}
+.hook-section-overlap() {}
+.hook-section-misc() {}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Flex - UIkit tests</title>
+        <script src="js/test.js"></script>
+        <style>
+
+            .vds-flex > * {
+                padding: 10px;
+                text-align: center;
+            }
+
+            .vds-flex > :nth-child(8n-7) { background: rgba(0,0,0,0.1); }
+            .vds-flex > :nth-child(8n-6) { background: rgba(0,0,0,0.15); }
+            .vds-flex > :nth-child(8n-5) { background: rgba(0,0,0,0.2); }
+            .vds-flex > :nth-child(8n-4) { background: rgba(0,0,0,0.25); }
+            .vds-flex > :nth-child(8n-3) { background: rgba(0,0,0,0.3); }
+            .vds-flex > :nth-child(8n-2) { background: rgba(0,0,0,0.35); }
+            .vds-flex > :nth-child(8n-1) { background: rgba(0,0,0,0.40); }
+            .vds-flex > :nth-child(8n) { background: rgba(0,0,0,0.45); }
+
+            .test {
+                height: 300px;
+                background: #f0f0f0;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="vds-container">
+
+            <h1>Flex</h1>
+
+            <h2>Alignment and Justify</h2>
+
+            <h3>Stretch / Left (Default)</h3>
+
+            <div class="vds-flex vds-child-width-1-4">
+                <div>1-4</div>
+                <div>1-4<br>...</div>
+                <div>1-4<br>...<br>...</div>
+            </div>
+
+            <h3>Middle / Center</h3>
+
+            <div class="vds-flex vds-flex-middle vds-flex-center vds-child-width-1-4">
+                <div>1-4</div>
+                <div>1-4<br>...</div>
+                <div>1-4<br>...<br>...</div>
+            </div>
+
+            <h3>Bottom / Right</h3>
+
+            <div class="vds-flex vds-flex-bottom vds-flex-right vds-child-width-1-4">
+                <div>1-4</div>
+                <div>1-4<br>...</div>
+                <div>1-4<br>...<br>...</div>
+            </div>
+
+            <h3>Top / Space-between</h3>
+
+            <div class="vds-flex vds-flex-top vds-flex-between vds-child-width-1-4">
+                <div>1-4</div>
+                <div>1-4<br>...</div>
+                <div>1-4<br>...<br>...</div>
+            </div>
+
+            <h3>Stretch / Space-around</h3>
+
+            <div class="vds-flex vds-flex-around vds-child-width-1-4">
+                <div>1-4</div>
+                <div>1-4<br>...</div>
+                <div>1-4<br>...<br>...</div>
+            </div>
+
+            <h2>Wrap and Alignment</h2>
+
+            <h3>Stretch</h3>
+
+            <div class="vds-flex vds-flex-wrap test">
+                <div class="vds-width-1-3">1-3</div>
+                <div class="vds-width-1-2">1-2<br>...</div>
+                <div class="vds-width-1-3">1-3<br>...<br>...</div>
+                <div class="vds-width-1-3">1-3</div>
+                <div class="vds-width-1-2">1-2<br>...</div>
+                <div class="vds-width-1-3">1-3<br>...<br>...</div>
+            </div>
+
+            <h3>Top</h3>
+
+            <div class="vds-flex vds-flex-wrap vds-flex-wrap-top test">
+                <div class="vds-width-1-3">1-3</div>
+                <div class="vds-width-1-2">1-2<br>...</div>
+                <div class="vds-width-1-3">1-3<br>...<br>...</div>
+                <div class="vds-width-1-3">1-3</div>
+                <div class="vds-width-1-2">1-2<br>...</div>
+                <div class="vds-width-1-3">1-3<br>...<br>...</div>
+            </div>
+
+            <h3>Middle</h3>
+
+            <div class="vds-flex vds-flex-wrap vds-flex-wrap-middle test">
+                <div class="vds-width-1-3">1-3</div>
+                <div class="vds-width-1-2">1-2<br>...</div>
+                <div class="vds-width-1-3">1-3<br>...<br>...</div>
+                <div class="vds-width-1-3">1-3</div>
+                <div class="vds-width-1-2">1-2<br>...</div>
+                <div class="vds-width-1-3">1-3<br>...<br>...</div>
+            </div>
+
+            <h3>Bottom</h3>
+
+            <div class="vds-flex vds-flex-wrap vds-flex-wrap-bottom test">
+                <div class="vds-width-1-3">1-3</div>
+                <div class="vds-width-1-2">1-2<br>...</div>
+                <div class="vds-width-1-3">1-3<br>...<br>...</div>
+                <div class="vds-width-1-3">1-3</div>
+                <div class="vds-width-1-2">1-2<br>...</div>
+                <div class="vds-width-1-3">1-3<br>...<br>...</div>
+            </div>
+
+            <h3>Space-between</h3>
+
+            <div class="vds-flex vds-flex-wrap vds-flex-wrap-between test">
+                <div class="vds-width-1-3">1-3</div>
+                <div class="vds-width-1-2">1-2<br>...</div>
+                <div class="vds-width-1-3">1-3<br>...<br>...</div>
+                <div class="vds-width-1-3">1-3</div>
+                <div class="vds-width-1-2">1-2<br>...</div>
+                <div class="vds-width-1-3">1-3<br>...<br>...</div>
+            </div>
+
+            <h3>Space-around</h3>
+
+            <div class="vds-flex vds-flex-wrap vds-flex-wrap-around test">
+                <div class="vds-width-1-3">1-3</div>
+                <div class="vds-width-1-2">1-2<br>...</div>
+                <div class="vds-width-1-3">1-3<br>...<br>...</div>
+                <div class="vds-width-1-3">1-3</div>
+                <div class="vds-width-1-2">1-2<br>...</div>
+                <div class="vds-width-1-3">1-3<br>...<br>...</div>
+            </div>
+
+            <h2>Inline Flex</h2>
+
+            <div class="vds-text-center">
+                <div class="vds-flex vds-flex-inline">
+                    <div>1-4</div>
+                    <div>1-4<br>...</div>
+                    <div>1-4<br>...<br>...</div>
+                </div>
+            </div>
+
+            <h2>Order</h2>
+
+            <div class="vds-flex vds-child-width-1-3">
+                <div>1</div>
+                <div>2</div>
+                <div class="vds-flex-first">3</div>
+            </div>
+
+            <div class="vds-flex vds-child-width-1-3">
+                <div class="vds-flex-last">1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+            <div class="vds-flex vds-child-width-1-3">
+                <div class="vds-flex-last">1</div>
+                <div>2</div>
+                <div class="vds-flex-first">3</div>
+            </div>
+
+        </div>
+
+    </body>
+</html>

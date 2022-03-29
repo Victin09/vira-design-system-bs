@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Position - UIkit tests</title>
+        <script src="js/test.js"></script>
+        <style>
+
+            /* JavaScript */
+            #js-viewport {
+                height: 300px;
+                outline: 1px solid rgba(0,0,0,0.1);
+                position: relative;
+            }
+
+            #js-target {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 200px;
+                height: 100px;
+                background: rgba(0,0,0,0.1);
+            }
+
+            #js-element {
+                position: absolute;
+                width: 75px;
+                height: 75px;
+                background: rgba(0,0,0,0.1);
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="vds-container">
+
+            <h1>Position</h1>
+
+            <div class="vds-position-relative">
+
+                <div class="vds-child-width-1-2@s" vds-grid>
+                    <div>
+
+                        <div class="vds-inline">
+                            <a class="vds-display-block" href="#"><img src="images/photo.jpg" width="1800" height="1200" alt=""></a>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-top-left">Top Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-top-center">Top Center</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-top-right">Top Right</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-center-left">Center Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-center">Center Center</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-center-right">Center Right</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-bottom-left">Bottom Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-bottom-center">Bottom Center</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-bottom-right">Bottom Right</div>
+                        </div>
+
+                    </div>
+                    <div>
+
+                        <div class="vds-inline">
+                            <a class="vds-display-block" href="#"><img src="images/photo.jpg" width="1800" height="1200" alt=""></a>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-top vds-text-center">Top</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-bottom vds-text-center">Bottom</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-left vds-flex vds-flex-middle">Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-right vds-flex vds-flex-middle">Right</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-center">Test if the text uses the available width if centered</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="vds-overlay vds-overlay-primary vds-padding-small vds-position-center-left-out vds-visible@xl">Out Test</div>
+                <div class="vds-overlay vds-overlay-primary vds-padding-small vds-position-center-right-out vds-visible@xl">Out Test</div>
+
+            </div>
+
+            <h2>Small</h2>
+
+            <div class="vds-position-relative">
+
+                <div class="vds-child-width-1-2@s" vds-grid>
+                    <div>
+
+                        <div class="vds-inline">
+                            <a class="vds-display-block" href="#"><img src="images/photo.jpg" width="1800" height="1200" alt=""></a>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-small vds-position-top-left">Top Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-small vds-position-top-center">Top Center</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-small vds-position-top-right">Top Right</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-small vds-position-center-left">Center Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-small vds-position-center">Center Center</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-small vds-position-center-right">Center Right</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-small vds-position-bottom-left">Bottom Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-small vds-position-bottom-center">Bottom Center</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-small vds-position-bottom-right">Bottom Right</div>
+                        </div>
+
+                    </div>
+                    <div>
+
+                        <div class="vds-inline">
+                            <a class="vds-display-block" href="#"><img src="images/photo.jpg" width="1800" height="1200" alt=""></a>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-small vds-position-top vds-text-center">Top</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-small vds-position-bottom vds-text-center">Bottom</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-small vds-position-left vds-flex vds-flex-middle">Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-small vds-position-right vds-flex vds-flex-middle">Right</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-small vds-position-center">
+                                <div class="vds-width-xlarge">Test if the overlay does not succeed the container width and position margin is taken into account.</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="vds-overlay vds-overlay-primary vds-padding-small vds-position-small vds-position-center-left-out vds-visible@xl">Out</div>
+                <div class="vds-overlay vds-overlay-primary vds-padding-small vds-position-small vds-position-center-right-out vds-visible@xl">Out</div>
+
+            </div>
+
+            <h2>Medium</h2>
+
+            <div class="vds-position-relative">
+
+                <div class="vds-child-width-1-2@s" vds-grid>
+                    <div>
+
+                        <div class="vds-inline">
+                            <a class="vds-display-block" href="#"><img src="images/photo.jpg" width="1800" height="1200" alt=""></a>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-medium vds-position-top-left">Top Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-medium vds-position-top-center">Top Center</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-medium vds-position-top-right">Top Right</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-medium vds-position-center-left">Center Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-medium vds-position-center">Center Center</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-medium vds-position-center-right">Center Right</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-medium vds-position-bottom-left">Bottom Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-medium vds-position-bottom-center">Bottom Center</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-medium vds-position-bottom-right">Bottom Right</div>
+                        </div>
+
+                    </div>
+                    <div>
+
+                        <div class="vds-inline">
+                            <a class="vds-display-block" href="#"><img src="images/photo.jpg" width="1800" height="1200" alt=""></a>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-medium vds-position-top vds-text-center">Top</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-medium vds-position-bottom vds-text-center">Bottom</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-medium vds-position-left vds-flex vds-flex-middle">Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-medium vds-position-right vds-flex vds-flex-middle">Right</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="vds-overlay vds-overlay-primary vds-padding-small vds-position-medium vds-position-center-left-out vds-visible@xl">Out</div>
+                <div class="vds-overlay vds-overlay-primary vds-padding-small vds-position-medium vds-position-center-right-out vds-visible@xl">Out</div>
+
+            </div>
+
+            <h2>Large</h2>
+
+            <div class="vds-position-relative">
+
+                <div class="vds-child-width-1-2@s" vds-grid>
+                    <div>
+
+                        <div class="vds-inline">
+                            <a class="vds-display-block" href="#"><img src="images/photo.jpg" width="1800" height="1200" alt=""></a>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-large vds-position-top-left">Top Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-large vds-position-top-center">Top Center</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-large vds-position-top-right">Top Right</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-large vds-position-center-left">Center Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-large vds-position-center">Center Center</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-large vds-position-center-right">Center Right</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-large vds-position-bottom-left">Bottom Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-large vds-position-bottom-center">Bottom Center</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-large vds-position-bottom-right">Bottom Right</div>
+                        </div>
+
+                    </div>
+                    <div>
+
+                        <div class="vds-inline">
+                            <a class="vds-display-block" href="#"><img src="images/photo.jpg" width="1800" height="1200" alt=""></a>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-large vds-position-top vds-text-center">Top</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-large vds-position-bottom vds-text-center">Bottom</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-large vds-position-left vds-flex vds-flex-middle">Left</div>
+                            <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-large vds-position-right vds-flex vds-flex-middle">Right</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="vds-overlay vds-overlay-primary vds-padding-small vds-position-large vds-position-center-left-out vds-visible@xl">Out</div>
+                <div class="vds-overlay vds-overlay-primary vds-padding-small vds-position-large vds-position-center-right-out vds-visible@xl">Out</div>
+
+            </div>
+
+            <h2>Cover</h2>
+
+            <div class="vds-child-width-1-4@s" vds-grid>
+                <div>
+
+                    <div class="vds-inline">
+                        <a class="vds-display-block" href="#"><img src="images/photo.jpg" width="1800" height="1200" alt=""></a>
+                        <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-cover vds-flex vds-flex-center vds-flex-middle">Cover</div>
+                    </div>
+
+                </div>
+                <div>
+
+                    <div class="vds-inline">
+                        <a class="vds-display-block" href="#"><img src="images/photo.jpg" width="1800" height="1200" alt=""></a>
+                        <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-small vds-position-cover vds-flex vds-flex-center vds-flex-middle">Cover</div>
+                    </div>
+
+                </div>
+                <div>
+
+                    <div class="vds-inline">
+                        <a class="vds-display-block" href="#"><img src="images/photo.jpg" width="1800" height="1200" alt=""></a>
+                        <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-medium vds-position-cover vds-flex vds-flex-center vds-flex-middle">Cover</div>
+                    </div>
+
+                </div>
+                <div>
+
+                    <div class="vds-inline">
+                        <a class="vds-display-block" href="#"><img src="images/photo.jpg" width="1800" height="1200" alt=""></a>
+                        <div class="vds-overlay vds-overlay-default vds-padding-small vds-position-large vds-position-cover vds-flex vds-flex-center vds-flex-middle">Cover</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <h2>JavaScript</h2>
+
+            <div id="js-viewport" class="vds-margin">
+                <div id="js-target" class="vds-flex vds-flex-center vds-flex-middle" draggable="true">Drag me!</div>
+            </div>
+
+            <div id="js-element"></div>
+
+            <div class="vds-grid vds-child-width-auto vds-form-stacked" style="margin-bottom: 100vh">
+                <div>
+
+                    <div class="vds-margin">
+                        <span class="vds-form-label">Element</span>
+                        <label>
+                            Horizontal
+                            <select id="js-element_x" class="vds-select vds-form-small vds-form-width-xsmall">
+                                <option value="left">left</option>
+                                <option value="center">center</option>
+                                <option value="right">right</option>
+                            </select>
+                        </label>
+                        <label>
+                            Vertical
+                            <select id="js-element_y" class="vds-select vds-form-small vds-form-width-xsmall">
+                                <option value="top">top</option>
+                                <option value="center">center</option>
+                                <option value="bottom">bottom</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="vds-margin">
+                        <span class="vds-form-label">Target</span>
+                        <label>
+                            Horizontal
+                            <select id="js-target_x" class="vds-select vds-form-small vds-form-width-xsmall">
+                                <option value="left">left</option>
+                                <option value="center">center</option>
+                                <option value="right">right</option>
+                            </select>
+                        </label>
+                        <label>
+                            Vertical
+                            <select id="js-target_y" class="vds-select vds-form-small vds-form-width-xsmall">
+                                <option value="top">top</option>
+                                <option value="center">center</option>
+                                <option value="bottom">bottom</option>
+                            </select>
+                        </label>
+                    </div>
+
+                </div>
+                <div>
+
+                    <div class="vds-margin">
+                        <span class="vds-form-label">Offset</span>
+                        <label>
+                            Horizontal
+                            <input id="js-offset_x" class="vds-input vds-form-small vds-form-width-xsmall" type="text">
+                        </label>
+                        <label>
+                            Vertical
+                            <input id="js-offset_y" class="vds-input vds-form-small vds-form-width-xsmall" type="text">
+                        </label>
+                    </div>
+
+                    <div class="vds-margin">
+                        <span class="vds-form-label">Flip</span>
+                        <label>
+                            Horizontal
+                            <select id="js-flip_x" class="vds-select vds-form-small vds-form-width-xsmall">
+                                <option value="x">flip</option>
+                                <option value="">none</option>
+                            </select>
+                        </label>
+                        <label>
+                            Vertical
+                            <select id="js-flip_y" class="vds-select vds-form-small vds-form-width-xsmall">
+                                <option value="y">flip</option>
+                                <option value="">none</option>
+                            </select>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+
+            const {$, $$, css, getEventPos, on, offset, positionAt} = UIkit.util;
+            let viewport = $('#js-viewport');
+            let element = $('#js-element');
+            let target = $('#js-target');
+            let offsetX;
+            let offsetY;
+
+            function position() {
+                positionAt(
+                    element,
+                    target,
+                    {
+                        viewport,
+                        attach:{
+                            element: [$('#js-element_x').value, $('#js-element_y').value],
+                            target: [$('#js-target_x').value, $('#js-target_y').value]
+                        },
+                        offset: [$('#js-offset_x').value, $('#js-offset_y').value],
+                        flip: [$('#js-flip_x').value, $('#js-flip_y').value]
+                    }
+                );
+            }
+
+            on(window, 'dragstart', function (e) {
+                e.dataTransfer.setDragImage(new Image(), 0, 0);
+
+                offsetX = Math.round(e.pageX - offset(target).left);
+                offsetY = Math.round(e.pageY - offset(target).top);
+
+            });
+
+            let lastPos;
+            on(window, 'dragover', function (e) {
+
+                const pos = getEventPos(e);
+
+                if (lastPos?.x === pos.x && lastPos?.y === pos.y) {
+                    return;
+                }
+                lastPos = pos;
+
+                e.preventDefault();
+
+                // positions target at mouse cursor
+                positionAt(
+                    target,
+                    viewport,
+                    {
+                        offset: [e.pageX - offset(viewport).left - offsetX, e.pageY - offset(viewport).top - offsetY]
+                    }
+                );
+
+                // positions element at target
+                position();
+            });
+
+            on($$('select,input'), 'change', position);
+            on(window, 'scroll', position);
+
+            position();
+
+        </script>
+
+    </body>
+</html>
