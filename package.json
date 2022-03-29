@@ -1,66 +1,33 @@
 {
-    "name": "vds",
-    "title": "Vira Design System",
-    "description": "Vira Design System is a lightweight and modular front-end framework for developing fast and powerful web interfaces.",
-    "version": "3.13.5",
-    "main": "dist/js/vds.js",
-    "style": "dist/css/vds.css",
-    "sideEffects": [
-        "*.css",
-        "./src/js/*.js",
-        "./dist/**/*.js"
-    ],
-    "scripts": {
-        "build-scss": "node scripts/scss",
-        "compile": "npm run compile-less && npm run compile-js",
-        "compile-js": "node scripts/build",
-        "compile-less": "npm run icons && node scripts/less",
-        "compile-rtl": "npm run compile-less rtl",
-        "icons": "node scripts/icons",
-        "prefix": "node scripts/prefix",
-        "scope": "node scripts/scope",
-        "release": "node scripts/release",
-        "watch": "watch-run -i -p '**/*.less' npm run compile-less",
-        "eslint": "eslint src/js",
-        "eslint-fix": "eslint --fix src/js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/vds/vds.git"
-    },
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/vds/vds/issues"
-    },
-    "homepage": "https://getvds.com",
-    "devDependencies": {
-        "@babel/core": "^7.17.8",
-        "@babel/preset-env": "^7.16.4",
-        "@rollup/plugin-alias": "^3.1.9",
-        "@rollup/plugin-babel": "^5.3.1",
-        "@rollup/plugin-replace": "^3.0.1",
-        "archiver": "^5.3.0",
-        "camelcase": "^6.3.0",
-        "clean-css": "^5.2.4",
-        "dateformat": "^5.0.3",
-        "esbuild": "^0.14.27",
-        "eslint": "^8.11.0",
-        "eslint-config-prettier": "^8.5.0",
-        "fs-extra": "^10.0.1",
-        "glob": "^7.2.0",
-        "inquirer": "^8.2.1",
-        "less": "^4.1.2",
-        "minimist": "^1.2.5",
-        "number-precision": "^1.5.2",
-        "p-limit": "^4.0.0",
-        "prettier": "^2.6.0",
-        "rollup": "^2.70.1",
-        "rollup-plugin-esbuild": "^4.8.2",
-        "rollup-plugin-html": "^0.2.1",
-        "rollup-plugin-modify": "^3.0.0",
-        "rtlcss": "^3.5.0",
-        "semver": "^7.3.2",
-        "svgo": "^2.8.0",
-        "watch-run": "^1.2.5"
-    }
+  "scripts": {
+    "install": "cd ./node_modules/vds && npm i && cd ../../ && symlink-dir ./node_modules/vds ./assets/vds",
+    "setup": "npm i && npm run compile",
+    "compile": "npm run compile-js && npm run compile-less && npm run compile-vds",
+    "compile-vds": "cd ./assets/vds && npm run compile-less && npm run compile-rtl && npm run compile-js vds tests",
+    "compile-js": "webpack",
+    "compile-less": "make-dir css && lessc less/theme.less > css/theme.css --relative-urls --rootpath=../less/ --clean-css",
+    "eslint": "eslint ./",
+    "watch-js": "webpack -w --devtool=inline-source-map"
+  },
+  "eslintIgnore": [
+    "*.min.js",
+    "*.json"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.4",
+    "babel-loader": "^8.2.4",
+    "eslint": "8.12.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "less": "^4.1.2",
+    "less-plugin-clean-css": "^1.5.1",
+    "make-dir-cli": "^3.0.0",
+    "symlink-dir": "^5.0.1",
+    "vds": "git+https://github.com/Victin09/vira-design-system.git",
+    "uniqid": "^5.4.0",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
 }

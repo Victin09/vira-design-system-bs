@@ -2,7 +2,7 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "vds-util": ["src/js/util"]
+            "vds-util": ["assets/vds/src/js/util"]
         }
     },
     "exclude": ["node_modules"]

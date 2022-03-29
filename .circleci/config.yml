@@ -11,36 +11,36 @@ executors:
 jobs:
   build:
     executor: executor
-    working_directory: ~/vds
+    working_directory: ~/vds-site
     steps:
-      # Install node
+      - run:
+          name: Update Environment
+          command: |
+            sudo apt update
+            sudo apt-get install rsync
       - node/install:
           lts: true
           install-npm: false
           install-yarn: true
-
-      # Checkout repository
       - checkout
-
-      # Download Node dependencies
       - node/install-packages:
           pkg-manager: yarn
-
-      # Run ESlint
-      - run:
-          name: ESlint
-          command: yarn eslint
-
       - run:
           name: Compile
           command: |
-            if [ "${CIRCLE_BRANCH}" = "master" ];then
-              yarn compile
-            fi
+            yarn compile
       - run:
-          name: Deploy to NPM
+          name: Replace Build Number
           command: |
-            if [ "${CIRCLE_BRANCH}" = "develop" ];then
-              echo "//registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN" >> ~/.npmrc
-              node ./scripts/publishDev.js
+            sed -i -- "s/{{BUILD}}/$CIRCLE_BUILD_NUM/g" app/main.min.js
+            sed -i -- "s/{{BUILD}}/$CIRCLE_BUILD_NUM/g" docs/app/main.min.js
+            sed -i -- "s/{{BUILD}}/$CIRCLE_BUILD_NUM/g" docs/index.html
+            sed -i -- "s/{{BUILD}}/$CIRCLE_BUILD_NUM/g" index.html
+      - run:
+          name: Transfer Files
+          command: |
+            if [ "${CIRCLE_BRANCH}" = "master" ];then
+              rsync -avze "ssh -o StrictHostKeyChecking=no" --exclude-from ".circleci/exclude.txt" --copy-links --checksum --delete . $UIKIT_SERVER
+            else
+              echo "Skipping deploy on branch ${CIRCLE_BRANCH}";
             fi
