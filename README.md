@@ -6,8 +6,8 @@ Vira Design System is a lightweight and modular front-end framework for developi
 
 You have the following options to get Vira Design System:
 
-- Download the [latest release](https://github.com/Victin09/vira-design-system/vds/releases/latest) with pre-built CSS and JS.
-- Clone the repo to get all source files including build scripts: `git clone git://github.com/Victin09/vira-design-system/vds.git`
+- Download the [latest release](https://github.com/Victin09/vira-design-system/releases/latest) with pre-built CSS and JS.
+- Clone the repo to get all source files including build scripts: `git clone git://github.com/Victin09/vira-design-system.git`
 
 
 ## Contributing
