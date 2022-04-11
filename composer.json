@@ -1,17 +1,18 @@
 {
-    "name": "vds/vds",
-    "type": "library",
-    "description": "Vira Design System is a lightweight and modular front-end framework for developing fast and powerful web interfaces.",
-    "keywords": [],
-    "homepage": "https://getvds.com/",
-    "authors": [],
-    "support": {
-        "issues": "https://github.com/vds/vds/issues"
-    },
-    "license": "MIT",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "3.0.x-dev"
-        }
-    }
+  "name": "vira/vds",
+  "description": "The vira front-end framework for developing responsive, mobile first projects on the web.",
+  "keywords": [
+    "css",
+    "js",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "support": {
+    "issues": "https://github.com/Victin09/vira-design-system/issues"
+  },
+  "license": "MIT"
 }

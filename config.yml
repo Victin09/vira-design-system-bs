@@ -1,0 +1,67 @@
+languageCode:           "en"
+title:                  "Vira Design System"
+
+security:
+  enableInlineShortcodes: true
+  funcs:
+    getenv:
+      - ^HUGO_
+      - NETLIFY
+
+markup:
+  goldmark:
+    renderer:
+      unsafe:           true
+  highlight:
+    noClasses:          false
+  tableOfContents:
+    startLevel:         2
+    endLevel:           6
+
+buildDrafts:            true
+buildFuture:            true
+
+enableRobotsTXT:        true
+metaDataFormat:         "yaml"
+disableKinds:           ["404", "taxonomy", "term", "RSS"]
+
+publishDir:             "_site"
+
+module:
+  mounts:
+    - source:           dist
+      target:           static/docs/1.0/dist
+    - source:           site/assets
+      target:           assets
+    - source:           site/content
+      target:           content
+    - source:           site/data
+      target:           data
+    - source:           site/layouts
+      target:           layouts
+    - source:           site/static
+      target:           static
+    - source:           site/static/docs/1.0/assets/img/favicons/apple-touch-icon.png
+      target:           static/apple-touch-icon.png
+    - source:           site/static/docs/1.0/assets/img/favicons/favicon.ico
+      target:           static/favicon.ico
+
+params:
+  description:          "The vira's front-end framework."
+  authors:              "Vira's contributors"
+
+  current_version:      "1.0"
+  current_ruby_version: "1.0"
+  docs_version:         "1.0"
+  rfs_version:          "v9.0.6"
+  github_org:           "https://github.com/Victin09"
+  repo:                 "https://github.com/Victin09/vira-design-system"
+  icons:                "https://icons.getbootstrap.com/"
+
+  cdn:
+    popper:           "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    popper_hash:      "sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+
+  anchors:
+    min: 2
+    max: 5
