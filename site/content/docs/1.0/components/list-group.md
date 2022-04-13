@@ -328,10 +328,10 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
   <div class="row">
     <div class="col-4">
       <div class="list-group" id="list-tab" role="tablist">
-        <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="tab" href="#list-home" role="tab" aria-controls="list-home">Home</a>
-        <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
-        <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages">Messages</a>
-        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="tab" href="#list-settings" role="tab" aria-controls="list-settings">Settings</a>
+        <a class="list-group-item list-group-item-action active" id="list-home-list" data-vds-toggle="tab" href="#list-home" role="tab" aria-controls="list-home">Home</a>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-vds-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
+        <a class="list-group-item list-group-item-action" id="list-messages-list" data-vds-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages">Messages</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-vds-toggle="tab" href="#list-settings" role="tab" aria-controls="list-settings">Settings</a>
       </div>
     </div>
     <div class="col-8">
@@ -357,10 +357,10 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 <div class="row">
   <div class="col-4">
     <div class="list-group" id="list-tab" role="tablist">
-      <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Home</a>
-      <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
-      <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Messages</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Settings</a>
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-vds-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Home</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-vds-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-vds-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Messages</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-vds-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Settings</a>
     </div>
   </div>
   <div class="col-8">
@@ -376,16 +376,16 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 
 ### Using data attributes
 
-You can activate a list group navigation without writing any JavaScript by simply specifying `data-bs-toggle="list"` or on an element. Use these data attributes on `.list-group-item`.
+You can activate a list group navigation without writing any JavaScript by simply specifying `data-vds-toggle="list"` or on an element. Use these data attributes on `.list-group-item`.
 
 ```html
 <div role="tabpanel">
   <!-- List group -->
   <div class="list-group" id="myList" role="tablist">
-    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Home</a>
-    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Profile</a>
-    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Messages</a>
-    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Settings</a>
+    <a class="list-group-item list-group-item-action active" data-vds-toggle="list" href="#home" role="tab">Home</a>
+    <a class="list-group-item list-group-item-action" data-vds-toggle="list" href="#profile" role="tab">Profile</a>
+    <a class="list-group-item list-group-item-action" data-vds-toggle="list" href="#messages" role="tab">Messages</a>
+    <a class="list-group-item list-group-item-action" data-vds-toggle="list" href="#settings" role="tab">Settings</a>
   </div>
 
   <!-- Tab panes -->
@@ -441,14 +441,14 @@ To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane 
 
 #### constructor
 
-Activates a list item element and content container. Tab should have either a `data-bs-target` or an `href` targeting a container node in the DOM.
+Activates a list item element and content container. Tab should have either a `data-vds-target` or an `href` targeting a container node in the DOM.
 
 ```html
 <div class="list-group" id="myList" role="tablist">
-  <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Home</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Profile</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Messages</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Settings</a>
+  <a class="list-group-item list-group-item-action active" data-vds-toggle="list" href="#home" role="tab">Home</a>
+  <a class="list-group-item list-group-item-action" data-vds-toggle="list" href="#profile" role="tab">Profile</a>
+  <a class="list-group-item list-group-item-action" data-vds-toggle="list" href="#messages" role="tab">Messages</a>
+  <a class="list-group-item list-group-item-action" data-vds-toggle="list" href="#settings" role="tab">Settings</a>
 </div>
 
 <div class="tab-content">
@@ -468,7 +468,7 @@ Activates a list item element and content container. Tab should have either a `d
 
 #### show
 
-Selects the given list item and shows its associated pane. Any other list item that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (for example, before the `shown.bs.tab` event occurs).
+Selects the given list item and shows its associated pane. Any other list item that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (for example, before the `shown.vds.tab` event occurs).
 
 ```js
   var someListItemEl = document.querySelector('#someListItem')
@@ -503,26 +503,26 @@ const tab = viraDesignSystem.Tab.getOrCreateInstance(triggerEl) // Returns a Vir
 
 When showing a new tab, the events fire in the following order:
 
-1. `hide.bs.tab` (on the current active tab)
-2. `show.bs.tab` (on the to-be-shown tab)
-3. `hidden.bs.tab` (on the previous active tab, the same one as for the `hide.bs.tab` event)
-4. `shown.bs.tab` (on the newly-active just-shown tab, the same one as for the `show.bs.tab` event)
+1. `hide.vds.tab` (on the current active tab)
+2. `show.vds.tab` (on the to-be-shown tab)
+3. `hidden.vds.tab` (on the previous active tab, the same one as for the `hide.vds.tab` event)
+4. `shown.vds.tab` (on the newly-active just-shown tab, the same one as for the `show.vds.tab` event)
 
-If no tab was already active, the `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
+If no tab was already active, the `hide.vds.tab` and `hidden.vds.tab` events will not be fired.
 
-{{< bs-table >}}
+{{< vds-table >}}
 | Event type | Description |
 | --- | --- |
-| `show.bs.tab` | This event fires on tab show, but before the new tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
-| `shown.bs.tab` | This event fires on tab show after a tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
-| `hide.bs.tab` | This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use `event.target` and `event.relatedTarget` to target the current active tab and the new soon-to-be-active tab, respectively. |
-| `hidden.bs.tab` | This event fires after a new tab is shown (and thus the previous active tab is hidden). Use `event.target` and `event.relatedTarget` to target the previous active tab and the new active tab, respectively. |
-{{< /bs-table >}}
+| `show.vds.tab` | This event fires on tab show, but before the new tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
+| `shown.vds.tab` | This event fires on tab show after a tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
+| `hide.vds.tab` | This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use `event.target` and `event.relatedTarget` to target the current active tab and the new soon-to-be-active tab, respectively. |
+| `hidden.vds.tab` | This event fires after a new tab is shown (and thus the previous active tab is hidden). Use `event.target` and `event.relatedTarget` to target the previous active tab and the new active tab, respectively. |
+{{< /vds-table >}}
 
 ```js
-var tabElms = document.querySelectorAll('a[data-bs-toggle="list"]')
+var tabElms = document.querySelectorAll('a[data-vds-toggle="list"]')
 tabElms.forEach(function(tabElm) {
-  tabElm.addEventListener('shown.bs.tab', function (event) {
+  tabElm.addEventListener('shown.vds.tab', function (event) {
     event.target // newly activated tab
     event.relatedTarget // previous active tab
   })

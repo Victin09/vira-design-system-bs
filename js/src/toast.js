@@ -15,7 +15,7 @@ import { enableDismissTrigger } from './util/component-functions'
  */
 
 const NAME = 'toast'
-const DATA_KEY = 'bs.toast'
+const DATA_KEY = 'vds.toast'
 const EVENT_KEY = `.${DATA_KEY}`
 
 const EVENT_MOUSEOVER = `mouseover${EVENT_KEY}`

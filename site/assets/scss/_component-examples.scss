@@ -208,7 +208,7 @@
     width: 16rem;
 
     @include media-breakpoint-up(md) {
-      --bs-aspect-ratio: 50%; // 2x1
+      --vds-aspect-ratio: 50%; // 2x1
     }
   }
 }
@@ -240,17 +240,17 @@
 }
 
 .custom-tooltip {
-  --bs-tooltip-bg: var(--bs-primary);
+  --vds-tooltip-bg: var(--vds-primary);
 }
 
 // scss-docs-start custom-popovers
 .custom-popover {
-  --bs-popover-max-width: 200px;
-  --bs-popover-border-color: var(--bs-primary);
-  --bs-popover-header-bg: var(--bs-primary);
-  --bs-popover-header-color: var(--bs-white);
-  --bs-popover-body-padding-x: 1rem;
-  --bs-popover-body-padding-y: .5rem;
+  --vds-popover-max-width: 200px;
+  --vds-popover-border-color: var(--vds-primary);
+  --vds-popover-header-bg: var(--vds-primary);
+  --vds-popover-header-color: var(--vds-white);
+  --vds-popover-body-padding-x: 1rem;
+  --vds-popover-body-padding-y: .5rem;
 }
 // scss-docs-end custom-popovers
 
@@ -334,7 +334,7 @@
 //
 
 .highlight {
-  padding: var(--bs-gutter-x) $bd-gutter-x;
+  padding: var(--vds-gutter-x) $bd-gutter-x;
   margin-bottom: 1rem;
   background-color: $gray-100;
 

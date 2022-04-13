@@ -21,7 +21,7 @@ body_class: "bg-light"
   <nav class="small" id="toc">
     <ul class="list-unstyled">
       <li class="my-2">
-        <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contents</button>
+        <button class="btn d-inline-flex align-items-center collapsed border-0" data-vds-toggle="collapse" aria-expanded="false" data-vds-target="#contents-collapse" aria-controls="contents-collapse">Contents</button>
         <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
           <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#typography">Typography</a></li>
           <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#images">Images</a></li>
@@ -30,7 +30,7 @@ body_class: "bg-light"
         </ul>
       </li>
       <li class="my-2">
-        <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#forms-collapse" aria-controls="forms-collapse">Forms</button>
+        <button class="btn d-inline-flex align-items-center collapsed border-0" data-vds-toggle="collapse" aria-expanded="false" data-vds-target="#forms-collapse" aria-controls="forms-collapse">Forms</button>
         <ul class="list-unstyled ps-3 collapse" id="forms-collapse">
           <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#overview">Overview</a></li>
           <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#disabled-forms">Disabled forms</a></li>
@@ -41,7 +41,7 @@ body_class: "bg-light"
         </ul>
       </li>
       <li class="my-2">
-        <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#components-collapse" aria-controls="components-collapse">Components</button>
+        <button class="btn d-inline-flex align-items-center collapsed border-0" data-vds-toggle="collapse" aria-expanded="false" data-vds-target="#components-collapse" aria-controls="components-collapse">Components</button>
         <ul class="list-unstyled ps-3 collapse" id="components-collapse">
           <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#accordion">Accordion</a></li>
           <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#alerts">Alerts</a></li>
@@ -613,11 +613,11 @@ body_class: "bg-light"
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
             <h4 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <button class="accordion-button" type="button" data-vds-toggle="collapse" data-vds-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 Accordion Item #1
               </button>
             </h4>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-vds-parent="#accordionExample">
               <div class="accordion-body">
                 <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
               </div>
@@ -625,11 +625,11 @@ body_class: "bg-light"
           </div>
           <div class="accordion-item">
             <h4 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <button class="accordion-button collapsed" type="button" data-vds-toggle="collapse" data-vds-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 Accordion Item #2
               </button>
             </h4>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-vds-parent="#accordionExample">
               <div class="accordion-body">
                 <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
               </div>
@@ -637,11 +637,11 @@ body_class: "bg-light"
           </div>
           <div class="accordion-item">
             <h4 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <button class="accordion-button collapsed" type="button" data-vds-toggle="collapse" data-vds-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 Accordion Item #3
               </button>
             </h4>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-vds-parent="#accordionExample">
               <div class="accordion-body">
                 <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
               </div>
@@ -663,7 +663,7 @@ body_class: "bg-light"
         {{- range (index $.Site.Data "theme-colors") }}
         <div class="alert alert-{{ .name }} alert-dismissible fade show" role="alert">
           A simple {{ .name }} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-vds-dismiss="alert" aria-label="Close"></button>
         </div>{{ end -}}
         {{< /alerts.inline >}}
         {{< /example >}}
@@ -860,11 +860,11 @@ body_class: "bg-light"
 
       <div>
         {{< example show_markup="false" >}}
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleCaptions" class="carousel slide" data-vds-ride="carousel">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-vds-target="#carouselExampleCaptions" data-vds-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-vds-target="#carouselExampleCaptions" data-vds-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-vds-target="#carouselExampleCaptions" data-vds-slide-to="2" aria-label="Slide 3"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -889,11 +889,11 @@ body_class: "bg-light"
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
+          <button class="carousel-control-prev" type="button" data-vds-target="#carouselExampleCaptions"  data-vds-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-vds-target="#carouselExampleCaptions"  data-vds-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
@@ -911,7 +911,7 @@ body_class: "bg-light"
         {{< example show_markup="false" >}}
         <div class="btn-group w-100 align-items-center justify-content-between flex-wrap">
           <div class="dropdown">
-            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButtonSM" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButtonSM" data-vds-toggle="dropdown" aria-expanded="false">
               Dropdown button
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonSM">
@@ -924,7 +924,7 @@ body_class: "bg-light"
             </ul>
           </div>
           <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-vds-toggle="dropdown" aria-expanded="false">
               Dropdown button
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -937,7 +937,7 @@ body_class: "bg-light"
             </ul>
           </div>
           <div class="dropdown">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButtonLG" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButtonLG" data-vds-toggle="dropdown" aria-expanded="false">
               Dropdown button
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLG">
@@ -955,7 +955,7 @@ body_class: "bg-light"
         {{< example show_markup="false" >}}
         <div class="btn-group">
           <button type="button" class="btn btn-primary">Primary</button>
-          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-vds-toggle="dropdown" aria-expanded="false">
             <span class="visually-hidden">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu">
@@ -966,7 +966,7 @@ body_class: "bg-light"
         </div><!-- /btn-group -->
         <div class="btn-group">
           <button type="button" class="btn btn-secondary">Secondary</button>
-          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-vds-toggle="dropdown" aria-expanded="false">
             <span class="visually-hidden">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu">
@@ -977,7 +977,7 @@ body_class: "bg-light"
         </div><!-- /btn-group -->
         <div class="btn-group">
           <button type="button" class="btn btn-success">Success</button>
-          <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-vds-toggle="dropdown" aria-expanded="false">
             <span class="visually-hidden">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu">
@@ -988,7 +988,7 @@ body_class: "bg-light"
         </div><!-- /btn-group -->
         <div class="btn-group">
           <button type="button" class="btn btn-info">Info</button>
-          <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-vds-toggle="dropdown" aria-expanded="false">
             <span class="visually-hidden">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu">
@@ -999,7 +999,7 @@ body_class: "bg-light"
         </div><!-- /btn-group -->
         <div class="btn-group">
           <button type="button" class="btn btn-warning">Warning</button>
-          <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-vds-toggle="dropdown" aria-expanded="false">
             <span class="visually-hidden">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu">
@@ -1010,7 +1010,7 @@ body_class: "bg-light"
         </div><!-- /btn-group -->
         <div class="btn-group">
           <button type="button" class="btn btn-danger">Danger</button>
-          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-vds-toggle="dropdown" aria-expanded="false">
             <span class="visually-hidden">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu">
@@ -1024,7 +1024,7 @@ body_class: "bg-light"
         {{< example show_markup="false" >}}
         <div class="btn-group w-100 align-items-center justify-content-between flex-wrap">
           <div class="dropend">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropendMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropendMenuButton" data-vds-toggle="dropdown" aria-expanded="false">
               Dropend button
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropendMenuButton">
@@ -1037,7 +1037,7 @@ body_class: "bg-light"
             </ul>
           </div>
           <div class="dropup">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropupMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropupMenuButton" data-vds-toggle="dropdown" aria-expanded="false">
               Dropup button
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropupMenuButton">
@@ -1050,7 +1050,7 @@ body_class: "bg-light"
             </ul>
           </div>
           <div class="dropstart">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropstartMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropstartMenuButton" data-vds-toggle="dropdown" aria-expanded="false">
               Dropstart button
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropstartMenuButton">
@@ -1068,7 +1068,7 @@ body_class: "bg-light"
         {{< example show_markup="false" >}}
         <div class="btn-group">
           <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownRightMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownRightMenuButton" data-vds-toggle="dropdown" aria-expanded="false">
               End-aligned menu
             </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownRightMenuButton">
@@ -1131,16 +1131,16 @@ body_class: "bg-light"
       <div>
         {{< example show_markup="false" >}}
         <div class="d-flex justify-content-between flex-wrap">
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalDefault">
+          <button type="button" class="btn btn-primary" data-vds-toggle="modal" data-vds-target="#exampleModalDefault">
             Launch demo modal
           </button>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropLive">
+          <button type="button" class="btn btn-primary" data-vds-toggle="modal" data-vds-target="#staticBackdropLive">
             Launch static backdrop modal
           </button>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
+          <button type="button" class="btn btn-primary" data-vds-toggle="modal" data-vds-target="#exampleModalCenteredScrollable">
             Vertically centered scrollable modal
           </button>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">
+          <button type="button" class="btn btn-primary" data-vds-toggle="modal" data-vds-target="#exampleModalFullscreen">
             Full screen
           </button>
         </div>
@@ -1166,9 +1166,9 @@ body_class: "bg-light"
         {{< example show_markup="false" >}}
         <nav>
           <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
-            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+            <button class="nav-link active" id="nav-home-tab" data-vds-toggle="tab" data-vds-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+            <button class="nav-link" id="nav-profile-tab" data-vds-toggle="tab" data-vds-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+            <button class="nav-link" id="nav-contact-tab" data-vds-toggle="tab" data-vds-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
           </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
@@ -1216,7 +1216,7 @@ body_class: "bg-light"
               <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="d-inline-block align-top" alt="Vira Design System" loading="lazy"
                    style="filter: invert(1) grayscale(100%) brightness(200%);">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-vds-toggle="collapse" data-vds-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -1228,7 +1228,7 @@ body_class: "bg-light"
                   <a class="nav-link" href="#">Link</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-vds-toggle="dropdown" aria-expanded="false">
                     Dropdown
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -1255,7 +1255,7 @@ body_class: "bg-light"
             <a class="navbar-brand" href="#">
               <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="d-inline-block align-top" alt="Vira Design System" loading="lazy">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-vds-toggle="collapse" data-vds-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent2">
@@ -1267,7 +1267,7 @@ body_class: "bg-light"
                   <a class="nav-link" href="#">Link</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-vds-toggle="dropdown" aria-expanded="false">
                     Dropdown
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
@@ -1357,20 +1357,20 @@ body_class: "bg-light"
 
       <div>
         {{< example show_markup="false" >}}
-        <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+        <button type="button" class="btn btn-lg btn-danger" data-vds-toggle="popover" title="Popover title" data-vds-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
         {{< /example >}}
 
         {{< example show_markup="false" >}}
-        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        <button type="button" class="btn btn-secondary" data-vds-container="body" data-vds-toggle="popover" data-vds-placement="top" data-vds-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
           Popover on top
         </button>
-        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        <button type="button" class="btn btn-secondary" data-vds-container="body" data-vds-toggle="popover" data-vds-placement="right" data-vds-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
           Popover on end
         </button>
-        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        <button type="button" class="btn btn-secondary" data-vds-container="body" data-vds-toggle="popover" data-vds-placement="bottom" data-vds-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
           Popover on bottom
         </button>
-        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        <button type="button" class="btn btn-secondary" data-vds-container="body" data-vds-toggle="popover" data-vds-placement="left" data-vds-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
           Popover on start
         </button>
         {{< /example >}}
@@ -1427,7 +1427,7 @@ body_class: "bg-light"
                 <a class="nav-link" href="#scrollspyHeading2">Second</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                <a class="nav-link dropdown-toggle" data-vds-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
                   <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
@@ -1437,7 +1437,7 @@ body_class: "bg-light"
               </li>
             </ul>
           </nav>
-        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example position-relative mt-2 overflow-auto" tabindex="0">
+        <div data-vds-spy="scroll" data-vds-target="#navbar-example2" data-vds-offset="0" class="scrollspy-example position-relative mt-2 overflow-auto" tabindex="0">
             <h4 id="scrollspyHeading1">First heading</h4>
             <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
             <h4 id="scrollspyHeading2">Second heading</h4>
@@ -1493,7 +1493,7 @@ body_class: "bg-light"
             {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
             <strong class="me-auto">Vira Design System</strong>
             <small class="text-muted">11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-vds-dismiss="toast" aria-label="Close"></button>
           </div>
           <div class="toast-body">
             Hello, world! This is a toast message.
@@ -1510,11 +1510,11 @@ body_class: "bg-light"
 
       <div>
         {{< example show_markup="false" class="tooltip-demo" >}}
-        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">Tooltip on top</button>
-        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on end">Tooltip on end</button>
-        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on start">Tooltip on start</button>
-        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Tooltip with HTML</button>
+        <button type="button" class="btn btn-secondary" data-vds-toggle="tooltip" data-vds-placement="top" title="Tooltip on top">Tooltip on top</button>
+        <button type="button" class="btn btn-secondary" data-vds-toggle="tooltip" data-vds-placement="right" title="Tooltip on end">Tooltip on end</button>
+        <button type="button" class="btn btn-secondary" data-vds-toggle="tooltip" data-vds-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+        <button type="button" class="btn btn-secondary" data-vds-toggle="tooltip" data-vds-placement="left" title="Tooltip on start">Tooltip on start</button>
+        <button type="button" class="btn btn-secondary" data-vds-toggle="tooltip" data-vds-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Tooltip with HTML</button>
         {{< /example >}}
       </div>
     </article>
@@ -1526,30 +1526,30 @@ body_class: "bg-light"
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-vds-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-vds-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
-<div class="modal fade" id="staticBackdropLive" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLiveLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdropLive" data-vds-backdrop="static" data-vds-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLiveLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="staticBackdropLiveLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-vds-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p>I will not close if you click outside me. Don't even try to press escape key.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-vds-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Understood</button>
       </div>
     </div>
@@ -1560,7 +1560,7 @@ body_class: "bg-light"
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-vds-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p>This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.</p>
@@ -1568,7 +1568,7 @@ body_class: "bg-light"
         <p>This content should appear at the bottom after you scroll.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-vds-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
@@ -1579,13 +1579,13 @@ body_class: "bg-light"
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Full screen modal</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-vds-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-vds-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

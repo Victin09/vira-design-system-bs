@@ -56,7 +56,7 @@ To hide elements simply use the `.d-none` class or one of the `.d-{sm,md,lg,xl,x
 
 To show an element only on a given interval of screen sizes you can combine one `.d-*-none` class with a `.d-*-*` class, for example `.d-none .d-md-block .d-xl-none .d-xxl-none` will hide the element for all screen sizes except on medium and large devices.
 
-{{< bs-table >}}
+{{< vds-table >}}
 | Screen size | Class |
 | --- | --- |
 | Hidden on all | `.d-none` |
@@ -73,7 +73,7 @@ To show an element only on a given interval of screen sizes you can combine one 
 | Visible only on lg | `.d-none .d-lg-block .d-xl-none` |
 | Visible only on xl | `.d-none .d-xl-block .d-xxl-none` |
 | Visible only on xxl | `.d-none .d-xxl-block` |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 {{< example >}}
 <div class="d-lg-none">hide on lg and wider screens</div>

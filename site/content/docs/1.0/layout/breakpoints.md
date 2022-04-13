@@ -19,7 +19,7 @@ toc: true
 
 Vira Design System includes six default breakpoints, sometimes referred to as _grid tiers_, for building responsively. These breakpoints can be customized if you're using our source Sass files.
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | Breakpoint | Class infix | Dimensions |
 | --- | --- | --- |
 | Extra small | <em>None</em>  |&lt;576px |
@@ -28,7 +28,7 @@ Vira Design System includes six default breakpoints, sometimes referred to as _g
 | Large | `lg` | &ge;992px |
 | Extra large | `xl` | &ge;1200px |
 | Extra extra large | `xxl` | &ge;1400px |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 
 Each breakpoint was chosen to comfortably hold containers whose widths are multiples of 12. Breakpoints are also representative of a subset of common device sizes and viewport dimensions—they don't specifically target every use case or device. Instead, the ranges provide a strong and consistent foundation to build on for nearly any device.

@@ -7,11 +7,11 @@
   document.querySelectorAll('.tooltip-demo')
     .forEach(function (tooltip) {
       new viraDesignSystem.Tooltip(tooltip, {
-        selector: '[data-bs-toggle="tooltip"]'
+        selector: '[data-vds-toggle="tooltip"]'
       })
     })
 
-  document.querySelectorAll('[data-bs-toggle="popover"]')
+  document.querySelectorAll('[data-vds-toggle="popover"]')
     .forEach(function (popover) {
       new viraDesignSystem.Popover(popover)
     })

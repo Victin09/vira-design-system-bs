@@ -29,7 +29,7 @@
    */
 
   const NAME = 'offcanvas';
-  const DATA_KEY = 'bs.offcanvas';
+  const DATA_KEY = 'vds.offcanvas';
   const EVENT_KEY = `.${DATA_KEY}`;
   const DATA_API_KEY = '.data-api';
   const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`;
@@ -46,7 +46,7 @@
   const EVENT_HIDDEN = `hidden${EVENT_KEY}`;
   const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
   const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY}`;
-  const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="offcanvas"]';
+  const SELECTOR_DATA_TOGGLE = '[data-vds-toggle="offcanvas"]';
   const Default = {
     backdrop: true,
     keyboard: true,

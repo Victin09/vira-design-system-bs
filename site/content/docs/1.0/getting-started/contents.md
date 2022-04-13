@@ -68,25 +68,25 @@ This is the most basic form of Vira Design System: precompiled files for quick d
 
 Vira Design System includes a handful of options for including some or all of our compiled CSS.
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | CSS files | Layout | Content | Components | Utilities |
 | --- | --- | --- | --- | --- |
 | `vira-design-system.css`<br> `vira-design-system.min.css`<br> `vira-design-system.rtl.css`<br> `vira-design-system.rtl.min.css` | Included | Included | Included | Included |
 | `vira-design-system-grid.css`<br> `vira-design-system-grid.rtl.css`<br> `vira-design-system-grid.min.css`<br> `vira-design-system-grid.rtl.min.css` | [Only grid system]({{< docsref "/layout/grid" >}}) | — | — | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
 | `vira-design-system-utilities.css`<br> `vira-design-system-utilities.rtl.css`<br> `vira-design-system-utilities.min.css`<br> `vira-design-system-utilities.rtl.min.css` | — | — | — | Included |
 | `vira-design-system-reboot.css`<br> `vira-design-system-reboot.rtl.css`<br> `vira-design-system-reboot.min.css`<br> `vira-design-system-reboot.rtl.min.css` | [Only Reboot]({{< docsref "/content/reboot" >}}) | — | — | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 ## JS files
 
 Similarly, we have options for including some or all of our compiled JavaScript.
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | JS Files | Popper |
 | --- | --- |
 | `vira-design-system.bundle.js`<br> `vira-design-system.bundle.min.js`<br> | Included |
 | `vira-design-system.js`<br> `vira-design-system.min.js`<br> | – |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 ## Vira Design System source code
 

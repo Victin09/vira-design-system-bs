@@ -44,7 +44,7 @@ Change the border color using utilities built on our theme colors.
 {{< /example >}}
 
 {{< callout >}}
-Unlike text and background color utilities, border color utilities redeclare the `border-color` property **without** an additional `--bs-border-opacity`, as opposed to resetting only `--bs-border-color`. This ensures the backward compatibility of border color utilities applying to other components while providing additional functionality through CSS variables.
+Unlike text and background color utilities, border color utilities redeclare the `border-color` property **without** an additional `--vds-border-opacity`, as opposed to resetting only `--vds-border-color`. This ensures the backward compatibility of border color utilities applying to other components while providing additional functionality through CSS variables.
 
 This will be revisited in a future major release.
 {{< /callout >}}
@@ -59,20 +59,20 @@ Consider our default `.border-success` utility.
 
 ```css
 .border-success {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-success-rgb), var(--bs-border-opacity)) !important;
+  --vds-border-opacity: 1;
+  border-color: rgba(var(--vds-success-rgb), var(--vds-border-opacity)) !important;
 }
 ```
 
-We use an RGB version of our `--bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `--bs-border-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.border-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.border-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+We use an RGB version of our `--vds-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `--vds-border-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.border-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.border-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
 
 ### Example
 
-To change that opacity, override `--bs-border-opacity` via custom styles or inline styles.
+To change that opacity, override `--vds-border-opacity` via custom styles or inline styles.
 
 {{< example >}}
 <div class="border border-success p-2 mb-2">This is default success border</div>
-<div class="border border-success p-2" style="--bs-border-opacity: .5;">This is 50% opacity success border</div>
+<div class="border border-success p-2" style="--vds-border-opacity: .5;">This is 50% opacity success border</div>
 {{< /example >}}
 
 Or, choose from any of the `.border-opacity` utilities:

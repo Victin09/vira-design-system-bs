@@ -8,7 +8,7 @@ toc: true
 
 Vira Design System includes many [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) in its compiled CSS for real-time customization without the need to recompile Sass. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser's inspector, a code sandbox, or general prototyping.
 
-**All our custom properties are prefixed with `bs-`** to avoid conflicts with third party CSS.
+**All our custom properties are prefixed with `vds-`** to avoid conflicts with third party CSS.
 
 ## Root variables
 
@@ -40,7 +40,7 @@ Whenever possible, we'll assign CSS variables at the base component level (e.g.,
 
 Most CSS variables use a prefix to avoid collisions with your own codebase. This prefix is in addition to the `--` that's required on every CSS variable.
 
-Customize the prefix via the `$prefix` Sass variable. By default, it's set to `bs-` (note the trailing dash).
+Customize the prefix via the `$prefix` Sass variable. By default, it's set to `vds-` (note the trailing dash).
 
 ## Examples
 
@@ -48,10 +48,10 @@ CSS variables offer similar flexibility to Sass's variables, but without the nee
 
 ```css
 body {
-  font: 1rem/1.5 var(--bs-font-sans-serif);
+  font: 1rem/1.5 var(--vds-font-sans-serif);
 }
 a {
-  color: var(--bs-blue);
+  color: var(--vds-blue);
 }
 ```
 

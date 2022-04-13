@@ -52,7 +52,7 @@
   const CLASS_NAME_SHOW = 'show';
   const SELECTOR_TOOLTIP_INNER = '.tooltip-inner';
   const SELECTOR_MODAL = `.${CLASS_NAME_MODAL}`;
-  const EVENT_MODAL_HIDE = 'hide.bs.modal';
+  const EVENT_MODAL_HIDE = 'hide.vds.modal';
   const TRIGGER_HOVER = 'hover';
   const TRIGGER_FOCUS = 'focus';
   const TRIGGER_CLICK = 'click';
@@ -339,7 +339,7 @@
 
       tip.classList.remove(CLASS_NAME_FADE, CLASS_NAME_SHOW); // todo: on v6 the following can be achieved with CSS only
 
-      tip.classList.add(`bs-${this.constructor.NAME}-auto`);
+      tip.classList.add(`vds-${this.constructor.NAME}-auto`);
       const tipId = index.getUID(this.constructor.NAME).toString();
       tip.setAttribute('id', tipId);
 

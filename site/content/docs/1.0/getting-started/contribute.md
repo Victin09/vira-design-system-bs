@@ -23,14 +23,14 @@ When completed, you'll be able to run the various commands provided from the com
 
 Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) includes numerous tasks for developing the project. Run `npm run` to see all the npm scripts in your terminal. **Primary tasks include:**
 
-{{< bs-table >}}
+{{< vds-table >}}
 | Task | Description |
 | --- | --- |
 | `npm start` | Compiles CSS and JavaScript, builds the documentation, and starts a local server. |
 | `npm run dist` | Creates the `dist/` directory with compiled files. Uses [Sass](https://sass-lang.com/), [Autoprefixer](https://github.com/postcss/autoprefixer), and [terser](https://github.com/terser/terser). |
 | `npm test` | Runs tests locally after running `npm run dist` |
 | `npm run docs-serve` | Builds and runs the documentation locally. |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 {{< callout info >}}
 {{< partial "callout-info-npm-starter.md" >}}

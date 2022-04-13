@@ -15,7 +15,7 @@ import { enableDismissTrigger } from './util/component-functions'
  */
 
 const NAME = 'alert'
-const DATA_KEY = 'bs.alert'
+const DATA_KEY = 'vds.alert'
 const EVENT_KEY = `.${DATA_KEY}`
 
 const EVENT_CLOSE = `close${EVENT_KEY}`

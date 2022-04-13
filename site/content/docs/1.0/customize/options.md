@@ -9,7 +9,7 @@ Customize Vira Design System with our built-in custom variables file and easily 
 
 You can find and customize these variables for key global options in Vira Design System's `scss/_variables.scss` file.
 
-{{< bs-table "table table-options" >}}
+{{< vds-table "table table-options" >}}
 | Variable                       | Values                             | Description                                                                            |
 | ------------------------------ | ---------------------------------- | -------------------------------------------------------------------------------------- |
 | `$spacer`                      | `1rem` (default), or any value > 0 | Specifies the default spacer value to programmatically generate our [spacer utilities]({{< docsref "/utilities/spacing" >}}). |
@@ -28,4 +28,4 @@ You can find and customize these variables for key global options in Vira Design
 | `$enable-deprecation-messages` | `true` (default) or `false`        | Set to `false` to hide warnings when using any of the deprecated mixins and functions that are planned to be removed in `v6`. |
 | `$enable-important-utilities`  | `true` (default) or `false`        | Enables the `!important` suffix in utility classes. |
 | `$enable-smooth-scroll`        | `true` (default) or `false`        | Applies `scroll-behavior: smooth` globally, except for users asking for reduced motion through [`prefers-reduced-motion` media query]({{< docsref "/getting-started/accessibility#reduced-motion" >}}) |
-{{< /bs-table >}}
+{{< /vds-table >}}

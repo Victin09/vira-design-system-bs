@@ -18,11 +18,11 @@
   document.querySelectorAll('.tooltip-demo')
     .forEach(function (tooltip) {
       new viraDesignSystem.Tooltip(tooltip, {
-        selector: '[data-bs-toggle="tooltip"]'
+        selector: '[data-vds-toggle="tooltip"]'
       })
     })
 
-  document.querySelectorAll('[data-bs-toggle="popover"]')
+  document.querySelectorAll('[data-vds-toggle="popover"]')
     .forEach(function (popover) {
       new viraDesignSystem.Popover(popover)
     })
@@ -62,7 +62,7 @@
 
   function alert(message, type) {
     const wrapper = document.createElement('div')
-    wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+    wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-vds-dismiss="alert" aria-label="Close"></button></div>'
 
     alertPlaceholder.append(wrapper)
   }
@@ -101,11 +101,11 @@
   // Modal relatedTarget demo
   const exampleModal = document.getElementById('exampleModal')
   if (exampleModal) {
-    exampleModal.addEventListener('show.bs.modal', function (event) {
+    exampleModal.addEventListener('show.vds.modal', function (event) {
       // Button that triggered the modal
       const button = event.relatedTarget
-      // Extract info from data-bs-* attributes
-      const recipient = button.getAttribute('data-bs-whatever')
+      // Extract info from data-vds-* attributes
+      const recipient = button.getAttribute('data-vds-whatever')
 
       // Update the modal's content.
       const modalTitle = exampleModal.querySelector('.modal-title')
@@ -157,7 +157,7 @@
     const tooltipBtn = viraDesignSystem.Tooltip.getInstance(event.trigger)
 
     tooltipBtn.setContent({ '.tooltip-inner': 'Copied!' })
-    event.trigger.addEventListener('hidden.bs.tooltip', function () {
+    event.trigger.addEventListener('hidden.vds.tooltip', function () {
       tooltipBtn.setContent({ '.tooltip-inner': btnTitle })
     }, { once: true })
     event.clearSelection()
@@ -169,7 +169,7 @@
     const tooltipBtn = viraDesignSystem.Tooltip.getInstance(event.trigger)
 
     tooltipBtn.setContent({ '.tooltip-inner': fallbackMsg })
-    event.trigger.addEventListener('hidden.bs.tooltip', function () {
+    event.trigger.addEventListener('hidden.vds.tooltip', function () {
       tooltipBtn.setContent({ '.tooltip-inner': btnTitle })
     }, { once: true })
   })

@@ -25,7 +25,7 @@ import BaseComponent from './base-component'
  */
 
 const NAME = 'carousel'
-const DATA_KEY = 'bs.carousel'
+const DATA_KEY = 'vds.carousel'
 const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
 
@@ -60,8 +60,8 @@ const SELECTOR_ITEM = '.carousel-item'
 const SELECTOR_ACTIVE_ITEM = SELECTOR_ACTIVE + SELECTOR_ITEM
 const SELECTOR_ITEM_IMG = '.carousel-item img'
 const SELECTOR_INDICATORS = '.carousel-indicators'
-const SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]'
-const SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]'
+const SELECTOR_DATA_SLIDE = '[data-vds-slide], [data-vds-slide-to]'
+const SELECTOR_DATA_RIDE = '[data-vds-ride="carousel"]'
 
 const KEY_TO_DIRECTION = {
   [ARROW_LEFT_KEY]: DIRECTION_RIGHT,
@@ -275,7 +275,7 @@ class Carousel extends BaseComponent {
     activeIndicator.classList.remove(CLASS_NAME_ACTIVE)
     activeIndicator.removeAttribute('aria-current')
 
-    const newActiveIndicator = SelectorEngine.findOne(`[data-bs-slide-to="${index}"]`, this._indicatorsElement)
+    const newActiveIndicator = SelectorEngine.findOne(`[data-vds-slide-to="${index}"]`, this._indicatorsElement)
 
     if (newActiveIndicator) {
       newActiveIndicator.classList.add(CLASS_NAME_ACTIVE)
@@ -290,7 +290,7 @@ class Carousel extends BaseComponent {
       return
     }
 
-    const elementInterval = Number.parseInt(element.getAttribute('data-bs-interval'), 10)
+    const elementInterval = Number.parseInt(element.getAttribute('data-vds-interval'), 10)
 
     this._config.interval = elementInterval || this._config.defaultInterval
   }
@@ -445,7 +445,7 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_SLIDE, function (e
   event.preventDefault()
 
   const carousel = Carousel.getOrCreateInstance(target)
-  const slideIndex = this.getAttribute('data-bs-slide-to')
+  const slideIndex = this.getAttribute('data-vds-slide-to')
 
   if (slideIndex) {
     carousel.to(slideIndex)

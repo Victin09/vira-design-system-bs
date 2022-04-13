@@ -20,23 +20,23 @@ We use [Autoprefixer](https://github.com/postcss/autoprefixer) to handle intende
 
 Generally speaking, Vira Design System supports the latest versions of each major platform's default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile's Turbo mode, UC Browser Mini, Amazon Silk) are not supported.
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | | Chrome | Firefox | Safari | Android Browser &amp; WebView |
 | --- | --- | --- | --- | --- |
 | **Android** | Supported | Supported | <span class="text-muted">&mdash;</span> | v6.0+ |
 | **Windows** | Supported | Supported | Supported | <span class="text-muted">&mdash;</span> |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 ### Desktop browsers
 
 Similarly, the latest versions of most desktop browsers are supported.
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | | Chrome | Firefox | Microsoft Edge | Opera | Safari |
 | --- | --- | --- | --- | --- | --- |
 | **Mac** | Supported | Supported | Supported | Supported | Supported |
 | **Windows** | Supported | Supported | Supported | Supported | <span class="text-muted">&mdash;</span> |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 For Firefox, in addition to the latest normal stable release, we also support the latest [Extended Support Release (ESR)](https://www.mozilla.org/en-US/firefox/enterprise/) version of Firefox.
 

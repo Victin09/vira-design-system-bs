@@ -61,7 +61,7 @@
   @include border-radius(var(--#{$prefix}dropdown-border-radius));
   @include box-shadow(var(--#{$prefix}dropdown-box-shadow));
 
-  &[data-bs-popper] {
+  &[data-vds-popper] {
     top: 100%;
     left: 0;
     margin-top: var(--#{$prefix}dropdown-spacer);
@@ -69,7 +69,7 @@
 }
 
 // scss-docs-start responsive-breakpoints
-// We deliberately hardcode the `bs-` prefix because we check
+// We deliberately hardcode the `vds-` prefix because we check
 // this custom property in JS to determine Popper's positioning
 
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -77,18 +77,18 @@
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     .dropdown-menu#{$infix}-start {
-      --bs-position: start;
+      --vds-position: start;
 
-      &[data-bs-popper] {
+      &[data-vds-popper] {
         right: auto;
         left: 0;
       }
     }
 
     .dropdown-menu#{$infix}-end {
-      --bs-position: end;
+      --vds-position: end;
 
-      &[data-bs-popper] {
+      &[data-vds-popper] {
         right: 0;
         left: auto;
       }
@@ -100,7 +100,7 @@
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
 // Just add .dropup after the standard .dropdown class and you're set.
 .dropup {
-  .dropdown-menu[data-bs-popper] {
+  .dropdown-menu[data-vds-popper] {
     top: auto;
     bottom: 100%;
     margin-top: 0;
@@ -113,7 +113,7 @@
 }
 
 .dropend {
-  .dropdown-menu[data-bs-popper] {
+  .dropdown-menu[data-vds-popper] {
     top: 0;
     right: auto;
     left: 100%;
@@ -130,7 +130,7 @@
 }
 
 .dropstart {
-  .dropdown-menu[data-bs-popper] {
+  .dropdown-menu[data-vds-popper] {
     top: 0;
     right: 100%;
     left: auto;

@@ -37,7 +37,7 @@ Scroll the area below the navbar and watch the active class change. The dropdown
         <a class="nav-link" href="#scrollspyHeading2">Second</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+        <a class="nav-link dropdown-toggle" data-vds-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
           <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
@@ -47,7 +47,7 @@ Scroll the area below the navbar and watch the active class change. The dropdown
       </li>
     </ul>
   </nav>
-  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+  <div data-vds-spy="scroll" data-vds-target="#navbar-example2" data-vds-offset="0" class="scrollspy-example" tabindex="0">
     <h4 id="scrollspyHeading1">First heading</h4>
     <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
     <h4 id="scrollspyHeading2">Second heading</h4>
@@ -72,7 +72,7 @@ Scroll the area below the navbar and watch the active class change. The dropdown
       <a class="nav-link" href="#scrollspyHeading2">Second</a>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <a class="nav-link dropdown-toggle" data-vds-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
         <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
@@ -82,7 +82,7 @@ Scroll the area below the navbar and watch the active class change. The dropdown
     </li>
   </ul>
 </nav>
-<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+<div data-vds-spy="scroll" data-vds-target="#navbar-example2" data-vds-offset="0" class="scrollspy-example" tabindex="0">
   <h4 id="scrollspyHeading1">First heading</h4>
   <p>...</p>
   <h4 id="scrollspyHeading2">Second heading</h4>
@@ -121,7 +121,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
       </nav>
     </div>
     <div class="col-8">
-      <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" class="scrollspy-example-2" tabindex="0">
+      <div data-vds-spy="scroll" data-vds-target="#navbar-example3" data-vds-offset="0" class="scrollspy-example-2" tabindex="0">
         <h4 id="item-1">Item 1</h4>
         <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
         <h5 id="item-1-1">Item 1-1</h5>
@@ -159,7 +159,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
   </nav>
 </nav>
 
-<div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+<div data-vds-spy="scroll" data-vds-target="#navbar-example3" data-vds-offset="0" tabindex="0">
   <h4 id="item-1">Item 1</h4>
   <p>...</p>
   <h5 id="item-1-1">Item 1-1</h5>
@@ -192,7 +192,7 @@ Scrollspy also works with `.list-group`s. Scroll the area next to the list group
       </div>
     </div>
     <div class="col-8">
-      <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+      <div data-vds-spy="scroll" data-vds-target="#list-example" data-vds-offset="0" class="scrollspy-example" tabindex="0">
         <h4 id="list-item-1">Item 1</h4>
         <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
         <h4 id="list-item-2">Item 2</h4>
@@ -213,7 +213,7 @@ Scrollspy also works with `.list-group`s. Scroll the area next to the list group
   <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
   <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
 </div>
-<div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+<div data-vds-spy="scroll" data-vds-target="#list-example" data-vds-offset="0" class="scrollspy-example" tabindex="0">
   <h4 id="list-item-1">Item 1</h4>
   <p>...</p>
   <h4 id="list-item-2">Item 2</h4>
@@ -229,7 +229,7 @@ Scrollspy also works with `.list-group`s. Scroll the area next to the list group
 
 ### Via data attributes
 
-To easily add scrollspy behavior to your topbar navigation, add `data-bs-spy="scroll"` to the element you want to spy on (most typically this would be the `<body>`). Then add the `data-bs-target` attribute with the ID or class of the parent element of any Vira Design System `.nav` component.
+To easily add scrollspy behavior to your topbar navigation, add `data-vds-spy="scroll"` to the element you want to spy on (most typically this would be the `<body>`). Then add the `data-vds-target` attribute with the ID or class of the parent element of any Vira Design System `.nav` component.
 
 ```css
 body {
@@ -238,7 +238,7 @@ body {
 ```
 
 ```html
-<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+<body data-vds-spy="scroll" data-vds-target="#navbar-example">
   ...
   <div id="navbar-example">
     <ul class="nav nav-tabs" role="tablist">
@@ -273,31 +273,31 @@ Target elements that are not visible will be ignored and their corresponding nav
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-offset=""`.
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-vds-`, as in `data-vds-offset=""`.
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | `offset` | number | `10` | Pixels to offset from top when calculating position of scroll. |
 | `method` | string | `auto` | Finds which section the spied element is in. `auto` will choose the best method to get scroll coordinates. `offset` will use the [`Element.getBoundingClientRect()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) method to get scroll coordinates. `position` will use the [`HTMLElement.offsetTop`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop) and [`HTMLElement.offsetLeft`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft) properties to get scroll coordinates.` |
 | `target` | string, jQuery object, DOM element |  | Specifies element to apply Scrollspy plugin. |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 ### Methods
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | Method | Description |
 | --- | --- |
 | `refresh` | When using scrollspy in conjunction with adding or removing of elements from the DOM, you'll need to call the refresh method. |
 | `dispose` | Destroys an element's scrollspy. (Removes stored data on the DOM element) |
 | `getInstance` | *Static* method which allows, to get the scrollspy instance associated with a DOM element |
 | `getOrCreateInstance` | *Static* method which allows, to get the scrollspy instance associated with a DOM element, or create a new one in case it wasn't initialized. |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 Here's an example using the refresh method:
 
 ```js
-const dataSpyList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-spy="scroll"]'))
+const dataSpyList = Array.prototype.slice.call(document.querySelectorAll('[data-vds-spy="scroll"]'))
 dataSpyList.forEach(function (dataSpyEl) {
   viraDesignSystem.ScrollSpy.getInstance(dataSpyEl)
     .refresh()
@@ -306,15 +306,15 @@ dataSpyList.forEach(function (dataSpyEl) {
 
 ### Events
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | Event | Description |
 | --- | --- |
-| `activate.bs.scrollspy` | This event fires on the scroll element whenever a new item becomes activated by the scrollspy. |
-{{< /bs-table >}}
+| `activate.vds.scrollspy` | This event fires on the scroll element whenever a new item becomes activated by the scrollspy. |
+{{< /vds-table >}}
 
 ```js
-var firstScrollSpyEl = document.querySelector('[data-bs-spy="scroll"]')
-firstScrollSpyEl.addEventListener('activate.bs.scrollspy', function () {
+var firstScrollSpyEl = document.querySelector('[data-vds-spy="scroll"]')
+firstScrollSpyEl.addEventListener('activate.vds.scrollspy', function () {
   // do something...
 })
 ```

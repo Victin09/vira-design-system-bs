@@ -33,7 +33,7 @@ Toasts are as flexible as you need and have very little required markup. At a mi
     {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
     <strong class="me-auto">Vira Design System</strong>
     <small>11 mins ago</small>
-    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-vds-dismiss="toast" aria-label="Close"></button>
   </div>
   <div class="toast-body">
     Hello, world! This is a toast message.
@@ -55,7 +55,7 @@ Click the button below to show a toast (positioned with our utilities in the low
       {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
       <strong class="me-auto">Vira Design System</strong>
       <small>11 mins ago</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-vds-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
       Hello, world! This is a toast message.
@@ -76,7 +76,7 @@ Click the button below to show a toast (positioned with our utilities in the low
       <img src="..." class="rounded me-2" alt="...">
       <strong class="me-auto">Vira Design System</strong>
       <small>11 mins ago</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-vds-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
       Hello, world! This is a toast message.
@@ -109,7 +109,7 @@ Toasts are slightly translucent to blend in with what's below them.
     {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
     <strong class="me-auto">Vira Design System</strong>
     <small class="text-muted">11 mins ago</small>
-    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-vds-dismiss="toast" aria-label="Close"></button>
   </div>
   <div class="toast-body">
     Hello, world! This is a toast message.
@@ -128,7 +128,7 @@ You can stack toasts by wrapping them in a toast container, which will verticall
       {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
       <strong class="me-auto">Vira Design System</strong>
       <small class="text-muted">just now</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-vds-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
       See? Just like this.
@@ -140,7 +140,7 @@ You can stack toasts by wrapping them in a toast container, which will verticall
       {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
       <strong class="me-auto">Vira Design System</strong>
       <small class="text-muted">2 seconds ago</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-vds-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
       Heads up, toasts will stack automatically
@@ -159,7 +159,7 @@ Customize your toasts by removing sub-components, tweaking them with [utilities]
     <div class="toast-body">
     Hello, world! This is a toast message.
    </div>
-    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    <button type="button" class="btn-close me-2 m-auto" data-vds-dismiss="toast" aria-label="Close"></button>
   </div>
 </div>
 {{< /example >}}
@@ -172,7 +172,7 @@ Alternatively, you can also add additional controls and components to toasts.
     Hello, world! This is a toast message.
     <div class="mt-2 pt-2 border-top">
       <button type="button" class="btn btn-primary btn-sm">Take action</button>
-      <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Close</button>
+      <button type="button" class="btn btn-secondary btn-sm" data-vds-dismiss="toast">Close</button>
     </div>
   </div>
 </div>
@@ -188,7 +188,7 @@ Building on the above example, you can create different toast color schemes with
     <div class="toast-body">
       Hello, world! This is a toast message.
     </div>
-    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-vds-dismiss="toast" aria-label="Close"></button>
   </div>
 </div>
 {{< /example >}}
@@ -247,7 +247,7 @@ For systems that generate more notifications, consider using a wrapping element 
         {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
         <strong class="me-auto">Vira Design System</strong>
         <small class="text-muted">just now</small>
-        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-vds-dismiss="toast" aria-label="Close"></button>
       </div>
       <div class="toast-body">
         See? Just like this.
@@ -259,7 +259,7 @@ For systems that generate more notifications, consider using a wrapping element 
         {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
         <strong class="me-auto">Vira Design System</strong>
         <small class="text-muted">2 seconds ago</small>
-        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-vds-dismiss="toast" aria-label="Close"></button>
       </div>
       <div class="toast-body">
         Heads up, toasts will stack automatically
@@ -281,7 +281,7 @@ You can also get fancy with flexbox utilities to align toasts horizontally and/o
       {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
       <strong class="me-auto">Vira Design System</strong>
       <small>11 mins ago</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-vds-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
       Hello, world! This is a toast message.
@@ -301,7 +301,7 @@ You also need to adapt the `role` and `aria-live` level depending on the content
 As the content you're displaying changes, be sure to update the [`delay` timeout](#options) so that users have enough time to read the toast.
 
 ```html
-<div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-bs-delay="10000">
+<div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-vds-delay="10000">
   <div role="alert" aria-live="assertive" aria-atomic="true">...</div>
 </div>
 ```
@@ -309,12 +309,12 @@ As the content you're displaying changes, be sure to update the [`delay` timeout
 When using `autohide: false`, you must add a close button to allow users to dismiss the toast.
 
 {{< example class="bg-light" >}}
-<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
+<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-vds-autohide="false">
   <div class="toast-header">
     {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
     <strong class="me-auto">Vira Design System</strong>
     <small>11 mins ago</small>
-    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-vds-dismiss="toast" aria-label="Close"></button>
   </div>
   <div class="toast-body">
     Hello, world! This is a toast message.
@@ -353,15 +353,15 @@ var toastList = toastElList.map(function (toastEl) {
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-animation=""`.
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-vds-`, as in `data-vds-animation=""`.
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | `animation` | boolean | `true` | Apply a CSS fade transition to the toast |
 | `autohide` | boolean | `true`  | Automatically hide the toast after the delay |
 | `delay` | number | `5000` | Delay in milliseconds before hiding the toast |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 ### Methods
 
@@ -369,30 +369,30 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 {{< partial "callout-danger-async-methods.md" >}}
 {{< /callout >}}
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | Method | Description |
 | --- | --- |
-| `show` | Reveals an element's toast. **Returns to the caller before the toast has actually been shown** (i.e. before the `shown.bs.toast` event occurs). You have to manually call this method, instead your toast won't show. |
-| `hide` | Hides an element's toast. **Returns to the caller before the toast has actually been hidden** (i.e. before the `hidden.bs.toast` event occurs). You have to manually call this method if you made `autohide` to `false`. |
+| `show` | Reveals an element's toast. **Returns to the caller before the toast has actually been shown** (i.e. before the `shown.vds.toast` event occurs). You have to manually call this method, instead your toast won't show. |
+| `hide` | Hides an element's toast. **Returns to the caller before the toast has actually been hidden** (i.e. before the `hidden.vds.toast` event occurs). You have to manually call this method if you made `autohide` to `false`. |
 | `dispose` | Hides an element's toast. Your toast will remain on the DOM but won't show anymore. |
 | `getInstance` | *Static* method which allows you to get the scrollspy instance associated with a DOM element. <br> For example: `var myToastEl = document.getElementById('myToastEl')` `var myToast = viraDesignSystem.Toast.getInstance(myToastEl)` Returns a Vira Design System toast instance|
 | `getOrCreateInstance` | *Static* method which allows you to get the scrollspy instance associated with a DOM element, or create a new one, in case it wasn't initialized.  <br>`var myToastEl = document.getElementById('myToastEl')`  `var myToast = viraDesignSystem.Toast.getOrCreateInstance(myToastEl)` Returns a Vira Design System toast instance |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 ### Events
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | Event | Description |
 | --- | --- |
-| `show.bs.toast` | This event fires immediately when the `show` instance method is called. |
-| `shown.bs.toast` | This event is fired when the toast has been made visible to the user. |
-| `hide.bs.toast` | This event is fired immediately when the `hide` instance method has been called. |
-| `hidden.bs.toast` | This event is fired when the toast has finished being hidden from the user. |
-{{< /bs-table >}}
+| `show.vds.toast` | This event fires immediately when the `show` instance method is called. |
+| `shown.vds.toast` | This event is fired when the toast has been made visible to the user. |
+| `hide.vds.toast` | This event is fired immediately when the `hide` instance method has been called. |
+| `hidden.vds.toast` | This event is fired when the toast has finished being hidden from the user. |
+{{< /vds-table >}}
 
 ```js
 var myToastEl = document.getElementById('myToast')
-myToastEl.addEventListener('hidden.bs.toast', function () {
+myToastEl.addEventListener('hidden.vds.toast', function () {
   // do something...
 })
 ```

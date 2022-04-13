@@ -25,7 +25,7 @@
    */
 
   const NAME = 'swipe';
-  const EVENT_KEY = '.bs.swipe';
+  const EVENT_KEY = '.vds.swipe';
   const EVENT_TOUCHSTART = `touchstart${EVENT_KEY}`;
   const EVENT_TOUCHMOVE = `touchmove${EVENT_KEY}`;
   const EVENT_TOUCHEND = `touchend${EVENT_KEY}`;

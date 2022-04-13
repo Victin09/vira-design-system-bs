@@ -22,7 +22,7 @@ These styles can be found within `_reboot.scss`, and the global variables are de
 
 All HTML headings, `<h1>` through `<h6>`, are available.
 
-{{< bs-table >}}
+{{< vds-table >}}
 | Heading | Example |
 | --- | --- |
 | `<h1></h1>` | <span class="h1">h1. Vira Design System heading</span> |
@@ -31,7 +31,7 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 | `<h4></h4>` | <span class="h4">h4. Vira Design System heading</span> |
 | `<h5></h5>` | <span class="h5">h5. Vira Design System heading</span> |
 | `<h6></h6>` | <span class="h6">h6. Vira Design System heading</span> |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 ```html
 <h1>h1. Vira Design System heading</h1>

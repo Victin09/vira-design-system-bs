@@ -36,7 +36,7 @@ const getUID = prefix => {
 };
 
 const getSelector = element => {
-  let selector = element.getAttribute('data-bs-target');
+  let selector = element.getAttribute('data-vds-target');
 
   if (!selector || selector === '#') {
     let hrefAttribute = element.getAttribute('href'); // The only valid content that could double as a selector are IDs or classes,
@@ -209,7 +209,7 @@ const reflow = element => {
 };
 
 const getjQuery = () => {
-  if (window.jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
+  if (window.jQuery && !document.body.hasAttribute('data-vds-no-jquery')) {
     return window.jQuery;
   }
 
@@ -480,7 +480,7 @@ function removeNamespacedHandlers(element, events, typeEvent, namespace) {
 }
 
 function getTypeEvent(event) {
-  // allow to get the native events from namespaced events ('click.bs.button' --> 'click')
+  // allow to get the native events from namespaced events ('click.vds.button' --> 'click')
   event = event.replace(stripNameRegex, '');
   return customEvents[event] || event;
 }
@@ -670,11 +670,11 @@ function normalizeDataKey(key) {
 
 const Manipulator = {
   setDataAttribute(element, key, value) {
-    element.setAttribute(`data-bs-${normalizeDataKey(key)}`, value);
+    element.setAttribute(`data-vds-${normalizeDataKey(key)}`, value);
   },
 
   removeDataAttribute(element, key) {
-    element.removeAttribute(`data-bs-${normalizeDataKey(key)}`);
+    element.removeAttribute(`data-vds-${normalizeDataKey(key)}`);
   },
 
   getDataAttributes(element) {
@@ -683,10 +683,10 @@ const Manipulator = {
     }
 
     const attributes = {};
-    const bsKeys = Object.keys(element.dataset).filter(key => key.startsWith('bs'));
+    const bsKeys = Object.keys(element.dataset).filter(key => key.startsWith('vds'));
 
     for (const key of bsKeys) {
-      let pureKey = key.replace(/^bs/, '');
+      let pureKey = key.replace(/^vds/, '');
       pureKey = pureKey.charAt(0).toLowerCase() + pureKey.slice(1, pureKey.length);
       attributes[pureKey] = normalizeData(element.dataset[key]);
     }
@@ -695,7 +695,7 @@ const Manipulator = {
   },
 
   getDataAttribute(element, key) {
-    return normalizeData(element.getAttribute(`data-bs-${normalizeDataKey(key)}`));
+    return normalizeData(element.getAttribute(`data-vds-${normalizeDataKey(key)}`));
   },
 
   offset(element) {
@@ -839,7 +839,7 @@ class BaseComponent extends Config {
   }
 
   static get DATA_KEY() {
-    return `bs.${this.NAME}`;
+    return `vds.${this.NAME}`;
   }
 
   static get EVENT_KEY() {
@@ -862,7 +862,7 @@ class BaseComponent extends Config {
 const enableDismissTrigger = (component, method = 'hide') => {
   const clickEvent = `click.dismiss${component.EVENT_KEY}`;
   const name = component.NAME;
-  EventHandler.on(document, clickEvent, `[data-bs-dismiss="${name}"]`, function (event) {
+  EventHandler.on(document, clickEvent, `[data-vds-dismiss="${name}"]`, function (event) {
     if (['A', 'AREA'].includes(this.tagName)) {
       event.preventDefault();
     }
@@ -889,7 +889,7 @@ const enableDismissTrigger = (component, method = 'hide') => {
  */
 
 const NAME$f = 'alert';
-const DATA_KEY$a = 'bs.alert';
+const DATA_KEY$a = 'vds.alert';
 const EVENT_KEY$b = `.${DATA_KEY$a}`;
 const EVENT_CLOSE = `close${EVENT_KEY$b}`;
 const EVENT_CLOSED = `closed${EVENT_KEY$b}`;
@@ -969,11 +969,11 @@ defineJQueryPlugin(Alert);
  */
 
 const NAME$e = 'button';
-const DATA_KEY$9 = 'bs.button';
+const DATA_KEY$9 = 'vds.button';
 const EVENT_KEY$a = `.${DATA_KEY$9}`;
 const DATA_API_KEY$6 = '.data-api';
 const CLASS_NAME_ACTIVE$3 = 'active';
-const SELECTOR_DATA_TOGGLE$5 = '[data-bs-toggle="button"]';
+const SELECTOR_DATA_TOGGLE$5 = '[data-vds-toggle="button"]';
 const EVENT_CLICK_DATA_API$6 = `click${EVENT_KEY$a}${DATA_API_KEY$6}`;
 /**
  * Class definition
@@ -1102,7 +1102,7 @@ const SelectorEngine = {
  */
 
 const NAME$d = 'swipe';
-const EVENT_KEY$9 = '.bs.swipe';
+const EVENT_KEY$9 = '.vds.swipe';
 const EVENT_TOUCHSTART = `touchstart${EVENT_KEY$9}`;
 const EVENT_TOUCHMOVE = `touchmove${EVENT_KEY$9}`;
 const EVENT_TOUCHEND = `touchend${EVENT_KEY$9}`;
@@ -1238,7 +1238,7 @@ class Swipe extends Config {
  */
 
 const NAME$c = 'carousel';
-const DATA_KEY$8 = 'bs.carousel';
+const DATA_KEY$8 = 'vds.carousel';
 const EVENT_KEY$8 = `.${DATA_KEY$8}`;
 const DATA_API_KEY$5 = '.data-api';
 const ARROW_LEFT_KEY$1 = 'ArrowLeft';
@@ -1269,8 +1269,8 @@ const SELECTOR_ITEM = '.carousel-item';
 const SELECTOR_ACTIVE_ITEM = SELECTOR_ACTIVE + SELECTOR_ITEM;
 const SELECTOR_ITEM_IMG = '.carousel-item img';
 const SELECTOR_INDICATORS = '.carousel-indicators';
-const SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]';
-const SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]';
+const SELECTOR_DATA_SLIDE = '[data-vds-slide], [data-vds-slide-to]';
+const SELECTOR_DATA_RIDE = '[data-vds-ride="carousel"]';
 const KEY_TO_DIRECTION = {
   [ARROW_LEFT_KEY$1]: DIRECTION_RIGHT,
   [ARROW_RIGHT_KEY$1]: DIRECTION_LEFT
@@ -1481,7 +1481,7 @@ class Carousel extends BaseComponent {
     const activeIndicator = SelectorEngine.findOne(SELECTOR_ACTIVE, this._indicatorsElement);
     activeIndicator.classList.remove(CLASS_NAME_ACTIVE$2);
     activeIndicator.removeAttribute('aria-current');
-    const newActiveIndicator = SelectorEngine.findOne(`[data-bs-slide-to="${index}"]`, this._indicatorsElement);
+    const newActiveIndicator = SelectorEngine.findOne(`[data-vds-slide-to="${index}"]`, this._indicatorsElement);
 
     if (newActiveIndicator) {
       newActiveIndicator.classList.add(CLASS_NAME_ACTIVE$2);
@@ -1496,7 +1496,7 @@ class Carousel extends BaseComponent {
       return;
     }
 
-    const elementInterval = Number.parseInt(element.getAttribute('data-bs-interval'), 10);
+    const elementInterval = Number.parseInt(element.getAttribute('data-vds-interval'), 10);
     this._config.interval = elementInterval || this._config.defaultInterval;
   }
 
@@ -1645,7 +1645,7 @@ EventHandler.on(document, EVENT_CLICK_DATA_API$5, SELECTOR_DATA_SLIDE, function 
 
   event.preventDefault();
   const carousel = Carousel.getOrCreateInstance(target);
-  const slideIndex = this.getAttribute('data-bs-slide-to');
+  const slideIndex = this.getAttribute('data-vds-slide-to');
 
   if (slideIndex) {
     carousel.to(slideIndex);
@@ -1683,7 +1683,7 @@ defineJQueryPlugin(Carousel);
  */
 
 const NAME$b = 'collapse';
-const DATA_KEY$7 = 'bs.collapse';
+const DATA_KEY$7 = 'vds.collapse';
 const EVENT_KEY$7 = `.${DATA_KEY$7}`;
 const DATA_API_KEY$4 = '.data-api';
 const EVENT_SHOW$6 = `show${EVENT_KEY$7}`;
@@ -1700,7 +1700,7 @@ const CLASS_NAME_HORIZONTAL = 'collapse-horizontal';
 const WIDTH = 'width';
 const HEIGHT = 'height';
 const SELECTOR_ACTIVES = '.collapse.show, .collapse.collapsing';
-const SELECTOR_DATA_TOGGLE$4 = '[data-bs-toggle="collapse"]';
+const SELECTOR_DATA_TOGGLE$4 = '[data-vds-toggle="collapse"]';
 const Default$a = {
   toggle: true,
   parent: null
@@ -1973,7 +1973,7 @@ defineJQueryPlugin(Collapse);
  */
 
 const NAME$a = 'dropdown';
-const DATA_KEY$6 = 'bs.dropdown';
+const DATA_KEY$6 = 'vds.dropdown';
 const EVENT_KEY$6 = `.${DATA_KEY$6}`;
 const DATA_API_KEY$3 = '.data-api';
 const ESCAPE_KEY$2 = 'Escape';
@@ -1995,7 +1995,7 @@ const CLASS_NAME_DROPEND = 'dropend';
 const CLASS_NAME_DROPSTART = 'dropstart';
 const CLASS_NAME_DROPUP_CENTER = 'dropup-center';
 const CLASS_NAME_DROPDOWN_CENTER = 'dropdown-center';
-const SELECTOR_DATA_TOGGLE$3 = '[data-bs-toggle="dropdown"]:not(.disabled):not(:disabled)';
+const SELECTOR_DATA_TOGGLE$3 = '[data-vds-toggle="dropdown"]:not(.disabled):not(:disabled)';
 const SELECTOR_DATA_TOGGLE_SHOWN = `${SELECTOR_DATA_TOGGLE$3}.${CLASS_NAME_SHOW$6}`;
 const SELECTOR_MENU = '.dropdown-menu';
 const SELECTOR_NAVBAR = '.navbar';
@@ -2207,7 +2207,7 @@ class Dropdown extends BaseComponent {
     } // We need to trim the value because custom properties can also include spaces
 
 
-    const isEnd = getComputedStyle(this._menu).getPropertyValue('--bs-position').trim() === 'end';
+    const isEnd = getComputedStyle(this._menu).getPropertyValue('--vds-position').trim() === 'end';
 
     if (parentDropdown.classList.contains(CLASS_NAME_DROPUP)) {
       return isEnd ? PLACEMENT_TOPEND : PLACEMENT_TOP;
@@ -2527,7 +2527,7 @@ class ScrollBarHelper {
 const NAME$9 = 'backdrop';
 const CLASS_NAME_FADE$4 = 'fade';
 const CLASS_NAME_SHOW$5 = 'show';
-const EVENT_MOUSEDOWN = `mousedown.bs.${NAME$9}`;
+const EVENT_MOUSEDOWN = `mousedown.vds.${NAME$9}`;
 const Default$8 = {
   className: 'modal-backdrop',
   isVisible: true,
@@ -2671,7 +2671,7 @@ class Backdrop extends Config {
  */
 
 const NAME$8 = 'focustrap';
-const DATA_KEY$5 = 'bs.focustrap';
+const DATA_KEY$5 = 'vds.focustrap';
 const EVENT_KEY$5 = `.${DATA_KEY$5}`;
 const EVENT_FOCUSIN$2 = `focusin${EVENT_KEY$5}`;
 const EVENT_KEYDOWN_TAB = `keydown.tab${EVENT_KEY$5}`;
@@ -2780,7 +2780,7 @@ class FocusTrap extends Config {
  */
 
 const NAME$7 = 'modal';
-const DATA_KEY$4 = 'bs.modal';
+const DATA_KEY$4 = 'vds.modal';
 const EVENT_KEY$4 = `.${DATA_KEY$4}`;
 const DATA_API_KEY$2 = '.data-api';
 const ESCAPE_KEY$1 = 'Escape';
@@ -2799,7 +2799,7 @@ const CLASS_NAME_STATIC = 'modal-static';
 const OPEN_SELECTOR$1 = '.modal.show';
 const SELECTOR_DIALOG = '.modal-dialog';
 const SELECTOR_MODAL_BODY = '.modal-body';
-const SELECTOR_DATA_TOGGLE$2 = '[data-bs-toggle="modal"]';
+const SELECTOR_DATA_TOGGLE$2 = '[data-vds-toggle="modal"]';
 const Default$6 = {
   backdrop: true,
   keyboard: true,
@@ -3148,7 +3148,7 @@ defineJQueryPlugin(Modal);
  */
 
 const NAME$6 = 'offcanvas';
-const DATA_KEY$3 = 'bs.offcanvas';
+const DATA_KEY$3 = 'vds.offcanvas';
 const EVENT_KEY$3 = `.${DATA_KEY$3}`;
 const DATA_API_KEY$1 = '.data-api';
 const EVENT_LOAD_DATA_API$2 = `load${EVENT_KEY$3}${DATA_API_KEY$1}`;
@@ -3165,7 +3165,7 @@ const EVENT_HIDE_PREVENTED = `hidePrevented${EVENT_KEY$3}`;
 const EVENT_HIDDEN$3 = `hidden${EVENT_KEY$3}`;
 const EVENT_CLICK_DATA_API$1 = `click${EVENT_KEY$3}${DATA_API_KEY$1}`;
 const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY$3}`;
-const SELECTOR_DATA_TOGGLE$1 = '[data-bs-toggle="offcanvas"]';
+const SELECTOR_DATA_TOGGLE$1 = '[data-vds-toggle="offcanvas"]';
 const Default$5 = {
   backdrop: true,
   keyboard: true,
@@ -3683,7 +3683,7 @@ const CLASS_NAME_MODAL = 'modal';
 const CLASS_NAME_SHOW$2 = 'show';
 const SELECTOR_TOOLTIP_INNER = '.tooltip-inner';
 const SELECTOR_MODAL = `.${CLASS_NAME_MODAL}`;
-const EVENT_MODAL_HIDE = 'hide.bs.modal';
+const EVENT_MODAL_HIDE = 'hide.vds.modal';
 const TRIGGER_HOVER = 'hover';
 const TRIGGER_FOCUS = 'focus';
 const TRIGGER_CLICK = 'click';
@@ -3970,7 +3970,7 @@ class Tooltip extends BaseComponent {
 
     tip.classList.remove(CLASS_NAME_FADE$2, CLASS_NAME_SHOW$2); // todo: on v6 the following can be achieved with CSS only
 
-    tip.classList.add(`bs-${this.constructor.NAME}-auto`);
+    tip.classList.add(`vds-${this.constructor.NAME}-auto`);
     const tipId = getUID(this.constructor.NAME).toString();
     tip.setAttribute('id', tipId);
 
@@ -4384,7 +4384,7 @@ defineJQueryPlugin(Popover);
  */
 
 const NAME$2 = 'scrollspy';
-const DATA_KEY$2 = 'bs.scrollspy';
+const DATA_KEY$2 = 'vds.scrollspy';
 const EVENT_KEY$2 = `.${DATA_KEY$2}`;
 const DATA_API_KEY = '.data-api';
 const EVENT_ACTIVATE = `activate${EVENT_KEY$2}`;
@@ -4392,7 +4392,7 @@ const EVENT_SCROLL = `scroll${EVENT_KEY$2}`;
 const EVENT_LOAD_DATA_API$1 = `load${EVENT_KEY$2}${DATA_API_KEY}`;
 const CLASS_NAME_DROPDOWN_ITEM = 'dropdown-item';
 const CLASS_NAME_ACTIVE$1 = 'active';
-const SELECTOR_DATA_SPY = '[data-bs-spy="scroll"]';
+const SELECTOR_DATA_SPY = '[data-vds-spy="scroll"]';
 const SELECTOR_NAV_LIST_GROUP = '.nav, .list-group';
 const SELECTOR_NAV_LINKS = '.nav-link';
 const SELECTOR_NAV_ITEMS = '.nav-item';
@@ -4536,7 +4536,7 @@ class ScrollSpy extends BaseComponent {
 
     this._clear();
 
-    const queries = SELECTOR_LINK_ITEMS.split(',').map(selector => `${selector}[data-bs-target="${target}"],${selector}[href="${target}"]`);
+    const queries = SELECTOR_LINK_ITEMS.split(',').map(selector => `${selector}[data-vds-target="${target}"],${selector}[href="${target}"]`);
     const link = SelectorEngine.findOne(queries.join(','), this._config.target);
     link.classList.add(CLASS_NAME_ACTIVE$1);
 
@@ -4617,7 +4617,7 @@ defineJQueryPlugin(ScrollSpy);
  */
 
 const NAME$1 = 'tab';
-const DATA_KEY$1 = 'bs.tab';
+const DATA_KEY$1 = 'vds.tab';
 const EVENT_KEY$1 = `.${DATA_KEY$1}`;
 const EVENT_HIDE$1 = `hide${EVENT_KEY$1}`;
 const EVENT_HIDDEN$1 = `hidden${EVENT_KEY$1}`;
@@ -4641,10 +4641,10 @@ const NOT_SELECTOR_DROPDOWN_TOGGLE = ':not(.dropdown-toggle)';
 const SELECTOR_TAB_PANEL = '.list-group, .nav, [role="tablist"]';
 const SELECTOR_OUTER = '.nav-item, .list-group-item';
 const SELECTOR_INNER = `.nav-link${NOT_SELECTOR_DROPDOWN_TOGGLE}, .list-group-item${NOT_SELECTOR_DROPDOWN_TOGGLE}, [role="tab"]${NOT_SELECTOR_DROPDOWN_TOGGLE}`;
-const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="tab"], [data-bs-toggle="pill"], [data-bs-toggle="list"]'; // todo:v6: could be only `tab`
+const SELECTOR_DATA_TOGGLE = '[data-vds-toggle="tab"], [data-vds-toggle="pill"], [data-vds-toggle="list"]'; // todo:v6: could be only `tab`
 
 const SELECTOR_INNER_ELEM = `${SELECTOR_INNER}, ${SELECTOR_DATA_TOGGLE}`;
-const SELECTOR_DATA_TOGGLE_ACTIVE = `.${CLASS_NAME_ACTIVE}[data-bs-toggle="tab"], .${CLASS_NAME_ACTIVE}[data-bs-toggle="pill"], .${CLASS_NAME_ACTIVE}[data-bs-toggle="list"]`;
+const SELECTOR_DATA_TOGGLE_ACTIVE = `.${CLASS_NAME_ACTIVE}[data-vds-toggle="tab"], .${CLASS_NAME_ACTIVE}[data-vds-toggle="pill"], .${CLASS_NAME_ACTIVE}[data-vds-toggle="list"]`;
 /**
  * Class definition
  */
@@ -4939,7 +4939,7 @@ defineJQueryPlugin(Tab);
  */
 
 const NAME = 'toast';
-const DATA_KEY = 'bs.toast';
+const DATA_KEY = 'vds.toast';
 const EVENT_KEY = `.${DATA_KEY}`;
 const EVENT_MOUSEOVER = `mouseover${EVENT_KEY}`;
 const EVENT_MOUSEOUT = `mouseout${EVENT_KEY}`;

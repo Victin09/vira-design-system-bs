@@ -81,7 +81,7 @@
     }
 
     static get DATA_KEY() {
-      return `bs.${this.NAME}`;
+      return `vds.${this.NAME}`;
     }
 
     static get EVENT_KEY() {

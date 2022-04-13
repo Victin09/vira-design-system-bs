@@ -22,11 +22,11 @@
   clip: rect(0, 0, 0, 0);
 }
 .list-group-item-check:hover + .list-group-item {
-  background-color: var(--bs-light);
+  background-color: var(--vds-light);
 }
 .list-group-item-check:checked + .list-group-item {
   color: #fff;
-  background-color: var(--bs-blue);
+  background-color: var(--vds-blue);
 }
 .list-group-item-check[disabled] + .list-group-item,
 .list-group-item-check:disabled + .list-group-item {
@@ -45,13 +45,13 @@
 }
 .list-group-radio .list-group-item:hover,
 .list-group-radio .list-group-item:focus {
-  background-color: var(--bs-light);
+  background-color: var(--vds-light);
 }
 
 .list-group-radio .form-check-input:checked + .list-group-item {
-  background-color: var(--bs-body);
-  border-color: var(--bs-blue);
-  box-shadow: 0 0 0 2px var(--bs-blue);
+  background-color: var(--vds-body);
+  border-color: var(--vds-blue);
+  box-shadow: 0 0 0 2px var(--vds-blue);
 }
 .list-group-radio .form-check-input[disabled] + .list-group-item,
 .list-group-radio .form-check-input:disabled + .list-group-item {

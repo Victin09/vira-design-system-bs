@@ -33,7 +33,7 @@ In practice, those variables are then applied in Reboot like so:
 Which allows you to make real-time customizations however you like:
 
 ```html
-<body style="--bs-body-color: #333;">
+<body style="--vds-body-color: #333;">
   <!-- ... -->
 </body>
 ```
@@ -82,7 +82,7 @@ This `font-family` is applied to the `<body>` and automatically inherited global
 
 All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-top` removed. Headings have `margin-bottom: .5rem` added and paragraphs `margin-bottom: 1rem` for easy spacing.
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | Heading | Example |
 | --- | --- |
 | `<h1></h1>` | <span class="h1">h1. Vira Design System heading</span> |
@@ -91,7 +91,7 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
 | `<h4></h4>` | <span class="h4">h4. Vira Design System heading</span> |
 | `<h5></h5>` | <span class="h5">h5. Vira Design System heading</span> |
 | `<h6></h6>` | <span class="h6">h6. Vira Design System heading</span> |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 ## Horizontal rules
 

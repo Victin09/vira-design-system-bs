@@ -39,7 +39,7 @@ Our dropdowns, popovers and tooltips also depend on [Popper](https://popper.js.o
 
 ## Still want to use jQuery? It's possible!
 
-Vira Design System 5 is designed to be used without jQuery, but it's still possible to use our components with jQuery. **If Vira Design System detects `jQuery` in the `window` object** it'll add all of our components in jQuery's plugin system; this means you'll be able to do `$('[data-bs-toggle="tooltip"]').tooltip()` to enable tooltips. The same goes for our other components.
+Vira Design System 5 is designed to be used without jQuery, but it's still possible to use our components with jQuery. **If Vira Design System detects `jQuery` in the `window` object** it'll add all of our components in jQuery's plugin system; this means you'll be able to do `$('[data-vds-toggle="tooltip"]').tooltip()` to enable tooltips. The same goes for our other components.
 
 ## Data attributes
 
@@ -61,7 +61,7 @@ All infinitive events provide [`preventDefault()`](https://developer.mozilla.org
 ```js
 var myModal = document.getElementById('myModal')
 
-myModal.addEventListener('show.bs.modal', function (event) {
+myModal.addEventListener('show.vds.modal', function (event) {
   if (!data) {
     return event.preventDefault() // stops modal from being shown
   }
@@ -71,10 +71,10 @@ myModal.addEventListener('show.bs.modal', function (event) {
 {{< callout warning >}}
 ## jQuery events
 
-Vira Design System will detect jQuery if `jQuery` is present in the `window` object and there is no `data-bs-no-jquery` attribute set on `<body>`. If jQuery is found, Vira Design System will emit events thanks to jQuery's event system. So if you want to listen to Vira Design System's events, you'll have to use the jQuery methods (`.on`, `.one`) instead of `addEventListener`.
+Vira Design System will detect jQuery if `jQuery` is present in the `window` object and there is no `data-vds-no-jquery` attribute set on `<body>`. If jQuery is found, Vira Design System will emit events thanks to jQuery's event system. So if you want to listen to Vira Design System's events, you'll have to use the jQuery methods (`.on`, `.one`) instead of `addEventListener`.
 
 ```js
-$('#myTab a').on('shown.bs.tab', function () {
+$('#myTab a').on('shown.vds.tab', function () {
   // do something...
 })
 ```
@@ -99,7 +99,7 @@ You can also use a CSS selector as the first argument instead of a DOM element t
 
 ```js
 var modal = new viraDesignSystem.Modal('#myModal')
-var dropdown = new viraDesignSystem.Dropdown('[data-bs-toggle="dropdown"]')
+var dropdown = new viraDesignSystem.Dropdown('[data-vds-toggle="dropdown"]')
 ```
 
 ### Asynchronous functions and transitions
@@ -111,7 +111,7 @@ In order to execute an action once the transition is complete, you can listen to
 ```js
 var myCollapseEl = document.getElementById('myCollapse')
 
-myCollapseEl.addEventListener('shown.bs.collapse', function (event) {
+myCollapseEl.addEventListener('shown.vds.collapse', function (event) {
   // Action to execute once the collapsible area is expanded
 })
 ```
@@ -122,7 +122,7 @@ In addition a method call on a **transitioning component will be ignored**.
 var myCarouselEl = document.getElementById('myCarousel')
 var carousel = viraDesignSystem.Carousel.getInstance(myCarouselEl) // Retrieve a Carousel instance
 
-myCarouselEl.addEventListener('slid.bs.carousel', function (event) {
+myCarouselEl.addEventListener('slid.vds.carousel', function (event) {
   carousel.to('2') // Will slide to the slide 2 as soon as the transition to slide 1 is finished
 })
 
@@ -217,8 +217,8 @@ var myDefaultAllowList = viraDesignSystem.Tooltip.Default.allowList
 // To allow table elements
 myDefaultAllowList.table = []
 
-// To allow td elements and data-bs-option attributes on td elements
-myDefaultAllowList.td = ['data-bs-option']
+// To allow td elements and data-vds-option attributes on td elements
+myDefaultAllowList.td = ['data-vds-option']
 
 // You can push your custom regex to validate your attributes.
 // Be careful about your regular expressions being too lax

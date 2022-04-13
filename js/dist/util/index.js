@@ -40,7 +40,7 @@
   };
 
   const getSelector = element => {
-    let selector = element.getAttribute('data-bs-target');
+    let selector = element.getAttribute('data-vds-target');
 
     if (!selector || selector === '#') {
       let hrefAttribute = element.getAttribute('href'); // The only valid content that could double as a selector are IDs or classes,
@@ -213,7 +213,7 @@
   };
 
   const getjQuery = () => {
-    if (window.jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
+    if (window.jQuery && !document.body.hasAttribute('data-vds-no-jquery')) {
       return window.jQuery;
     }
 

@@ -11,7 +11,7 @@ Vira Design System utilities are generated with our utility API and can be used 
 
 The `$utilities` map contains all our utilities and is later merged with your custom `$utilities` map, if present. The utility map contains a keyed list of utility groups which accept the following options:
 
-{{< bs-table "table text-start" >}}
+{{< vds-table "table text-start" >}}
 | Option | Type | Default&nbsp;value | Description |
 | --- | --- | --- | --- |
 | [`property`](#property) | **Required** | – | Name of the property, this can be a string or an array of strings (e.g., horizontal paddings or margins). |
@@ -25,7 +25,7 @@ The `$utilities` map contains all our utilities and is later merged with your cu
 | `rfs` | Optional | `false` | Boolean to enable [fluid rescaling with RFS]({{< docsref "/getting-started/rfs" >}}). |
 | [`print`](#print) | Optional | `false` | Boolean indicating if print classes need to be generated. |
 | `rtl` | Optional | `true` | Boolean indicating if utility should be kept in RTL. |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 ## API explained
 
@@ -182,10 +182,10 @@ $utilities: (
 Output:
 
 ```css
-.text-opacity-25 { --bs-text-alpha: .25; }
-.text-opacity-50 { --bs-text-alpha: .5; }
-.text-opacity-75 { --bs-text-alpha: .75; }
-.text-opacity-100 { --bs-text-alpha: 1; }
+.text-opacity-25 { --vds-text-alpha: .25; }
+.text-opacity-50 { --vds-text-alpha: .5; }
+.text-opacity-75 { --vds-text-alpha: .75; }
+.text-opacity-100 { --vds-text-alpha: 1; }
 ```
 
 ### Local CSS variables
@@ -214,8 +214,8 @@ Output:
 
 ```css
 .bg-primary {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+  --vds-bg-opacity: 1;
+  background-color: rgba(var(--vds-primary-rgb), var(--vds-bg-opacity)) !important;
 }
 ```
 

@@ -76,7 +76,7 @@ You can even roll your own custom sizing with CSS variables:
 
 {{< example >}}
 <button type="button" class="btn btn-primary"
-        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+        style="--vds-btn-padding-y: .25rem; --vds-btn-padding-x: .5rem; --vds-btn-font-size: .75rem;">
   Custom button
 </button>
 {{< /example >}}
@@ -161,18 +161,18 @@ Visually, these toggle buttons are identical to the [checkbox toggle buttons]({{
 
 ### Toggle states
 
-Add `data-bs-toggle="button"` to toggle a button's `active` state. If you're pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to ensure that it is conveyed appropriately to assistive technologies.
+Add `data-vds-toggle="button"` to toggle a button's `active` state. If you're pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to ensure that it is conveyed appropriately to assistive technologies.
 
 {{< example >}}
-<button type="button" class="btn btn-primary" data-bs-toggle="button">Toggle button</button>
-<button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Active toggle button</button>
-<button type="button" class="btn btn-primary" disabled data-bs-toggle="button">Disabled toggle button</button>
+<button type="button" class="btn btn-primary" data-vds-toggle="button">Toggle button</button>
+<button type="button" class="btn btn-primary active" data-vds-toggle="button" aria-pressed="true">Active toggle button</button>
+<button type="button" class="btn btn-primary" disabled data-vds-toggle="button">Disabled toggle button</button>
 {{< /example >}}
 
 {{< example >}}
-<a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Toggle link</a>
-<a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle link</a>
-<a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>
+<a href="#" class="btn btn-primary" role="button" data-vds-toggle="button">Toggle link</a>
+<a href="#" class="btn btn-primary active" role="button" data-vds-toggle="button" aria-pressed="true">Active toggle link</a>
+<a class="btn btn-primary disabled" aria-disabled="true" role="button" data-vds-toggle="button">Disabled toggle link</a>
 {{< /example >}}
 
 ### Methods
@@ -184,14 +184,14 @@ var button = document.getElementById('myButton')
 var bsButton = new viraDesignSystem.Button(button)
 ```
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | Method | Description |
 | --- | --- |
 | `toggle` | Toggles push state. Gives the button the appearance that it has been activated. |
 | `dispose` | Destroys an element's button. (Removes stored data on the DOM element) |
 | `getInstance` | Static method which allows you to get the button instance associated to a DOM element, you can use it like this: `viraDesignSystem.Button.getInstance(element)`|
 | `getOrCreateInstance` | Static method which returns a button instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `viraDesignSystem.Button.getOrCreateInstance(element)` |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 For example, to toggle all buttons
 

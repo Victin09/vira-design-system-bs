@@ -21,7 +21,7 @@ import BaseComponent from './base-component'
  */
 
 const NAME = 'collapse'
-const DATA_KEY = 'bs.collapse'
+const DATA_KEY = 'vds.collapse'
 const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
 
@@ -42,7 +42,7 @@ const WIDTH = 'width'
 const HEIGHT = 'height'
 
 const SELECTOR_ACTIVES = '.collapse.show, .collapse.collapsing'
-const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="collapse"]'
+const SELECTOR_DATA_TOGGLE = '[data-vds-toggle="collapse"]'
 
 const Default = {
   toggle: true,

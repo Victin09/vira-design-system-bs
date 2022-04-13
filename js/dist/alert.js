@@ -25,7 +25,7 @@
    */
 
   const NAME = 'alert';
-  const DATA_KEY = 'bs.alert';
+  const DATA_KEY = 'vds.alert';
   const EVENT_KEY = `.${DATA_KEY}`;
   const EVENT_CLOSE = `close${EVENT_KEY}`;
   const EVENT_CLOSED = `closed${EVENT_KEY}`;

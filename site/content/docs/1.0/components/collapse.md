@@ -22,15 +22,15 @@ Click the buttons below to show and hide another element via class changes:
 - `.collapsing` is applied during transitions
 - `.collapse.show` shows content
 
-Generally, we recommend using a button with the `data-bs-target` attribute. While not recommended from a semantic point of view, you can also use a link with the `href` attribute (and a `role="button"`). In both cases, the `data-bs-toggle="collapse"` is required.
+Generally, we recommend using a button with the `data-vds-target` attribute. While not recommended from a semantic point of view, you can also use a link with the `href` attribute (and a `role="button"`). In both cases, the `data-vds-toggle="collapse"` is required.
 
 {{< example >}}
 <p>
-  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+  <a class="btn btn-primary" data-vds-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Link with href
   </a>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Button with data-bs-target
+  <button class="btn btn-primary" type="button" data-vds-toggle="collapse" data-vds-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-vds-target
   </button>
 </p>
 <div class="collapse" id="collapseExample">
@@ -50,7 +50,7 @@ Please note that while the example below has a `min-height` set to avoid excessi
 
 {{< example >}}
 <p>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+  <button class="btn btn-primary" type="button" data-vds-toggle="collapse" data-vds-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
     Toggle width collapse
   </button>
 </p>
@@ -65,14 +65,14 @@ Please note that while the example below has a `min-height` set to avoid excessi
 
 ## Multiple targets
 
-A `<button>` or `<a>` can show and hide multiple elements by referencing them with a selector in its `href` or `data-bs-target` attribute.
-Multiple `<button>` or `<a>` can show and hide an element if they each reference it with their `href` or `data-bs-target` attribute
+A `<button>` or `<a>` can show and hide multiple elements by referencing them with a selector in its `href` or `data-vds-target` attribute.
+Multiple `<button>` or `<a>` can show and hide an element if they each reference it with their `href` or `data-vds-target` attribute
 
 {{< example >}}
 <p>
-  <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+  <a class="btn btn-primary" data-vds-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+  <button class="btn btn-primary" type="button" data-vds-toggle="collapse" data-vds-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+  <button class="btn btn-primary" type="button" data-vds-toggle="collapse" data-vds-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
 </p>
 <div class="row">
   <div class="col">
@@ -96,7 +96,7 @@ Multiple `<button>` or `<a>` can show and hide an element if they each reference
 
 Be sure to add `aria-expanded` to the control element. This attribute explicitly conveys the current state of the collapsible element tied to the control to screen readers and similar assistive technologies. If the collapsible element is closed by default, the attribute on the control element should have a value of `aria-expanded="false"`. If you've set the collapsible element to be open by default using the `show` class, set `aria-expanded="true"` on the control instead. The plugin will automatically toggle this attribute on the control based on whether or not the collapsible element has been opened or closed (via JavaScript, or because the user triggered another control element also tied to the same collapsible element). If the control element's HTML element is not a button (e.g., an `<a>` or `<div>`), the attribute `role="button"` should be added to the element.
 
-If your control element is targeting a single collapsible element – i.e. the `data-bs-target` attribute is pointing to an `id` selector – you should add the `aria-controls` attribute to the control element, containing the `id` of the collapsible element. Modern screen readers and similar assistive technologies make use of this attribute to provide users with additional shortcuts to navigate directly to the collapsible element itself.
+If your control element is targeting a single collapsible element – i.e. the `data-vds-target` attribute is pointing to an `id` selector – you should add the `aria-controls` attribute to the control element, containing the `id` of the collapsible element. Modern screen readers and similar assistive technologies make use of this attribute to provide users with additional shortcuts to navigate directly to the collapsible element itself.
 
 Note that Vira Design System's current implementation does not cover the various *optional* keyboard interactions described in the [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) - you will need to include these yourself with custom JavaScript.
 
@@ -124,9 +124,9 @@ These classes can be found in `_transitions.scss`.
 
 ### Via data attributes
 
-Just add `data-bs-toggle="collapse"` and a `data-bs-target` to the element to automatically assign control of one or more collapsible elements. The `data-bs-target` attribute accepts a CSS selector to apply the collapse to. Be sure to add the class `collapse` to the collapsible element. If you'd like it to default open, add the additional class `show`.
+Just add `data-vds-toggle="collapse"` and a `data-vds-target` to the element to automatically assign control of one or more collapsible elements. The `data-vds-target` attribute accepts a CSS selector to apply the collapse to. Be sure to add the class `collapse` to the collapsible element. If you'd like it to default open, add the additional class `show`.
 
-To add accordion-like group management to a collapsible area, add the data attribute `data-bs-parent="#selector"`. Refer to the [accordion page]({{< docsref "/components/accordion" >}}) for more information.
+To add accordion-like group management to a collapsible area, add the data attribute `data-vds-parent="#selector"`. Refer to the [accordion page]({{< docsref "/components/accordion" >}}) for more information.
 
 ### Via JavaScript
 
@@ -141,14 +141,14 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-parent=""`.
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-vds-`, as in `data-vds-parent=""`.
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 `parent` | selector, jQuery object, DOM element | `false` | If parent is provided, then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent on the `card` class). The attribute has to be set on the target collapsible area. |
 `toggle` | boolean | `true` | Toggles the collapsible element on invocation |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 ### Methods
 
@@ -167,33 +167,33 @@ var bsCollapse = new viraDesignSystem.Collapse(myCollapse, {
 })
 ```
 
-{{< bs-table >}}
+{{< vds-table >}}
 | Method | Description |
 | --- | --- |
-| `toggle` | Toggles a collapsible element to shown or hidden. **Returns to the caller before the collapsible element has actually been shown or hidden** (i.e. before the `shown.bs.collapse` or `hidden.bs.collapse` event occurs). |
-| `show` | Shows a collapsible element. **Returns to the caller before the collapsible element has actually been shown** (e.g., before the `shown.bs.collapse` event occurs). |
-| `hide` | Hides a collapsible element. **Returns to the caller before the collapsible element has actually been hidden** (e.g., before the `hidden.bs.collapse` event occurs). |
+| `toggle` | Toggles a collapsible element to shown or hidden. **Returns to the caller before the collapsible element has actually been shown or hidden** (i.e. before the `shown.vds.collapse` or `hidden.vds.collapse` event occurs). |
+| `show` | Shows a collapsible element. **Returns to the caller before the collapsible element has actually been shown** (e.g., before the `shown.vds.collapse` event occurs). |
+| `hide` | Hides a collapsible element. **Returns to the caller before the collapsible element has actually been hidden** (e.g., before the `hidden.vds.collapse` event occurs). |
 | `dispose` | Destroys an element's collapse. (Removes stored data on the DOM element) |
 | `getInstance` | Static method which allows you to get the collapse instance associated to a DOM element, you can use it like this: `viraDesignSystem.Collapse.getInstance(element)` |
 | `getOrCreateInstance` | Static method which returns a collapse instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `viraDesignSystem.Collapse.getOrCreateInstance(element)` |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 ### Events
 
 Vira Design System's collapse class exposes a few events for hooking into collapse functionality.
 
-{{< bs-table >}}
+{{< vds-table >}}
 | Event type | Description |
 | --- | --- |
-| `show.bs.collapse` | This event fires immediately when the `show` instance method is called. |
-| `shown.bs.collapse` | This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete). |
-| `hide.bs.collapse` | This event is fired immediately when the `hide` method has been called. |
-| `hidden.bs.collapse` | This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete). |
-{{< /bs-table >}}
+| `show.vds.collapse` | This event fires immediately when the `show` instance method is called. |
+| `shown.vds.collapse` | This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete). |
+| `hide.vds.collapse` | This event is fired immediately when the `hide` method has been called. |
+| `hidden.vds.collapse` | This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete). |
+{{< /vds-table >}}
 
 ```js
 var myCollapsible = document.getElementById('myCollapsible')
-myCollapsible.addEventListener('hidden.bs.collapse', function () {
+myCollapsible.addEventListener('hidden.vds.collapse', function () {
   // do something...
 })
 ```

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Tooltips
-description: Documentation and examples for adding custom Vira Design System tooltips with CSS and JavaScript using CSS3 for animations and data-bs-attributes for local title storage.
+description: Documentation and examples for adding custom Vira Design System tooltips with CSS and JavaScript using CSS3 for animations and data-vds-attributes for local title storage.
 group: components
 toc: true
 ---
@@ -34,10 +34,10 @@ Got all that? Great, let's see how they work with some examples.
 
 ### Enable tooltips
 
-As mentioned above, you must initialize tooltips before they can be used. One way to initialize all tooltips on a page would be to select them by their `data-bs-toggle` attribute, like so:
+As mentioned above, you must initialize tooltips before they can be used. One way to initialize all tooltips on a page would be to select them by their `data-vds-toggle` attribute, like so:
 
 ```js
-var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-vds-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new viraDesignSystem.Tooltip(tooltipTriggerEl)
 })
@@ -48,24 +48,24 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 Hover over the links below to see tooltips:
 
 <div class="bd-example tooltip-demo">
-  <p class="muted">Placeholder text to demonstrate some <a href="#" data-bs-toggle="tooltip" title="Default tooltip">inline links</a> with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of <a href="#" data-bs-toggle="tooltip" title="Another tooltip">real text</a>. And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how <a href="#" data-bs-toggle="tooltip" title="Another one here too">these tooltips on links</a> can work in practice, once you use them on <a href="#" data-bs-toggle="tooltip" title="The last tip!">your own</a> site or project.
+  <p class="muted">Placeholder text to demonstrate some <a href="#" data-vds-toggle="tooltip" title="Default tooltip">inline links</a> with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of <a href="#" data-vds-toggle="tooltip" title="Another tooltip">real text</a>. And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how <a href="#" data-vds-toggle="tooltip" title="Another one here too">these tooltips on links</a> can work in practice, once you use them on <a href="#" data-vds-toggle="tooltip" title="The last tip!">your own</a> site or project.
   </p>
 </div>
 
 ### Custom tooltips
 
-You can customize the appearance of tooltips using [CSS variables](#variables). We set a custom class with `data-bs-custom-class="custom-tooltip"` to scope our custom appearance and use it to override a local CSS variable.
+You can customize the appearance of tooltips using [CSS variables](#variables). We set a custom class with `data-vds-custom-class="custom-tooltip"` to scope our custom appearance and use it to override a local CSS variable.
 
 ```scss
 .custom-tooltip {
-  --bs-tooltip-bg: var(--bs-primary);
+  --vds-tooltip-bg: var(--vds-primary);
 }
 ```
 
 {{< example class="tooltip-demo" >}}
 <button type="button" class="btn btn-secondary"
-        data-bs-toggle="tooltip" data-bs-placement="top"
-        data-bs-custom-class="custom-tooltip"
+        data-vds-toggle="tooltip" data-vds-placement="top"
+        data-vds-custom-class="custom-tooltip"
         title="This top tooltip is themed via CSS variables.">
   Custom tooltip
 </button>
@@ -77,25 +77,25 @@ Hover over the buttons below to see the four tooltips directions: top, right, bo
 
 <div class="bd-example tooltip-demo">
   <div class="bd-example-tooltips">
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">Tooltip on top</button>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">Tooltip on right</button>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">Tooltip on left</button>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Tooltip with HTML</button>
+    <button type="button" class="btn btn-secondary" data-vds-toggle="tooltip" data-vds-placement="top" title="Tooltip on top">Tooltip on top</button>
+    <button type="button" class="btn btn-secondary" data-vds-toggle="tooltip" data-vds-placement="right" title="Tooltip on right">Tooltip on right</button>
+    <button type="button" class="btn btn-secondary" data-vds-toggle="tooltip" data-vds-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+    <button type="button" class="btn btn-secondary" data-vds-toggle="tooltip" data-vds-placement="left" title="Tooltip on left">Tooltip on left</button>
+    <button type="button" class="btn btn-secondary" data-vds-toggle="tooltip" data-vds-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Tooltip with HTML</button>
   </div>
 </div>
 
 ```html
-<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+<button type="button" class="btn btn-secondary" data-vds-toggle="tooltip" data-vds-placement="top" title="Tooltip on top">
   Tooltip on top
 </button>
-<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+<button type="button" class="btn btn-secondary" data-vds-toggle="tooltip" data-vds-placement="right" title="Tooltip on right">
   Tooltip on right
 </button>
-<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+<button type="button" class="btn btn-secondary" data-vds-toggle="tooltip" data-vds-placement="bottom" title="Tooltip on bottom">
   Tooltip on bottom
 </button>
-<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+<button type="button" class="btn btn-secondary" data-vds-toggle="tooltip" data-vds-placement="left" title="Tooltip on left">
   Tooltip on left
 </button>
 ```
@@ -103,7 +103,7 @@ Hover over the buttons below to see the four tooltips directions: top, right, bo
 And with custom HTML added:
 
 ```html
-<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+<button type="button" class="btn btn-secondary" data-vds-toggle="tooltip" data-vds-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
   Tooltip with HTML
 </button>
 ```
@@ -111,7 +111,7 @@ And with custom HTML added:
 With an SVG:
 
 <div class="bd-example tooltip-demo">
-  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" title="Default tooltip">
+  <a href="#" class="d-inline-block" data-vds-toggle="tooltip" title="Default tooltip">
     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
       <rect width="100%" height="100%" fill="#563d7c"/>
       <circle cx="50" cy="50" r="30" fill="#007bff"/>
@@ -167,10 +167,10 @@ You should only add tooltips to HTML elements that are traditionally keyboard-fo
 
 ```html
 <!-- HTML to write -->
-<a href="#" data-bs-toggle="tooltip" title="Some tooltip text!">Hover over me</a>
+<a href="#" data-vds-toggle="tooltip" title="Some tooltip text!">Hover over me</a>
 
 <!-- Generated markup by the plugin -->
-<div class="tooltip bs-tooltip-top" role="tooltip">
+<div class="tooltip vds-tooltip-top" role="tooltip">
   <div class="tooltip-arrow"></div>
   <div class="tooltip-inner">
     Some tooltip text!
@@ -184,7 +184,7 @@ Elements with the `disabled` attribute aren't interactive, meaning users cannot 
 
 <div class="tooltip-demo">
 {{< example >}}
-<span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Disabled tooltip">
+<span class="d-inline-block" tabindex="0" data-vds-toggle="tooltip" title="Disabled tooltip">
   <button class="btn btn-primary" type="button" disabled>Disabled button</button>
 </span>
 {{< /example >}}
@@ -192,14 +192,14 @@ Elements with the `disabled` attribute aren't interactive, meaning users cannot 
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-animation=""`. Make sure to change the case type of the option name from camelCase to kebab-case when passing the options via data attributes. For example, instead of using `data-bs-customClass="beautifier"`, use `data-bs-custom-class="beautifier"`.
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-vds-`, as in `data-vds-animation=""`. Make sure to change the case type of the option name from camelCase to kebab-case when passing the options via data attributes. For example, instead of using `data-vds-customClass="beautifier"`, use `data-vds-custom-class="beautifier"`.
 
 {{< callout warning >}}
 Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` options cannot be supplied using data attributes.
 {{< /callout >}}
 
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | `animation` | boolean | `true` | Apply a CSS fade transition to the tooltip |
@@ -212,14 +212,14 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
 | `title` | string, element, function | `''` | Default title value if `title` attribute isn't present. If a function is given, it will be called with its `this` reference set to the element that the popover is attached to. |
 | `customClass` | string, function | `''` | Add classes to the tooltip when it is shown. Note that these classes will be added in addition to any classes specified in the template. To add multiple classes, separate them with spaces: `'class-1 class-2'`. You can also pass a function that should return a single string containing additional class names. |
 | `trigger` | string | `'hover focus'` | How tooltip is triggered: click, hover, focus, manual. You may pass multiple triggers; separate them with a space. `'manual'` indicates that the tooltip will be triggered programmatically via the `.tooltip('show')`, `.tooltip('hide')` and `.tooltip('toggle')` methods; this value cannot be combined with any other trigger. `'hover'` on its own will result in tooltips that cannot be triggered via the keyboard, and should only be used if alternative methods for conveying the same information for keyboard users is present. |
-| `offset` | number, string, function | `[0, 0]` | Offset of the tooltip relative to its target. You can pass a string in data attributes with comma separated values like: `data-bs-offset="10,20"`. When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: [skidding](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [distance](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). For more information refer to Popper's [offset docs](https://popper.js.org/docs/v2/modifiers/offset/#options). |
+| `offset` | number, string, function | `[0, 0]` | Offset of the tooltip relative to its target. You can pass a string in data attributes with comma separated values like: `data-vds-offset="10,20"`. When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: [skidding](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [distance](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). For more information refer to Popper's [offset docs](https://popper.js.org/docs/v2/modifiers/offset/#options). |
 | `fallbackPlacements` | string, array | `['top', 'right', 'bottom', 'left']` | Define fallback placements by providing a list of placements in array (in order of preference). For more information refer to Popper's [behavior docs](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements. |
 | `boundary` | string, element | `'clippingParents'` | Overflow constraint boundary of the tooltip (applies only to Popper's preventOverflow modifier). By default, it's `'clippingParents'` and can accept an HTMLElement reference (via JavaScript only). For more information refer to Popper's [detectOverflow docs](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary). |
 | `sanitize` | boolean | `true` | Enable or disable the sanitization. If activated `'template'`, `'content'` and `'title'` options will be sanitized. |
 | `allowList` | object | [Default value]({{< docsref "/getting-started/javascript#sanitizer" >}}) | Object which contains allowed attributes and tags. |
 | `sanitizeFn` | null, function | `null` | Here you can supply your own sanitize function. This can be useful if you prefer to use a dedicated library to perform sanitization. |
 | `popperConfig` | null, object, function | `null` | To change Vira Design System's default Popper config, see [Popper's configuration](https://popper.js.org/docs/v2/constructors/#options). When a function is used to create the Popper configuration, it's called with an object that contains the Vira Design System's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper.|
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 {{< callout info >}}
 #### Data attributes for individual tooltips
@@ -245,12 +245,12 @@ var tooltip = new viraDesignSystem.Tooltip(element, {
 {{< partial "callout-danger-async-methods.md" >}}
 {{< /callout >}}
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | Method | Description |
 | --- | --- |
-| `show` | Reveals an element's tooltip. **Returns to the caller before the tooltip has actually been shown** (i.e. before the `shown.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. Tooltips with zero-length titles are never displayed. |
-| `hide` | Hides an element's tooltip. **Returns to the caller before the tooltip has actually been hidden** (i.e. before the `hidden.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. |
-| `toggle` | Toggles an element's tooltip. **Returns to the caller before the tooltip has actually been shown or hidden** (i.e. before the `shown.bs.tooltip` or `hidden.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. |
+| `show` | Reveals an element's tooltip. **Returns to the caller before the tooltip has actually been shown** (i.e. before the `shown.vds.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. Tooltips with zero-length titles are never displayed. |
+| `hide` | Hides an element's tooltip. **Returns to the caller before the tooltip has actually been hidden** (i.e. before the `hidden.vds.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. |
+| `toggle` | Toggles an element's tooltip. **Returns to the caller before the tooltip has actually been shown or hidden** (i.e. before the `shown.vds.tooltip` or `hidden.vds.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. |
 | `dispose` | Hides and destroys an element's tooltip (Removes stored data on the DOM element). Tooltips that use delegation (which are created using [the `selector` option](#options)) cannot be individually destroyed on descendant trigger elements. |
 | `enable` | Gives an element's tooltip the ability to be shown. **Tooltips are enabled by default.** |
 | `disable` | Removes the ability for an element's tooltip to be shown. The tooltip will only be able to be shown if it is re-enabled. |
@@ -259,7 +259,7 @@ var tooltip = new viraDesignSystem.Tooltip(element, {
 | `update` | Updates the position of an element's tooltip. |
 | `getInstance` | *Static* method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn't initialized |
 | `getOrCreateInstance` | *Static* method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn't initialized |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 ```js
 // getOrCreateInstance example
@@ -277,21 +277,21 @@ The `setContent` method accepts an `object` argument, where each property-key is
 
 ### Events
 
-{{< bs-table >}}
+{{< vds-table >}}
 | Event | Description |
 | --- | --- |
-| `show.bs.tooltip` | This event fires immediately when the `show` instance method is called. |
-| `shown.bs.tooltip` | This event is fired when the popover has been made visible to the user (will wait for CSS transitions to complete). |
-| `hide.bs.tooltip` | This event is fired immediately when the `hide` instance method has been called. |
-| `hidden.bs.tooltip` | This event is fired when the popover has finished being hidden from the user (will wait for CSS transitions to complete). |
-| `inserted.bs.tooltip` | This event is fired after the `show.bs.tooltip` event when the tooltip template has been added to the DOM. |
-{{< /bs-table >}}
+| `show.vds.tooltip` | This event fires immediately when the `show` instance method is called. |
+| `shown.vds.tooltip` | This event is fired when the popover has been made visible to the user (will wait for CSS transitions to complete). |
+| `hide.vds.tooltip` | This event is fired immediately when the `hide` instance method has been called. |
+| `hidden.vds.tooltip` | This event is fired when the popover has finished being hidden from the user (will wait for CSS transitions to complete). |
+| `inserted.vds.tooltip` | This event is fired after the `show.vds.tooltip` event when the tooltip template has been added to the DOM. |
+{{< /vds-table >}}
 
 ```js
 var myTooltipEl = document.getElementById('myTooltip')
 var tooltip = new viraDesignSystem.Tooltip(myTooltipEl)
 
-myTooltipEl.addEventListener('hidden.bs.tooltip', function () {
+myTooltipEl.addEventListener('hidden.vds.tooltip', function () {
   // do something...
 })
 

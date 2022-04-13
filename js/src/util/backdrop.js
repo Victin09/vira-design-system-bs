@@ -16,7 +16,7 @@ import Config from './config'
 const NAME = 'backdrop'
 const CLASS_NAME_FADE = 'fade'
 const CLASS_NAME_SHOW = 'show'
-const EVENT_MOUSEDOWN = `mousedown.bs.${NAME}`
+const EVENT_MOUSEDOWN = `mousedown.vds.${NAME}`
 
 const Default = {
   className: 'modal-backdrop',

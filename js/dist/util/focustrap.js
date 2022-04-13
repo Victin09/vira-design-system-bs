@@ -26,7 +26,7 @@
    */
 
   const NAME = 'focustrap';
-  const DATA_KEY = 'bs.focustrap';
+  const DATA_KEY = 'vds.focustrap';
   const EVENT_KEY = `.${DATA_KEY}`;
   const EVENT_FOCUSIN = `focusin${EVENT_KEY}`;
   const EVENT_KEYDOWN_TAB = `keydown.tab${EVENT_KEY}`;

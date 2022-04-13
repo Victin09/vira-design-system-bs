@@ -3,24 +3,24 @@
 }
 
 .dropdown-item-danger {
-  color: var(--bs-red);
+  color: var(--vds-red);
 }
 .dropdown-item-danger:hover,
 .dropdown-item-danger:focus {
   color: #fff;
-  background-color: var(--bs-red);
+  background-color: var(--vds-red);
 }
 .dropdown-item-danger.active {
-  background-color: var(--bs-red);
+  background-color: var(--vds-red);
 }
 
 .btn-hover-light {
-  background-color: var(--bs-white);
+  background-color: var(--vds-white);
 }
 .btn-hover-light:hover,
 .btn-hover-light:focus {
-  color: var(--bs-blue);
-  background-color: var(--bs-light);
+  color: var(--vds-blue);
+  background-color: var(--vds-light);
 }
 
 .cal-month,

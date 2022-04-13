@@ -31,7 +31,7 @@ Below is an offcanvas example that is shown by default (via `.show` on `.offcanv
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-vds-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     Content for the offcanvas goes here. You can place just about any Vira Design System component or custom elements here.
@@ -46,27 +46,27 @@ Use the buttons below to show and hide an offcanvas element via JavaScript that 
 - `.offcanvas` hides content (default)
 - `.offcanvas.show` shows content
 
-You can use a link with the `href` attribute, or a button with the `data-bs-target` attribute. In both cases, the `data-bs-toggle="offcanvas"` is required.
+You can use a link with the `href` attribute, or a button with the `data-vds-target` attribute. In both cases, the `data-vds-toggle="offcanvas"` is required.
 
 {{< example >}}
-<a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+<a class="btn btn-primary" data-vds-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
   Link with href
 </a>
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-  Button with data-bs-target
+<button class="btn btn-primary" type="button" data-vds-toggle="offcanvas" data-vds-target="#offcanvasExample" aria-controls="offcanvasExample">
+  Button with data-vds-target
 </button>
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-vds-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     <div class="">
       Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
     </div>
     <div class="dropdown mt-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-vds-toggle="dropdown">
         Dropdown button
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -81,15 +81,15 @@ You can use a link with the `href` attribute, or a button with the `data-bs-targ
 
 ### Body scrolling
 
-Scrolling the `<body>` element is disabled when an offcanvas and its backdrop are visible. Use the `data-bs-scroll` attribute to enable `<body>` scrolling.
+Scrolling the `<body>` element is disabled when an offcanvas and its backdrop are visible. Use the `data-vds-scroll` attribute to enable `<body>` scrolling.
 
 {{< example >}}
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
+<button class="btn btn-primary" type="button" data-vds-toggle="offcanvas" data-vds-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
 
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+<div class="offcanvas offcanvas-start" data-vds-scroll="true" data-vds-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-vds-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     <p>Try scrolling the rest of the page to see this option in action.</p>
@@ -102,12 +102,12 @@ Scrolling the `<body>` element is disabled when an offcanvas and its backdrop ar
 You can also enable `<body>` scrolling with a visible backdrop.
 
 {{< example >}}
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
+<button class="btn btn-primary" type="button" data-vds-toggle="offcanvas" data-vds-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
 
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+<div class="offcanvas offcanvas-start" data-vds-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-vds-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     <p>Try scrolling the rest of the page to see this option in action.</p>
@@ -120,14 +120,14 @@ You can also enable `<body>` scrolling with a visible backdrop.
 When backdrop is set to static, the offcanvas will not close when clicking outside of it.
 
 {{< example >}}
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+<button class="btn btn-primary" type="button" data-vds-toggle="offcanvas" data-vds-target="#staticBackdrop" aria-controls="staticBackdrop">
   Toggle static offcanvas
 </button>
 
-<div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+<div class="offcanvas offcanvas-start" data-vds-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-vds-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     <div>
@@ -149,12 +149,12 @@ There's no default placement for offcanvas components, so you must add one of th
 Try the top, right, and bottom examples out below.
 
 {{< example >}}
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
+<button class="btn btn-primary" type="button" data-vds-toggle="offcanvas" data-vds-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
 
 <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-vds-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     ...
@@ -163,12 +163,12 @@ Try the top, right, and bottom examples out below.
 {{< /example >}}
 
 {{< example >}}
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+<button class="btn btn-primary" type="button" data-vds-toggle="offcanvas" data-vds-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-vds-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     ...
@@ -177,12 +177,12 @@ Try the top, right, and bottom examples out below.
 {{< /example >}}
 
 {{< example >}}
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Toggle bottom offcanvas</button>
+<button class="btn btn-primary" type="button" data-vds-toggle="offcanvas" data-vds-target="#offcanvasBottom" aria-controls="offcanvasBottom">Toggle bottom offcanvas</button>
 
 <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-vds-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body small">
     ...
@@ -211,13 +211,13 @@ The offcanvas plugin utilizes a few classes and attributes to handle the heavy l
 - `.offcanvas-top` hides the offcanvas on the top
 - `.offcanvas-bottom` hides the offcanvas on the bottom
 
-Add a dismiss button with the `data-bs-dismiss="offcanvas"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
+Add a dismiss button with the `data-vds-dismiss="offcanvas"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
 
 ### Via data attributes
 
 #### Toggle
 
-Add `data-bs-toggle="offcanvas"` and a `data-bs-target` or `href` to the element to automatically assign control of one offcanvas element. The `data-bs-target` attribute accepts a CSS selector to apply the offcanvas to. Be sure to add the class `offcanvas` to the offcanvas element. If you'd like it to default open, add the additional class `show`.
+Add `data-vds-toggle="offcanvas"` and a `data-vds-target` or `href` to the element to automatically assign control of one offcanvas element. The `data-vds-target` attribute accepts a CSS selector to apply the offcanvas to. Be sure to add the class `offcanvas` to the offcanvas element. If you'd like it to default open, add the additional class `show`.
 
 #### Dismiss
 
@@ -240,15 +240,15 @@ var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-backdrop=""`.
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-vds-`, as in `data-vds-backdrop=""`.
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | `backdrop` | boolean or the string `static` | `true` | Apply a backdrop on body while offcanvas is open. Alternatively, specify `static` for a backdrop which doesn't close the offcanvas when clicked. |
 | `keyboard` | boolean | `true` | Closes the offcanvas when escape key is pressed |
 | `scroll` | boolean | `false` | Allow body scrolling while offcanvas is open |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 ### Methods
 
@@ -265,33 +265,33 @@ var myOffcanvas = document.getElementById('myOffcanvas')
 var bsOffcanvas = new viraDesignSystem.Offcanvas(myOffcanvas)
 ```
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | Method | Description |
 | --- | --- |
-| `toggle` | Toggles an offcanvas element to shown or hidden. **Returns to the caller before the offcanvas element has actually been shown or hidden** (i.e. before the `shown.bs.offcanvas` or `hidden.bs.offcanvas` event occurs). |
-| `show` | Shows an offcanvas element. **Returns to the caller before the offcanvas element has actually been shown** (i.e. before the `shown.bs.offcanvas` event occurs).|
-| `hide` | Hides an offcanvas element. **Returns to the caller before the offcanvas element has actually been hidden** (i.e. before the `hidden.bs.offcanvas` event occurs).|
+| `toggle` | Toggles an offcanvas element to shown or hidden. **Returns to the caller before the offcanvas element has actually been shown or hidden** (i.e. before the `shown.vds.offcanvas` or `hidden.vds.offcanvas` event occurs). |
+| `show` | Shows an offcanvas element. **Returns to the caller before the offcanvas element has actually been shown** (i.e. before the `shown.vds.offcanvas` event occurs).|
+| `hide` | Hides an offcanvas element. **Returns to the caller before the offcanvas element has actually been hidden** (i.e. before the `hidden.vds.offcanvas` event occurs).|
 | `getInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element |
 | `getOrCreateInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element, or create a new one in case it wasn't initialized |
-{{< /bs-table >}}
+{{< /vds-table >}}
 
 ### Events
 
 Vira Design System's offcanvas class exposes a few events for hooking into offcanvas functionality.
 
-{{< bs-table "table" >}}
+{{< vds-table "table" >}}
 | Event type | Description |
 | --- | --- |
-| `show.bs.offcanvas` | This event fires immediately when the `show` instance method is called. |
-| `shown.bs.offcanvas` | This event is fired when an offcanvas element has been made visible to the user (will wait for CSS transitions to complete). |
-| `hide.bs.offcanvas` | This event is fired immediately when the `hide` method has been called. |
-| `hidden.bs.offcanvas` | This event is fired when an offcanvas element has been hidden from the user (will wait for CSS transitions to complete). |
-| `hidePrevented.bs.offcanvas` | This event is fired when the offcanvas is shown, its backdrop is `static` and a click outside of the offcanvas is performed. The event is also fired when the escape key is pressed and the `keyboard` option is set to `false`. |
-{{< /bs-table >}}
+| `show.vds.offcanvas` | This event fires immediately when the `show` instance method is called. |
+| `shown.vds.offcanvas` | This event is fired when an offcanvas element has been made visible to the user (will wait for CSS transitions to complete). |
+| `hide.vds.offcanvas` | This event is fired immediately when the `hide` method has been called. |
+| `hidden.vds.offcanvas` | This event is fired when an offcanvas element has been hidden from the user (will wait for CSS transitions to complete). |
+| `hidePrevented.vds.offcanvas` | This event is fired when the offcanvas is shown, its backdrop is `static` and a click outside of the offcanvas is performed. The event is also fired when the escape key is pressed and the `keyboard` option is set to `false`. |
+{{< /vds-table >}}
 
 ```js
 var myOffcanvas = document.getElementById('myOffcanvas')
-myOffcanvas.addEventListener('hidden.bs.offcanvas', function () {
+myOffcanvas.addEventListener('hidden.vds.offcanvas', function () {
   // do something...
 })
 ```

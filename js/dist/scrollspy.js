@@ -27,7 +27,7 @@
    */
 
   const NAME = 'scrollspy';
-  const DATA_KEY = 'bs.scrollspy';
+  const DATA_KEY = 'vds.scrollspy';
   const EVENT_KEY = `.${DATA_KEY}`;
   const DATA_API_KEY = '.data-api';
   const EVENT_ACTIVATE = `activate${EVENT_KEY}`;
@@ -35,7 +35,7 @@
   const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`;
   const CLASS_NAME_DROPDOWN_ITEM = 'dropdown-item';
   const CLASS_NAME_ACTIVE = 'active';
-  const SELECTOR_DATA_SPY = '[data-bs-spy="scroll"]';
+  const SELECTOR_DATA_SPY = '[data-vds-spy="scroll"]';
   const SELECTOR_NAV_LIST_GROUP = '.nav, .list-group';
   const SELECTOR_NAV_LINKS = '.nav-link';
   const SELECTOR_NAV_ITEMS = '.nav-item';
@@ -179,7 +179,7 @@
 
       this._clear();
 
-      const queries = SELECTOR_LINK_ITEMS.split(',').map(selector => `${selector}[data-bs-target="${target}"],${selector}[href="${target}"]`);
+      const queries = SELECTOR_LINK_ITEMS.split(',').map(selector => `${selector}[data-vds-target="${target}"],${selector}[href="${target}"]`);
       const link = SelectorEngine__default.default.findOne(queries.join(','), this._config.target);
       link.classList.add(CLASS_NAME_ACTIVE);
 

@@ -19,7 +19,7 @@ import { enableDismissTrigger } from './util/component-functions'
  */
 
 const NAME = 'modal'
-const DATA_KEY = 'bs.modal'
+const DATA_KEY = 'vds.modal'
 const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
 const ESCAPE_KEY = 'Escape'
@@ -41,7 +41,7 @@ const CLASS_NAME_STATIC = 'modal-static'
 const OPEN_SELECTOR = '.modal.show'
 const SELECTOR_DIALOG = '.modal-dialog'
 const SELECTOR_MODAL_BODY = '.modal-body'
-const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="modal"]'
+const SELECTOR_DATA_TOGGLE = '[data-vds-toggle="modal"]'
 
 const Default = {
   backdrop: true,
